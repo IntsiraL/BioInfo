@@ -1,0 +1,102 @@
+%:-+-+-+- Engendré par : http://math.et.info.free.fr/TikZ/Arbre/
+\begin{center}
+% Racine en Haut, développement vers le bas
+\begin{tikzpicture}[xscale=1,yscale=1]
+% Styles (MODIFIABLES)
+\tikzstyle{fleche}=[->,>=latex,thick]
+\tikzstyle{noeud}=[fill=yellow,circle,draw]
+\tikzstyle{feuille}=[fill=yellow,circle,draw]
+\tikzstyle{etiquette}=[midway,fill=white,draw]
+% Dimensions (MODIFIABLES)
+\def\DistanceInterNiveaux{3}
+\def\DistanceInterFeuilles{2}
+% Dimensions calculées (NON MODIFIABLES)
+\def\NiveauA{(-0)*\DistanceInterNiveaux}
+\def\NiveauB{(-1.75)*\DistanceInterNiveaux}
+\def\NiveauC{(-3.25)*\DistanceInterNiveaux}
+\def\NiveauD{(-4.5)*\DistanceInterNiveaux}
+\def\NiveauE{(-5.5)*\DistanceInterNiveaux}
+\def\InterFeuilles{(1)*\DistanceInterFeuilles}
+% Noeuds (MODIFIABLES : Styles et Coefficients d'InterFeuilles)
+\node[noeud] (R) at ({(11.5)*\InterFeuilles},{\NiveauA}) {$Monocyte$};
+\node[noeud] (Ra) at ({(5.5)*\InterFeuilles},{\NiveauB}) {$G$};
+\node[noeud] (Raa) at ({(2.5)*\InterFeuilles},{\NiveauC}) {$G1$};
+\node[noeud] (Raaa) at ({(1)*\InterFeuilles},{\NiveauD}) {$G1'$};
+\node[feuille] (Raaaa) at ({(0)*\InterFeuilles},{\NiveauE}) {$G1'-P1$};
+\node[feuille] (Raaab) at ({(1)*\InterFeuilles},{\NiveauE}) {$G1'-P2$};
+\node[feuille] (Raaac) at ({(2)*\InterFeuilles},{\NiveauE}) {$G1'-P3$};
+\node[noeud] (Raab) at ({(4)*\InterFeuilles},{\NiveauD}) {$G1''$};
+\node[feuille] (Raaba) at ({(3)*\InterFeuilles},{\NiveauE}) {$G1''-P1$};
+\node[feuille] (Raabb) at ({(4)*\InterFeuilles},{\NiveauE}) {$G1''-P2$};
+\node[feuille] (Raabc) at ({(5)*\InterFeuilles},{\NiveauE}) {$G1''-P3$};
+\node[noeud] (Rab) at ({(8.5)*\InterFeuilles},{\NiveauC}) {$G2$};
+\node[noeud] (Raba) at ({(7)*\InterFeuilles},{\NiveauD}) {$G2'$};
+\node[feuille] (Rabaa) at ({(6)*\InterFeuilles},{\NiveauE}) {$G2'-P1$};
+\node[feuille] (Rabab) at ({(7)*\InterFeuilles},{\NiveauE}) {$G2'-P2$};
+\node[feuille] (Rabac) at ({(8)*\InterFeuilles},{\NiveauE}) {$G2'-P3$};
+\node[noeud] (Rabb) at ({(10)*\InterFeuilles},{\NiveauD}) {$G2''$};
+\node[feuille] (Rabba) at ({(9)*\InterFeuilles},{\NiveauE}) {$G2''-P1$};
+\node[feuille] (Rabbb) at ({(10)*\InterFeuilles},{\NiveauE}) {$G2''-P2$};
+\node[feuille] (Rabbc) at ({(11)*\InterFeuilles},{\NiveauE}) {$G2''-P3$};
+\node[noeud] (Rb) at ({(17.5)*\InterFeuilles},{\NiveauB}) {$M$};
+\node[noeud] (Rba) at ({(14.5)*\InterFeuilles},{\NiveauC}) {$M1$};
+\node[noeud] (Rbaa) at ({(13)*\InterFeuilles},{\NiveauD}) {$M1'$};
+\node[feuille] (Rbaaa) at ({(12)*\InterFeuilles},{\NiveauE}) {$M1'-P1$};
+\node[feuille] (Rbaab) at ({(13)*\InterFeuilles},{\NiveauE}) {$M1'-P2$};
+\node[feuille] (Rbaac) at ({(14)*\InterFeuilles},{\NiveauE}) {$M1'-P3$};
+\node[noeud] (Rbab) at ({(16)*\InterFeuilles},{\NiveauD}) {$M1''$};
+\node[feuille] (Rbaba) at ({(15)*\InterFeuilles},{\NiveauE}) {$M1''-P1$};
+\node[feuille] (Rbabb) at ({(16)*\InterFeuilles},{\NiveauE}) {$M1''-P2$};
+\node[feuille] (Rbabc) at ({(17)*\InterFeuilles},{\NiveauE}) {$M1''-P3$};
+\node[noeud] (Rbb) at ({(20.5)*\InterFeuilles},{\NiveauC}) {$M2$};
+\node[noeud] (Rbba) at ({(19)*\InterFeuilles},{\NiveauD}) {$M2'$};
+\node[feuille] (Rbbaa) at ({(18)*\InterFeuilles},{\NiveauE}) {$M2'-P1$};
+\node[feuille] (Rbbab) at ({(19)*\InterFeuilles},{\NiveauE}) {$M2'-P2$};
+\node[feuille] (Rbbac) at ({(20)*\InterFeuilles},{\NiveauE}) {$M2'-P3$};
+\node[noeud] (Rbbb) at ({(22)*\InterFeuilles},{\NiveauD}) {$M2''$};
+\node[feuille] (Rbbba) at ({(21)*\InterFeuilles},{\NiveauE}) {$M2''-P1$};
+\node[feuille] (Rbbbb) at ({(22)*\InterFeuilles},{\NiveauE}) {$M2''-P2$};
+\node[feuille] (Rbbbc) at ({(23)*\InterFeuilles},{\NiveauE}) {$M2''-P3$};
+% Arcs (MODIFIABLES : Styles)
+\draw[fleche] (R)--(Ra) node[etiquette] {$GM-CSF$};
+\draw[fleche] (Ra)--(Raa) node[etiquette] {$AL$};
+\draw[fleche] (Raa)--(Raaa) node[etiquette] {$LPS$};
+\draw[fleche] (Raaa)--(Raaaa) node[etiquette] {$$};
+\draw[fleche] (Raaa)--(Raaab) node[etiquette] {$$};
+\draw[fleche] (Raaa)--(Raaac) node[etiquette] {$$};
+\draw[fleche] (Raa)--(Raab) node[etiquette] {$!LPS$};
+\draw[fleche] (Raab)--(Raaba) node[etiquette] {$$};
+\draw[fleche] (Raab)--(Raabb) node[etiquette] {$$};
+\draw[fleche] (Raab)--(Raabc) node[etiquette] {$$};
+\draw[fleche] (Ra)--(Rab) node[etiquette] {$!AL$};
+\draw[fleche] (Rab)--(Raba) node[etiquette] {$LPS$};
+\draw[fleche] (Raba)--(Rabaa) node[etiquette] {$$};
+\draw[fleche] (Raba)--(Rabab) node[etiquette] {$$};
+\draw[fleche] (Raba)--(Rabac) node[etiquette] {$$};
+\draw[fleche] (Rab)--(Rabb) node[etiquette] {$!LPS$};
+\draw[fleche] (Rabb)--(Rabba) node[etiquette] {$$};
+\draw[fleche] (Rabb)--(Rabbb) node[etiquette] {$$};
+\draw[fleche] (Rabb)--(Rabbc) node[etiquette] {$$};
+\draw[fleche] (R)--(Rb) node[etiquette] {$M-CSF$};
+\draw[fleche] (Rb)--(Rba) node[etiquette] {$AL$};
+\draw[fleche] (Rba)--(Rbaa) node[etiquette] {$LPS$};
+\draw[fleche] (Rbaa)--(Rbaaa) node[etiquette] {$$};
+\draw[fleche] (Rbaa)--(Rbaab) node[etiquette] {$$};
+\draw[fleche] (Rbaa)--(Rbaac) node[etiquette] {$$};
+\draw[fleche] (Rba)--(Rbab) node[etiquette] {$!LPS$};
+\draw[fleche] (Rbab)--(Rbaba) node[etiquette] {$$};
+\draw[fleche] (Rbab)--(Rbabb) node[etiquette] {$$};
+\draw[fleche] (Rbab)--(Rbabc) node[etiquette] {$$};
+\draw[fleche] (Rb)--(Rbb) node[etiquette] {$!AL$};
+\draw[fleche] (Rbb)--(Rbba) node[etiquette] {$LPS$};
+\draw[fleche] (Rbba)--(Rbbaa) node[etiquette] {$$};
+\draw[fleche] (Rbba)--(Rbbab) node[etiquette] {$$};
+\draw[fleche] (Rbba)--(Rbbac) node[etiquette] {$$};
+\draw[fleche] (Rbb)--(Rbbb) node[etiquette] {$!LPS$};
+\draw[fleche] (Rbbb)--(Rbbba) node[etiquette] {$$};
+\draw[fleche] (Rbbb)--(Rbbbb) node[etiquette] {$$};
+\draw[fleche] (Rbbb)--(Rbbbc) node[etiquette] {$$};
+\end{tikzpicture}
+\end{center}
+%:-+-+-+-+- Fin
+
