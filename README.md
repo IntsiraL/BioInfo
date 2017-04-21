@@ -4,3 +4,6 @@
 #Liens
 http://genet.univ-tours.fr/gen002200/gen002201.htm
 https://www-lmgm.biotoul.fr/enseignements/MABS/transcriptome.pdf
+
+#idatInfo
+https://www.bioconductor.org/packages/devel/bioc/vignettes/illuminaio/inst/doc/illuminaio.pdf
