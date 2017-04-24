@@ -43,6 +43,7 @@ colnames(obj$other$STDEV) <- nameCol
 #juste un petit control des p-values
 obj$genes$DetectionPValue <- detectionPValues(obj)
 
+
 #correction de bruit de fond et normalisaion (par quantille) avec neqc (ajustement des paramètres au fur et à mesure)
 # à tester la fonction backgroundCorrect()
 dCorect <- neqc(obj)
@@ -53,4 +54,4 @@ mydata = list()
 for (i in 1:24){
   mydata[[nameCol[i]]] <- readIDAT(idatFiles[i])
 }
-print(mydata$P1_G_Co)
+#print(mydata$P1_G_Co)

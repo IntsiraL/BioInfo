@@ -2,6 +2,7 @@
 source("https://bioconductor.org/biocLite.R")
 biocLite("limma")
 biocLite("illuminaio")
+biocLite("statmod")
 cluster
 ade4
 dbscan
