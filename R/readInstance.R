@@ -55,3 +55,5 @@ for (i in 1:24){
   mydata[[nameCol[i]]] <- readIDAT(idatFiles[i])
 }
 #print(mydata$P1_G_Co)
+
+targetData <- readTargets(file = "../Data/Annot.txt")

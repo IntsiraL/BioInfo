@@ -1,0 +1,14 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}INTRODUCTION :}{2}
+\contentsline {section}{\numberline {2}ACQUISITION DES DONN\'{E}ES :}{2}
+\contentsline {subsection}{\numberline {2.1}Les puces \IeC {\`a} ADN :}{2}
+\contentsline {subsection}{\numberline {2.2}Illumina BeadArray Technology :}{3}
+\contentsline {subsection}{\numberline {2.3} Plan exp\IeC {\'e}rimental :}{3}
+\contentsline {section}{\numberline {3}DESCRIPTION DES DONN\'{E}ES :}{4}
+\contentsline {subsection}{\numberline {3.1} Decryptage et lecture :}{4}
+\contentsline {subsection}{\numberline {3.2} Contenu :}{4}
+\contentsline {section}{\numberline {4}TRANSFORMATION, NORMALISATION ET FILTRAGE :}{4}
+\contentsline {section}{\numberline {5}ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}{4}
+\contentsline {subsection}{\numberline {5.1}G\IeC {\`e}nes diff\IeC {\'e}rentiellement exprim\IeC {\'e}s :}{4}
+\contentsline {subsection}{\numberline {5.2}G\IeC {\`e}nes co-exprim\IeC {\'e}s :}{4}
+\contentsline {section}{\numberline {6}INTERP\'{E}TATION :}{4}
