@@ -17,3 +17,4 @@ https://www.google.fr/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&
 https://academic.oup.com/nar/article/43/7/e47/2414268/limma-powers-differential-expression-analyses-for
 https://www.bioconductor.org/packages/release/data/experiment/vignettes/BeadArrayUseCases/inst/doc/BeadArrayUseCases.pdf
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3968891/
+http://www.info2.uqam.ca/~makarenkov_v/BIF7002/Rapport_NextGen_BF_JC.htm

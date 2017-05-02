@@ -62,16 +62,13 @@
 \section{INTRODUCTION :}
 \section{ACQUISITION DES DONN\'{E}ES :}
 \subsection{Les puces à ADN :}
-La technologie qui prédomine est basée sur les puces à ADN.
   Une puce à ADN est constituée d'un support physique (le plus
   souvent une lame de verre) sur lequel sont déposées des molécules
   d'ADN correspondant à de petits fragments du génome (jusqu'à 40 000
   dépôts différents par puce). On recouvre la puce
   de la solution contenant la population d'ARN à étudier. Les ARN
   s'hybrident sur les fragments d'ADN complémentaires. La quantité d'ARN
-  fixée reflète la concentration de cet ARN dans la solution. Il
-  peut exister des biais systématiques dus à d'autres facteurs,
-  tels que l'affinité des séquences ou l'efficacité du marquage. 
+  fixée reflète la concentration de cet ARN dans la solution.
   \newline
  Pour des raisons pratiques, on utilise des ADNc plutôt que directement
   les ARN. Les ADNc sont marqués par un nucléotide radioactif ou
@@ -83,21 +80,32 @@ La technologie qui prédomine est basée sur les puces à ADN.
   qui permet de mettre toutes les puces à la même échelle,
   quelle que soit leur origine. 
   \newline
-  Un scanner mesure l'intensité du signal émis
-  par l'ADNc hybridé au
-  niveau de chaque dépôt. Parmi les valeurs que proposent les
+  Un scanner mesure l'intensité du signal émis par l'ADNc hybridé au niveau de chaque dépôt. Parmi les valeurs que proposent les
   logiciels pour cette intensité, la plus fiable est la médiane de l'intensité des pixels car elle est moins sensible aux défauts de
   l'image (pixels sur-brillants par exemple). 
   \newline
-  Les puces comportent généralement plusieurs
-  dépôts
-  identiques pour chaque gène. Cela simplifie le travail lorsqu'il faut
-  repérer les aberrations dans la lecture des intensités puisqu'il
-  suffit d'examiner les cas où les valeurs diffèrent beaucoup d'un
-  dépôt à l'autre. Il s'agit le plus souvent d'un défaut
-  physique sur la puce et il est facile d'éliminer la valeur aberrante.
+  Les puces comportent généralement plusieurs dépôts identiques pour chaque gène. Cela simplifie le travail lorsqu'il faut
+  repérer les aberrations dans la lecture des intensités puisqu'il suffit d'examiner les cas où les valeurs diffèrent beaucoup d'un
+  dépôt à l'autre. Il s'agit le plus souvent d'un défaut physique sur la puce et il est facile d'éliminer la valeur aberrante.
   Dans le doute, on conserve la médiane des différentes mesures. 
+  \newline
+  Plusieurs  types  de  puces  à  ADN  
+existent selon le support, la nature des fragments fixés à la surface, le mode de fabrication, la 
+densité, le mode de marquage des cibles et les méthodes d’hybridation.
+\begin{center}
+ \includegraphics[scale=0.5]{./image/principe.jpg}
+ % Etapes_d'une_expérience_de_biopuces.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+\end{center}
+
 \subsection{La technologie Illumina :}
+Illumina, Inc. est une société américaine qui fabrique et commercialise des systèmes intégrés pour l'analyse de la variation génétique et la fonction biologique 
+notamment des gammes de produits et services qui servent les marchés du séquençage, génotypage et expression génétique.
+\newline
+Un de ces récentes fabrications, le puce ``BeadArray technologie''.
+\begin{center}
+ \includegraphics[scale=0.5]{./image/beadarray.png}
+ % beadarray_multi_sample_array_formats_lg.gif: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+\end{center}
 
 \subsection{ Plan expérimental :}
 \begin{center}
@@ -118,16 +126,37 @@ Ce qui nous donne une matrice de données de dimmension (48210 x 24) avec les 24
 \end{pmatrix}
 \]
 \subsection{Les biais possibles :}
-
+ Il peut exister des biais systématiques dus à d'autres facteurs,
+  tels que l'affinité des séquences ou l'efficacité du marquage. 
 \section{DESCRIPTION DES DONN\'{E}ES :}
 \subsection{ Decryptage et lecture :}
-\subsection{ Données brutes :}
 \begin{itemize}
+ \item HumanHT-12\_V4\_0\_R2\_15002873\_B.bgx
  \item idat
  \item bgx
  \item sdf
  \item cfg
  \item Metrics.txt
+\end{itemize}
+\subsection{ Données brutes :}
+\begin{itemize}
+ \item  Barcode  
+\item  Section 
+\item  ChipType 
+\item  RunInfo 
+\item  Quants
+      \begin{description}
+        \item  MeanBinData        
+	\item  TrimmedMeanBinData  
+	\item  DevBinData           
+	\item  MedianBinData      
+	\item  BackgroundBinData   
+	\item  BackgroundDevBinData
+	\item  CodesBinData      
+	\item  NumBeadsBinData    
+	\item  NumGoodBeadsBinData
+	\item  IllumicodeBinData
+      \end{description}
 \end{itemize}
 \subsection{ Contrôle et qualité :}
 
