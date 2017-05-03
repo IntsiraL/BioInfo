@@ -8,7 +8,11 @@ http://silico.biotoul.fr/enseignement/m1-mabs/transcriptome/TD_transcriptome.htm
 
 #idatInfo
 https://www.bioconductor.org/packages/devel/bioc/vignettes/illuminaio/inst/doc/illuminaio.pdf
-
+https://www.bioconductor.org/packages/devel/data/experiment/vignettes/BeadArrayUseCases/inst/doc/BeadArrayUseCases.pdf
+http://barleyworld.org/sites/default/files/illuminasnpgenotyping.pdf
+http://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/11/technote_gene_expression_data_quality_control.pdf
+https://www.illumina.com/documents/products/datasheets/datasheet_gene_exp_analysis.pdf
+https://www.ncbi.nlm.nih.gov/genome/probe/doc/DistrIllumina.shtml
 
 #image
 https://www.google.fr/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwjQm9ebor_TAhXDWxoKHey3DxsQjRwIBw&url=http%3A%2F%2Fslideplayer.fr%2Fslide%2F496496%2F&psig=AFQjCNE0FdaFbdg-uGQEcn00Yj5h0MiNow&ust=1493197740776419

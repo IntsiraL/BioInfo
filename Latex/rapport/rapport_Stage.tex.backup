@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 
+
 \newcommand\tabA[1][0.5cm]{\hspace*{#1}}
 \newcommand\tabB[1][1.5cm]{\hspace*{#1}}
 \newcommand\tabC[1][2cm]{\hspace*{#1}}
@@ -12,6 +13,8 @@
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
 % Title Page
 \begin{document}
 \begin{titlepage}
@@ -101,6 +104,7 @@ densité, le mode de marquage des cibles et les méthodes d’hybridation.
 Illumina, Inc. est une société américaine qui fabrique et commercialise des systèmes intégrés pour l'analyse de la variation génétique et la fonction biologique 
 notamment des gammes de produits et services qui servent les marchés du séquençage, génotypage et expression génétique.
 \newline
+Un de ces récentes fabrications, le puce ``BeadArray technologie''.
 \begin{center}
  \includegraphics[scale=0.5]{./image/beadarray.png}
  % beadarray_multi_sample_array_formats_lg.gif: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
@@ -129,6 +133,25 @@ Ce qui nous donne une matrice de données de dimmension (48210 x 24) avec les 24
   tels que l'affinité des séquences ou l'efficacité du marquage. 
 \section{DESCRIPTION DES DONN\'{E}ES :}
 \subsection{ Decryptage et lecture :}
+
+\begin{tabular}{|l|p{9cm}|}
+\hline
+File  & Description \\
+\hline
+ (Serial Number).txt &             \\
+\hline
+Metrics.txt &  un pour chaque BeadChip  et contient des informations récapitulatives sur l'intensité des signals,
+la quantité de saturation, la mise au point et l'enregistrement sur l'image (s) de chaque section \\
+\hline 
+Effective.cfg & fichier de configuration des paramètres du scanner\\
+\hline
+(Serial Number).sdf & fichier de description des échantillons d'Illumina utilisé pour déterminer les propriétes (positions)
+physique d'une section et savoir les sections liées sur chaque échantillons\\
+\hline
+*.idat & contiennent la moyenne des intensités du signal de chaque spots \\
+\hline
+\end{tabular}
+
 \begin{itemize}
  \item HumanHT-12\_V4\_0\_R2\_15002873\_B.bgx
  \item idat
