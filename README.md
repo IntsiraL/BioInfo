@@ -22,3 +22,8 @@ https://academic.oup.com/nar/article/43/7/e47/2414268/limma-powers-differential-
 https://www.bioconductor.org/packages/release/data/experiment/vignettes/BeadArrayUseCases/inst/doc/BeadArrayUseCases.pdf
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3968891/
 http://www.info2.uqam.ca/~makarenkov_v/BIF7002/Rapport_NextGen_BF_JC.htm
+
+#illumina
+http://dnatech.genomecenter.ucdavis.edu/illumina-gene-expression/
+https://support.illumina.com/array/array_kits/humanht-12_v4_expression_beadchip_kit/documentation.html
+https://support.illumina.com/content/dam/illumina-support/courses/Gene_Expression_Part_1_GeneExpression_Overview/a001_workflow_best_practices_references.html
