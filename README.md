@@ -27,3 +27,8 @@ http://www.info2.uqam.ca/~makarenkov_v/BIF7002/Rapport_NextGen_BF_JC.htm
 http://dnatech.genomecenter.ucdavis.edu/illumina-gene-expression/
 https://support.illumina.com/array/array_kits/humanht-12_v4_expression_beadchip_kit/documentation.html
 https://support.illumina.com/content/dam/illumina-support/courses/Gene_Expression_Part_1_GeneExpression_Overview/a001_workflow_best_practices_references.html
+
+#doc
+http://compdiag.molgen.mpg.de/ngfn/docs/2005/sep/beissbarth_cDNA_QCPP.pdf
+http://compdiag.molgen.mpg.de/ngfn/docs/2005/mar/mansmann-cDNA.pdf
+http://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/11/technote_gene_expression_data_quality_control.pdf
