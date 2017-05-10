@@ -3,7 +3,13 @@ source("https://bioconductor.org/biocLite.R")
 biocLite("limma")
 biocLite("illuminaio")
 biocLite("statmod")
+biocLite(c("beadarray", "GEOquery", "illuminaHumanv1.db","illuminaHumanv2.db", "illuminaHumanv3.db", "BeadArrayUseCases"))
+biocLite(c("GOstats", "GenomicRanges", "Biostrings"))
+biocLite(c("beadarrayExampleData", "beadarrayExampleData"))  ###juste pour voir un peu les jeux de données
 cluster
 ade4
 dbscan
 ------------------------------------------------
+		Utilitaire linux
+sudo apt-get install libxml2-dev
+sudo apt-get install libcurl4-openssl-dev
