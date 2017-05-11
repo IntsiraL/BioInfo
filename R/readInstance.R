@@ -68,3 +68,25 @@ targetData <- readTargets(file = "../Data/Annot.txt")
 #######################################################################################################
 controlData <- obj[obj$genes$Status != "regular",]
 bruteData <- obj[obj$genes$Status == "regular",]
+###############################################################################
+## Hybridation controls                                                      ##
+###############################################################################
+hybC <- obj[obj$genes$Status == "cy3_hyb",]
+for(i in c(1:24)){
+  hybC$E[,i] <- sort(hybC$E[,i])
+}
+low = c()
+for(i in c(1:24)){
+  low <- c(low,mean(c(hybC$E[1,i],hybC$E[2,i])))
+}
+medium = c()
+for(i in c(1:24)){
+  medium <- c(medium,mean(c(hybC$E[3,i],hybC$E[4,i])))
+}
+high = c()
+for(i in c(1:24)){
+  high <- c(high,mean(c(hybC$E[5,i],hybC$E[6,i])))
+}
+vv <- c(mean(low),mean(medium),mean(high))
+names(vv) <- c("Low","Medium", "High")
+barplot(vv)
