@@ -50,7 +50,7 @@ obj$genes$DetectionPValue <- detectionPValues(obj)
 
 #correction de bruit de fond et normalisaion (par quantille) avec neqc (ajustement des paramètres au fur et à mesure)
 # à tester la fonction backgroundCorrect()
-dCorect <- neqc(obj)
+#dCorect <- neqc(obj)
 
 
 #décryptage des fichier idat avec illuminao
@@ -66,3 +66,5 @@ targetData <- readTargets(file = "../Data/Annot.txt")
 ############################## CONTROL DATA
 #######################################################################################################
 #######################################################################################################
+controlData <- obj[obj$genes$Status != "regular",]
+bruteData <- obj[obj$genes$Status == "regular",]
