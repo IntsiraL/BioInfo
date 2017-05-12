@@ -68,6 +68,10 @@ targetData <- readTargets(file = "../Data/Annot.txt")
 #######################################################################################################
 controlData <- obj[obj$genes$Status != "regular",]
 bruteData <- obj[obj$genes$Status == "regular",]
+#function to add the error bar representing the confidence interval
+error.bar <- function(x, y, upper, lower=upper, length=0.1,...){
+  arrows(x,y+upper, x, y-lower, angle=90, code=3, length=length, ...)
+}
 ###############################################################################
 ## Hybridation controls                                                      ##
 ###############################################################################
@@ -88,5 +92,36 @@ for(i in c(1:24)){
   high <- c(high,mean(c(hybC$E[5,i],hybC$E[6,i])))
 }
 vv <- c(mean(low),mean(medium),mean(high))
+vvSD <- c(sd(low),sd(medium),sd(high))
 names(vv) <- c("Low","Medium", "High")
-barplot(vv)
+par(mfcol=c(2,2))
+hybC_Bar <- barplot(vv,ylim = c(0,1.2*max(vv)), ylab = "Signal")
+error.bar(hybC_Bar,vv, vvSD)
+plot(low, type = "b", ylab = "Signal",xaxt="n", xlab = "")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+plot(medium, type = "b", ylab = "Signal",xaxt="n", xlab = "")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+plot(high, type = "b", ylab = "Signal",xaxt="n", xlab = "")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+###############################################################################
+## Negative controls                                                         ##
+###############################################################################
+negC <- obj[obj$genes$Status == "negative",]
+background = c()
+for(i in c(1:24)){
+  background <- c(background,mean(c(negC$E[,i])))
+}
+noise = c()
+for(i in c(1:24)){
+  noise <- c(noise,sd(c(negC$E[,i])))
+}
+nn <- c(mean(background),mean(noise))
+nnSD <- c(sd(background),sd(noise))
+names(nn) <- c("Background", "Noise")
+par(mfcol=c(2,2))
+negC_Bar <- barplot(nn,ylim = c(0,1.2*max(nn)), ylab = "Signal")
+error.bar(negC_Bar,nn, nnSD)
+plot(background, type = "b", ylab = "Signal",xaxt="n", xlab = "")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+plot(noise, type = "b", ylab = "Signal",xaxt="n", xlab = "")
+axis(1, at=c(1:24), labels = nameCol, las=2)
