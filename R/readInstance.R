@@ -10,7 +10,7 @@ idatfilesPath<-getwd()
 idatFiles44 <- list.files(paste(idatfilesPath,"/../Data/200729890044/",sep = ""),all.files=FALSE,pattern=".idat")
 idatFiles64 <- list.files(paste(idatfilesPath,"/../Data/200796240064/",sep = ""),all.files=FALSE,pattern=".idat")
 bgxfile=paste(idatfilesPath,"/../Data/HumanHT-12_V4_0_R2_15002873_B.bgx",sep = "")
-
+controlProfil  <- read.table(paste(idatfilesPath,"/../Data/controlProfil.txt",sep = ""), sep = "\t", header = TRUE ,as.is = TRUE)
 idatFiles = c()
 for (i in idatFiles44){
   idatFiles <- c(idatFiles,paste(idatfilesPath,"/../Data/200729890044/",i,sep = ""))

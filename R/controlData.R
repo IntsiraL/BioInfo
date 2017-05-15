@@ -12,21 +12,17 @@ error.bar <- function(x, y, upper, lower=upper, length=0.1,...){
 ###############################################################################
 ## Hybridation controls                                                      ##
 ###############################################################################
-hybC <- obj[obj$genes$Status == "cy3_hyb",]
-for(i in c(1:24)){
-  hybC$E[,i] <- sort(hybC$E[,i])
-}
 low = c()
 for(i in c(1:24)){
-  low <- c(low,mean(c(hybC$E[1,i],hybC$E[2,i])))
+  low <- c(low,mean(controlData$E[controlProfil$Reporter_Group_id=="phage_lambda_genome:low",i]))
 }
 medium = c()
 for(i in c(1:24)){
-  medium <- c(medium,mean(c(hybC$E[3,i],hybC$E[4,i])))
+  medium <- c(medium,mean(controlData$E[controlProfil$Reporter_Group_id=="phage_lambda_genome:med",i]))
 }
 high = c()
 for(i in c(1:24)){
-  high <- c(high,mean(c(hybC$E[5,i],hybC$E[6,i])))
+  high <- c(high,mean(controlData$E[controlProfil$Reporter_Group_id=="phage_lambda_genome:high",i]))
 }
 vv <- c(mean(low),mean(medium),mean(high))
 vvSD <- c(sd(low),sd(medium),sd(high))
@@ -66,25 +62,26 @@ axis(1, at=c(1:24), labels = nameCol, las=2)
 ## Biotin & High Stringency   | Low Stringency                               ##
 ###############################################################################
 biotC <- obj[obj$genes$Status == "biotin",]
-stringC <- obj[obj$genes$Status == "low_stringency_hyb",]
-for(i in c(1:24)){
-  stringC$E[,i] <- sort(stringC$E[,i])
-}
+#stringC <- obj[obj$genes$Status == "low_stringency_hyb",]
+#for(i in c(1:24)){
+#  stringC$E[,i] <- sort(stringC$E[,i])
+#}
 biot = c()
 for(i in c(1:24)){
   biot <- c(biot,mean(c(biotC$E[,i])))
 }
-highStingc = c()
-for(i in c(1:24)){
-  highStingc <- c(highStingc,mean(c(stringC$E[5:8,i])))
-}
+#A voir
+highStingc = rep(55,24)
+#for(i in c(1:24)){
+#  highStingc <- c(highStingc,mean(c(stringC$E[8,i])))
+#}
 mm2 = c()
 for(i in c(1:24)){
-  mm2 <- c(mm2,mean(c(stringC$E[1,i],stringC$E[2,i])))
+  mm2 <- c(mm2,mean(controlData$E[controlProfil$Reporter_Group_id=="phage_lambda_genome:mm2",i]))
 }
 pm = c()
 for(i in c(1:24)){
-  pm <- c(pm,mean(c(stringC$E[3,i],stringC$E[4,i])))
+  pm <- c(pm,mean(controlData$E[controlProfil$Reporter_Group_id=="phage_lambda_genome:pm",i]))
 }
 ss <- c(mean(biot),mean(highStingc))
 ssSD <- c(sd(biot),sd(highStingc))
