@@ -3,8 +3,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{graphicx}
+\usepackage[font=small,labelfont=bf]{caption}
 \usepackage{amsmath}
-
+\usepackage{stackengine}
 
 \newcommand\tabA[1][0.5cm]{\hspace*{#1}}
 \newcommand\tabB[1][1.5cm]{\hspace*{#1}}
@@ -78,7 +79,7 @@
   un fluorochrome. Il est possible d'étudier simultanément plusieurs
   populations d'ADNc sur une même puce en utilisant des fluorochromes différents.
   La meilleure façon d'utiliser cette possibilité est de marquer
-  de l'ADN génomique avec un fluorochrome, toujours le même. On
+  l'ADN génomique avec un fluorochrome, toujours le même. On
   obtient ainsi une référence stable au cours des années
   qui permet de mettre toutes les puces à la même échelle,
   quelle que soit leur origine. 
@@ -98,47 +99,72 @@ densité, le mode de marquage des cibles et les méthodes d’hybridation.
 \begin{center}
  \includegraphics[scale=0.5]{./image/principe.jpg}
  % Etapes_d'une_expérience_de_biopuces.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{Principe général d'utilisation des puces ADN }
 \end{center}
 
 \subsection{La technologie Illumina :}
 Illumina, Inc. est une société américaine qui fabrique et commercialise des systèmes intégrés pour l'analyse de la variation génétique et la fonction biologique 
 notamment des gammes de produits et services qui servent les marchés du séquençage, génotypage et expression génétique.
 \newline
-Un de ces récentes fabrications, le puce ``BeadArray technologie''.
+Une de ces récentes fabrications, la puce ``BeadArray technologie''.
 \begin{center}
  \includegraphics[scale=0.5]{./image/beadarray.png}
  % beadarray_multi_sample_array_formats_lg.gif: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{Illumina BeadArray Technologie }
+\end{center}
+Dans l’analyse des expressions des genes, Illumina utilise deux approches différentes : l’hybridation directe(Direct Hybridization assay) et le DASL (cDNA-mediated Annealing Selection Extension and Ligation).
+L’expérience est faite avec la première approche qui consiste à utiliser un simple brin de la séquence d’ADN par spot. Cette séquence monocaténaire est censée s’hybrider avec la séquence cible étiquetée dans l’échantillon. 
+La quantité du signal fluorescente produit détermine la quantité de l’ARN cible dans l’échantillon.
+\begin{center}
+ \includegraphics[scale=0.5]{./image/Direct_Hyb.png}
+ % direct_hybridization_assay_workflow_lg.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{An Illumina Direct Hybridization probe }
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{./image/direct_hybridization_assay_workflow.png}
+ % direct_hybridization_assay_workflow.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Direct Hybridization assay workflow}
 \end{center}
 
 \subsection{ Plan expérimental :}
 \begin{center}
  \includegraphics[scale=0.5]{./image/plan.png}
  % plan.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{Plan éxpérimental }
 \end{center}
-L’expression des gènes des macrophages a été analysée par des puces d’expression génique de technologie Illumina avec 48210 sondes pour chaque prélèvement.
-Ce qui nous donne une matrice de données de dimmension (48210 x 24) avec les 24 prélèvements.
-\[
-\begin{pmatrix}
-
-   a_{11} & \cdots & a_{1m} \\
+L’expérience a été faite avec la puce ADN  Illumina HumanHT-12 v4.0 BeadChip 12x1 avec 48210 sondes pour chaque prélèvement.
+887 de ses sondes sont classés comme des sondes de contrôles.
+On se trouve donc avec 47323 individus sur 24 variables. 
+Ce qui nous donne une matrice de données de dimmension :
+\def\tmp{
+  \begin{pmatrix}
+  a_{11} & \cdots & a_{1m} \\
 
    \vdots & \ddots &\vdots \\
 
    a_{n1} & \cdots & a_{nm} 
-
-\end{pmatrix}
+ \end{pmatrix}
+}
+\[
+\stackMath\def\stackalignment{r}
+  \stackon
+    {\mathrm{47323~rows}\left\{\tmp\right.}
+    {\overbrace{\phantom{\smash{\tmp\mkern -36mu}}}^{\mathrm{\textstyle 24~columns}}\mkern 20mu}
 \]
+
 \subsection{Les biais possibles :}
  Il peut exister des biais systématiques dus à d'autres facteurs,
   tels que l'affinité des séquences ou l'efficacité du marquage. 
 \section{DESCRIPTION DES DONN\'{E}ES :}
 \subsection{ Decryptage et lecture :}
-
+Après avoir scanné la puce, le scanner iScan d’Illumina exporte et produit des fichiers de sortie selon les paramètres définis.
+Les fichiers qui contiennent les intensités des spots (.idat) sont encryptés et d’autres fichiers sont fournis à titre indicatif et de mesure pour l’analyse.\\
+\begin{table}
 \begin{tabular}{|l|p{9cm}|}
 \hline
 File  & Description \\
 \hline
- (Serial Number).txt &             \\
+ (Serial Number).txt & un fichier qui stocke la positions et l'identité de chaque spots, qui contient quelques informations sur les paramètres du scanner\\
 \hline
 Metrics.txt &  un pour chaque BeadChip  et contient des informations récapitulatives sur l'intensité des signals,
 la quantité de saturation, la mise au point et l'enregistrement sur l'image (s) de chaque section \\
@@ -151,16 +177,15 @@ physique d'une section et savoir les sections liées sur chaque échantillons\\
 *.idat & contiennent la moyenne des intensités du signal de chaque spots \\
 \hline
 \end{tabular}
-
-\begin{itemize}
- \item HumanHT-12\_V4\_0\_R2\_15002873\_B.bgx
- \item idat
- \item bgx
- \item sdf
- \item cfg
- \item Metrics.txt
-\end{itemize}
-\subsection{ Données brutes :}
+\caption{Description des fichiers de sortie}
+\label{my-label}
+\end{table}
+\newline
+Pour la lecture  des fichiers .idat, l’utilisation d’un fichier manifeste qui contient l’ensemble de tout les informations nécessaires concernant la puce est indispensable pour le décryptage : le nom et l’identifiant  des gènes ( Probe\_id, Array\_Address\_Id, Symbol, Barcode), le statut d’un spot (regular, negative, biotin,...)
+Dans la suite logique des choses, Illumina fourni un logiciel payant (GenomeStudio Software)  qui aide sur le traitement et l'analyse des puces ADN (Genotyping Module, Gene Expression Module, Methylation Module).
+\subsection{ Données brutes via Bioconductor :}
+Bioconductor est un projet de développement et un ensemble de package (1380 packages en 2017)  gratuit et open source dans l’analyse et la compréhension des données génomiques basé principalement en langage de programmation statistique R.
+Limma est un des packages dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
 \begin{itemize}
  \item  Barcode  
 \item  Section 

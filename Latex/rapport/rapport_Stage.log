@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.30)  17 MAY 2017 06:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.14)  17 MAY 2017 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **rapport_Stage.tex
 (./rapport_Stage.tex
 LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 5 language(s) loaded.
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -409,6 +409,22 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen108
+\captionmargin@=\dimen109
+\captionwidth=\dimen110
+\caption@tempdima=\dimen111
+\caption@indent=\dimen112
+\caption@parindent=\dimen113
+\caption@hangindent=\dimen114
+)
+\c@ContinuedFloat=\count93
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/06/28 v2.15d AMS math features
 \@mathmargin=\skip50
@@ -420,46 +436,46 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
-\ex@=\dimen108
+\ex@=\dimen115
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen109
+\pmbraise@=\dimen116
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count93
+\inf@bad=\count94
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count94
-\leftroot@=\count95
+\uproot@=\count95
+\leftroot@=\count96
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count96
-\DOTSCASE@=\count97
+\classnum@=\count97
+\DOTSCASE@=\count98
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen110
+\big@size=\dimen117
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count98
-\c@MaxMatrixCols=\count99
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
 \dotsspace@=\muskip10
-\c@parentequation=\count100
-\dspbrk@lvl=\count101
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
 \tag@help=\toks19
-\row@=\count102
-\column@=\count103
-\maxfields@=\count104
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
 \andhelp@=\toks20
-\eqnshift@=\dimen111
-\alignsep@=\dimen112
-\tagshift@=\dimen113
-\tagwidth@=\dimen114
-\totwidth@=\dimen115
-\lineht@=\dimen116
+\eqnshift@=\dimen118
+\alignsep@=\dimen119
+\tagshift@=\dimen120
+\tagwidth@=\dimen121
+\totwidth@=\dimen122
+\lineht@=\dimen123
 \@envbody=\toks21
 \multlinegap=\skip51
 \multlinetaggap=\skip52
@@ -467,37 +483,67 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
-(./rapport_Stage.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/stackengine/stackengine.sty
+Package: stackengine 2016/07/28 v3.26\ Stacking text and objects in convenient 
+ways
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count106
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count107
+\calc@Bcount=\count108
+\calc@Adimen=\dimen124
+\calc@Bdimen=\dimen125
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count109
+\calc@Cskip=\skip55
+)
+\c@@stackindex=\count110
+\@boxshift=\skip56
+\stack@tmplength=\skip57
+\temp@stkl=\skip58
+\@stackedboxwidth=\skip59
+\@addedbox=\box28
+\@anchorbox=\box29
+\stackedbox=\box30
+\@centerbox=\box31
+\c@ROWcellindex@=\count111
+) (./rapport_Stage.aux)
 \openout1 = `rapport_Stage.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Info: Redefining \degres on input line 19.
-LaTeX Info: Redefining \dots on input line 19.
-LaTeX Info: Redefining \up on input line 19.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Info: Redefining \degres on input line 20.
+LaTeX Info: Redefining \dots on input line 20.
+LaTeX Info: Redefining \up on input line 20.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen117
-\scratchbox=\box28
-\nofMPsegments=\count106
-\nofMParguments=\count107
+\scratchcounter=\count112
+\scratchdimen=\dimen126
+\scratchbox=\box32
+\nofMPsegments=\count113
+\nofMParguments=\count114
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen118
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen127
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -548,7 +594,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 21.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 22.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -557,23 +605,23 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 File: ./image/ua_v_couleur.jpg Graphic file (type jpg)
 
 <use ./image/ua_v_couleur.jpg>
-Package pdftex.def Info: ./image/ua_v_couleur.jpg used on input line 26.
+Package pdftex.def Info: ./image/ua_v_couleur.jpg used on input line 27.
 (pdftex.def)             Requested size: 61.79068pt x 60.52597pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 28.
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 29.
 
 <./image/logo-generique-SD.png, id=2, 209.78375pt x 56.21pt>
 File: ./image/logo-generique-SD.png Graphic file (type png)
 
 <use ./image/logo-generique-SD.png>
-Package pdftex.def Info: ./image/logo-generique-SD.png used on input line 31.
+Package pdftex.def Info: ./image/logo-generique-SD.png used on input line 32.
 (pdftex.def)             Requested size: 209.78322pt x 56.20985pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <12> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 44.
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 45.
 
 [1
 
@@ -587,64 +635,93 @@ LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <12> not available
 File: ./image/principe.jpg Graphic file (type jpg)
 
 <use ./image/principe.jpg>
-Package pdftex.def Info: ./image/principe.jpg used on input line 99.
+Package pdftex.def Info: ./image/principe.jpg used on input line 100.
 (pdftex.def)             Requested size: 301.12425pt x 138.01527pt.
  [2 <./image/principe.jpg>]
-<./image/beadarray.png, id=26, 431.6125pt x 554.07pt>
+<./image/beadarray.png, id=29, 431.6125pt x 554.07pt>
 File: ./image/beadarray.png Graphic file (type png)
 
 <use ./image/beadarray.png>
-Package pdftex.def Info: ./image/beadarray.png used on input line 109.
+Package pdftex.def Info: ./image/beadarray.png used on input line 111.
 (pdftex.def)             Requested size: 215.80571pt x 277.03432pt.
- <./image/plan.png, id=27, 728.4816pt x 478.9092pt>
-File: ./image/plan.png Graphic file (type png)
 
-<use ./image/plan.png>
-Package pdftex.def Info: ./image/plan.png used on input line 115.
-(pdftex.def)             Requested size: 364.23991pt x 239.45401pt.
+<./image/Direct_Hyb.png, id=30, 367.3725pt x 250.9375pt>
+File: ./image/Direct_Hyb.png Graphic file (type png)
 
-Overfull \hbox (19.23991pt too wide) in paragraph at lines 115--117
+<use ./image/Direct_Hyb.png>
+Package pdftex.def Info: ./image/Direct_Hyb.png used on input line 119.
+(pdftex.def)             Requested size: 183.68579pt x 125.46843pt.
+ [3 <./image/beadarray.png>]
+<./image/direct_hybridization_assay_workflow.png, id=35, 760.8425pt x 500.87125
+pt>
+File: ./image/direct_hybridization_assay_workflow.png Graphic file (type png)
+ <use ./image/direct_hybridization_assay_workflow.png>
+Package pdftex.def Info: ./image/direct_hybridization_assay_workflow.png used o
+n input line 124.
+(pdftex.def)             Requested size: 380.42032pt x 250.435pt.
+
+Overfull \hbox (35.42032pt too wide) in paragraph at lines 124--126
  [] 
  []
 
-[3 <./image/beadarray.png>]
-Overfull \hbox (21.77586pt too wide) in paragraph at lines 137--154
+<./image/plan.png, id=36, 728.4816pt x 478.9092pt>
+File: ./image/plan.png Graphic file (type png)
+ <use ./image/plan.png>
+Package pdftex.def Info: ./image/plan.png used on input line 131.
+(pdftex.def)             Requested size: 364.23991pt x 239.45401pt.
+
+Overfull \hbox (19.23991pt too wide) in paragraph at lines 131--133
+ [] 
+ []
+
+[4 <./image/Direct_Hyb.png> <./image/direct_hybridization_assay_workflow.png>]
+Overfull \hbox (21.77586pt too wide) in paragraph at lines 163--180
 [][] 
  []
 
-[4 <./image/plan.png>]
-Overfull \hbox (1.71513pt too wide) in paragraph at lines 190--190
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./image/plan.png>]
+Overfull \hbox (13.3431pt too wide) in paragraph at lines 191--203
+[][] 
+ []
+
+[6]
+Overfull \hbox (1.71513pt too wide) in paragraph at lines 232--232
 []\T1/cmr/bx/n/14.4 ANALYSE DES DON-NÉES DE TRANS-CRIP-
  []
 
-[5] [6] (./rapport_Stage.aux) ) 
+[7] (./rapport_Stage.aux) ) 
 Here is how much of TeX's memory you used:
- 3751 strings out of 494916
- 49026 string characters out of 6179763
- 114705 words of memory out of 5000000
- 6993 multiletter control sequences out of 15000+600000
- 15508 words of font info for 31 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 40i,9n,30p,245b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/jao/.texlive2016/texmf-var/fonts/pk/ljfo
-ur/jknappen/ec/ecbx0900.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfou
-r/jknappen/ec/ecbx1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecrm1000.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecbx1000.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecbx1440.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecsi1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jkn
-appen/ec/eccc1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecss1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecsx2074.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknapp
-en/ec/eccc1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rapport_Stage.pdf (7 pages, 373522 bytes).
+ 5325 strings out of 493013
+ 74914 string characters out of 6135682
+ 150250 words of memory out of 5000000
+ 8785 multiletter control sequences out of 15000+600000
+ 16883 words of font info for 33 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,27n,39p,796b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-
+t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx100
+0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfcc1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfsi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2074.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfxc0900.pfb>
+Output written on rapport_Stage.pdf (8 pages, 545561 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
