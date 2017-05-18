@@ -152,14 +152,63 @@ Ce qui nous donne une matrice de données de dimmension :
     {\overbrace{\phantom{\smash{\tmp\mkern -36mu}}}^{\mathrm{\textstyle 24~columns}}\mkern 20mu}
 \]
 
-\subsection{Les biais possibles :}
- Il peut exister des biais systématiques dus à d'autres facteurs,
-  tels que l'affinité des séquences ou l'efficacité du marquage. 
+\subsection{Les sources de variations et les défis sur l'utilisation des puces ADN :}
+
+La littérature nous raconte que si on effectue à plusieurs reprises une même expérience, on peut se heurter à des valeurs d’expérience légèrement différentes à chaque exécution.
+Il est de ce fait très intéressant de voir de plus près les grandes étapes et les effets des processus biologiques qui sont derrières ces sources de quantité de variabilité dans l’étude des expressions génomique avec les puces ADN.
+De ce point de vue, ces variations sont considérées comme des bruits dans la phase d’analyse des expressions.\\
+Est-ce que la variation d’un gène particulier est due au bruit de fond de la puce ou c’est réellement une différence entre les différentes expériences testées ? C’est là le vrai challenge. 
+Si on prend un gène spécifique, combien de quantité de sa valeur représente la mesure de la variance due à la régulation des gènes et due à la quantité de bruit ?
+Néanmoins, une grande partie de la variabilité induite par la puce elle-même  peut être déterminée à l'aide des techniques 
+de réplications ou d’autres techniques de séparations des bruits (Exemples : conception d’expérience statistique, normalisation des données). 
+\begin{table}[!ht]
+\begin{tabular}{|l|p{6cm}|}
+\hline
+ Facteur & Commentaires\\
+\hline
+Préparation des mRNA et la transcription &  Tissus, les kits et les procedures variantes \\
+\hline 
+Transcription & Les variations inhérentes dans la réaction, le type de l'enzymes utilisé  \\
+\hline 
+L'étiquetage (Labeling) & Depend du type,des procédures et l'âge de l'étiquette  \\
+\hline
+Amplification (PCR) & Il est difficille de quantifier le rendement du PCR\\
+\hline
+Variations géométriques des broches & différentes surfaces et propriétés dues à des erreurs aléatoires de production \\
+\hline
+Volume de l'échantillon & fluctue stochastiquement même pour la même broche (pin)  \\
+\hline
+Fixation de l'échantillon & La fraction de l'ADNc cible (une gouttelette) qui est chimiquement liée à la surface de la diapositive n'est pas prise en compte \\
+\hline
+ Paramètre d'hybridation&  influencé par plusieurs facteurs comme la temperature,le temps,le buffering \\
+\hline
+ Hybridation non-spécifique& un ADNc s'hybride avec une sequence qui n'est pas exactement son complémentaire \\
+\hline
+Réglages de gain & déplace la répartition des intensités de pixels \\
+\hline
+Limitation de la plage dynamique & Variabilité de la saturation au bas de gamme ou au haut de gamme \\
+\hline
+Alignement d'image & Les images d'un même BeadArray à diverses longueurs d'onde correspondant à des canaux différents ne sont pas alignées; différents pixels sont considérés pour le même emplacement \\
+\hline
+ Placement de la grille& le centre du spot n’est pas bien localisé  \\
+\hline
+ Bruit de fond non-spécifique& Élévation erronée de la moyenne de l'intensité du bruit de fond \\
+\hline
+Forme de spot & L'intensité des spots irréguliers sont difficille à segmenter en bruit de fond \\
+\hline
+ Segmentation& Des contaminants lumineux peuvent ressembler comme un signal(ex: poussière) \\
+\hline
+ Quantification de spot& la moyenne des pixels, la médiane,... \\
+\hline
+\end{tabular}
+\caption{Sources of fluctuations in a typical cDNA microarray experiment}
+\label{Sources de variation}
+\end{table}
 \section{DESCRIPTION DES DONN\'{E}ES :}
-\subsection{ Decryptage et lecture :}
+\subsection{ Décryptage et lecture :}
 Après avoir scanné la puce, le scanner iScan d’Illumina exporte et produit des fichiers de sortie selon les paramètres définis.
 Les fichiers qui contiennent les intensités des spots (.idat) sont encryptés et d’autres fichiers sont fournis à titre indicatif et de mesure pour l’analyse.\\
-\begin{table}[!h]
+\begin{table}[!ht]
 \begin{tabular}{|l|p{9cm}|}
 \hline
 File  & Description \\
@@ -187,7 +236,7 @@ Dans la suite logique des choses, Illumina fourni un logiciel payant (GenomeStud
 Bioconductor est un projet de développement et un ensemble de package (1380 packages en 2017)  gratuit et open source dans l’analyse et la compréhension des données génomiques basé principalement en langage de programmation statistique R.
 Limma est un des packages dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
 On obtient après un objet limma de type EListRaw  qui contient les objets suivants:
-\begin{table}[!h]
+\begin{table}[!ht]
 \begin{tabular}{|l|p{9cm}|}
 \hline
  \emph{E} & matrice des intensité brutes\\
