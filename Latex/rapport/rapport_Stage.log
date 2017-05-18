@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.14)  17 MAY 2017 17:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.30)  17 MAY 2017 20:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **rapport_Stage.tex
 (./rapport_Stage.tex
 LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+Babel <3.9r> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -484,27 +484,34 @@ LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/stackengine/stackengine.sty
-Package: stackengine 2016/07/28 v3.26\ Stacking text and objects in convenient 
+Package: stackengine 2016/10/04 v4.00\ Stacking text and objects in convenient 
 ways
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count106
 )
+(/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty
+(/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
+\loi_nestcnt=\count107
+)
+Package: listofitems 2016/11/18 v1.3 Grab items in lists using user-specified s
+ep char
+)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count107
-\calc@Bcount=\count108
+\calc@Acount=\count108
+\calc@Bcount=\count109
 \calc@Adimen=\dimen124
 \calc@Bdimen=\dimen125
 \calc@Askip=\skip53
 \calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count109
+\calc@Ccount=\count110
 \calc@Cskip=\skip55
 )
-\c@@stackindex=\count110
+\c@@stackindex=\count111
 \@boxshift=\skip56
 \stack@tmplength=\skip57
 \temp@stkl=\skip58
@@ -513,7 +520,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \@anchorbox=\box29
 \stackedbox=\box30
 \@centerbox=\box31
-\c@ROWcellindex@=\count111
+\c@ROWcellindex@=\count112
 ) (./rapport_Stage.aux)
 \openout1 = `rapport_Stage.aux'.
 
@@ -534,16 +541,16 @@ LaTeX Info: Redefining \dots on input line 20.
 LaTeX Info: Redefining \up on input line 20.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count112
+\scratchcounter=\count113
 \scratchdimen=\dimen126
 \scratchbox=\box32
-\nofMPsegments=\count113
-\nofMParguments=\count114
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count115
+\MPscratchCnt=\count116
 \MPscratchDim=\dimen127
-\MPnumerator=\count116
-\makeMPintoPDFobject=\count117
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -687,41 +694,43 @@ Overfull \hbox (13.3431pt too wide) in paragraph at lines 191--203
 [][] 
  []
 
-[6]
-Overfull \hbox (1.71513pt too wide) in paragraph at lines 232--232
+
+Overfull \hbox (1.71513pt too wide) in paragraph at lines 213--213
 []\T1/cmr/bx/n/14.4 ANALYSE DES DON-NÉES DE TRANS-CRIP-
  []
 
-[7] (./rapport_Stage.aux) ) 
+[6] [7] (./rapport_Stage.aux) ) 
 Here is how much of TeX's memory you used:
- 5325 strings out of 493013
- 74914 string characters out of 6135682
- 150250 words of memory out of 5000000
- 8785 multiletter control sequences out of 15000+600000
+ 5439 strings out of 494916
+ 76721 string characters out of 6179763
+ 147964 words of memory out of 5000000
+ 8653 multiletter control sequences out of 15000+600000
  16883 words of font info for 33 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 40i,27n,39p,796b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-
-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfbx0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx100
-0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/publ
-ic/cm-super/sfcc1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publi
-c/cm-super/sfsi1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.
-pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2074.pfb></usr/share/texm
-f/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public
-/cm-super/sfxc0900.pfb>
-Output written on rapport_Stage.pdf (8 pages, 545561 bytes).
+ 14 hyphenation exceptions out of 8191
+ 40i,27n,39p,853b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/jao/.texlive2016/texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ecti1000.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecrm0900.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecbx0900.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/
+jknappen/ec/ecxc0900.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecbx1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jk
+nappen/ec/ecrm1000.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx1000.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/ecbx1440.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecsi1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknapp
+en/ec/eccc1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecss1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen
+/ec/ecsx2074.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/
+ec/eccc1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on rapport_Stage.pdf (8 pages, 466778 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 506 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
