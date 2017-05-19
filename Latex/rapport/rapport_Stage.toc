@@ -9,11 +9,11 @@
 \contentsline {subsection}{\numberline {3.1} D\IeC {\'e}cryptage et lecture :}{7}
 \contentsline {subsection}{\numberline {3.2} Donn\IeC {\'e}es brutes via Bioconductor :}{7}
 \contentsline {subsection}{\numberline {3.3} Contr\IeC {\^o}le et qualit\IeC {\'e} :}{8}
-\contentsline {section}{\numberline {4}PR\'{E}TRAITEMENT DES DONN\'{E}ES :}{8}
-\contentsline {subsection}{\numberline {4.1}Transformation :}{8}
-\contentsline {subsection}{\numberline {4.2}Normalisation :}{8}
-\contentsline {subsection}{\numberline {4.3}Filtrage :}{8}
-\contentsline {section}{\numberline {5}ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}{8}
-\contentsline {subsection}{\numberline {5.1}G\IeC {\`e}nes diff\IeC {\'e}rentiellement exprim\IeC {\'e}s :}{8}
-\contentsline {subsection}{\numberline {5.2}G\IeC {\`e}nes co-exprim\IeC {\'e}s :}{8}
-\contentsline {section}{\numberline {6}INTERP\'{E}TATION :}{8}
+\contentsline {section}{\numberline {4}PR\'{E}TRAITEMENT DES DONN\'{E}ES :}{9}
+\contentsline {subsection}{\numberline {4.1}Transformation :}{9}
+\contentsline {subsection}{\numberline {4.2}Normalisation :}{9}
+\contentsline {subsection}{\numberline {4.3}Filtrage :}{9}
+\contentsline {section}{\numberline {5}ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}{9}
+\contentsline {subsection}{\numberline {5.1}G\IeC {\`e}nes diff\IeC {\'e}rentiellement exprim\IeC {\'e}s :}{9}
+\contentsline {subsection}{\numberline {5.2}G\IeC {\`e}nes co-exprim\IeC {\'e}s :}{9}
+\contentsline {section}{\numberline {6}INTERP\'{E}TATION :}{9}

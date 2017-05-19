@@ -6,6 +6,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{amsmath}
 \usepackage{stackengine}
+%\usepackage{placeins}
 
 \newcommand\tabA[1][0.5cm]{\hspace*{#1}}
 \newcommand\tabB[1][1.5cm]{\hspace*{#1}}
@@ -96,6 +97,9 @@
   Plusieurs  types  de  puces  à  ADN  
 existent selon le support, la nature des fragments fixés à la surface, le mode de fabrication, la 
 densité, le mode de marquage des cibles et les méthodes d’hybridation.
+On sait que toutes les technologies à puce ADN se base sur le principe fondamental de l’hybridation complémentaire des brins d’acide nucléique même si leurs techniques se diffèrent largement entre-elles, 
+par exemple sur la longueur et la type de la sonde utilisée (cDNA arrays, oligonucleotide array), l’étiquetage et le protocole d’hybridation…
+La vraie différence entre ses approches réside sur la précision, la spécificité, la sensibilité et la robustesse de chaque plateforme.
 \begin{center}
  \includegraphics[scale=0.5]{./image/principe.jpg}
  % Etapes_d'une_expérience_de_biopuces.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
@@ -159,9 +163,13 @@ Il est de ce fait très intéressant de voir de plus près les grandes étapes e
 De ce point de vue, ces variations sont considérées comme des bruits dans la phase d’analyse des expressions.\\
 Est-ce que la variation d’un gène particulier est due au bruit de fond de la puce ou c’est réellement une différence entre les différentes expériences testées ? C’est là le vrai challenge. 
 Si on prend un gène spécifique, combien de quantité de sa valeur représente la mesure de la variance due à la régulation des gènes et due à la quantité de bruit ?
+Ces sources de variation (Tableau :~\ref{Sources de variation})nous mènent aux problèmes de fiabilité et de reproductibilité dans les mesures des puces ADN qui sont souvent négligés.
 Néanmoins, une grande partie de la variabilité induite par la puce elle-même  peut être déterminée à l'aide des techniques 
-de réplications ou d’autres techniques de séparations des bruits (Exemples : conception d’expérience statistique, normalisation des données). 
+de réplications ou d’autres techniques de séparations des bruits (Exemples : conception d’expérience statistique, normalisation des données).
+Plusieurs efforts ont été menés pour évaluer la fiabilité, la précision et la reproductibilité des puces ADN, inclus des projets comme MAQC( MicroArray Quality Control). \\
+
 \begin{table}[!ht]
+\centering
 \begin{tabular}{|l|p{6cm}|}
 \hline
  Facteur & Commentaires\\
@@ -174,7 +182,7 @@ L'étiquetage (Labeling) & Depend du type,des procédures et l'âge de l'étique
 \hline
 Amplification (PCR) & Il est difficille de quantifier le rendement du PCR\\
 \hline
- &  \\
+Variations géométriques des broches & différentes surfaces et propriétés dues à des erreurs aléatoires de production \\
 \hline
 Volume de l'échantillon & fluctue stochastiquement même pour la même broche (pin)  \\
 \hline
@@ -182,13 +190,11 @@ Fixation de l'échantillon & La fraction de l'ADNc cible (une gouttelette) qui e
 \hline
  Paramètre d'hybridation&  influencé par plusieurs facteurs comme la temperature,le temps,le buffering \\
 \hline
- &  \\
-\hline
  Hybridation non-spécifique& un ADNc s'hybride avec une sequence qui n'est pas exactement son complémentaire \\
 \hline
- &  \\
+Réglages de gain & déplace la répartition des intensités de pixels \\
 \hline
- &  \\
+Limitation de la plage dynamique & Variabilité de la saturation au bas de gamme ou au haut de gamme \\
 \hline
 Alignement d'image & Les images d'un même BeadArray à diverses longueurs d'onde correspondant à des canaux différents ne sont pas alignées; différents pixels sont considérés pour le même emplacement \\
 \hline
@@ -206,6 +212,7 @@ Forme de spot & L'intensité des spots irréguliers sont difficille à segmenter
 \caption{Sources of fluctuations in a typical cDNA microarray experiment}
 \label{Sources de variation}
 \end{table}
+%\FloatBarrier
 \section{DESCRIPTION DES DONN\'{E}ES :}
 \subsection{ Décryptage et lecture :}
 Après avoir scanné la puce, le scanner iScan d’Illumina exporte et produit des fichiers de sortie selon les paramètres définis.
@@ -255,7 +262,15 @@ On obtient après un objet limma de type EListRaw  qui contient les objets suiva
 \label{EListRaw}
 \end{table}
 \subsection{ Contrôle et qualité :}
+Par approximation, on peut considérer qu’un signal émit par la puce soit :
+\begin{itemize}
+ \item la vraie intensité produit par le gène cible
+ \item un signal d’une hybridation non-spécifique
+ \item un bruit de fond non-spécifique
+\end{itemize}
 
+
+La puce d’Illumina introduit alors des sondes appelées sonde de contrôle pour pouvoir mesurer et quantifier la qualité des données obtenues. 
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES :}
 \subsection{Transformation :}
 \subsection{Normalisation :}
