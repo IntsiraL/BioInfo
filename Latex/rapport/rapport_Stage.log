@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.30)  19 MAY 2017 06:06
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.14)  19 MAY 2017 17:01
+>>>>>>> cc54b06d339e3d60dad7cb03f6f09a8fb1a49aa8
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -520,26 +524,35 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \@anchorbox=\box29
 \stackedbox=\box30
 \@centerbox=\box31
+<<<<<<< HEAD
 \c@ROWcellindex@=\count112
 ) (./rapport_Stage.aux)
+=======
+\c@ROWcellindex@=\count111
+) (./rapport_Stage.aux
+
+LaTeX Warning: Label `EListRaw' multiply defined.
+
+)
+>>>>>>> cc54b06d339e3d60dad7cb03f6f09a8fb1a49aa8
 \openout1 = `rapport_Stage.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Info: Redefining \degres on input line 20.
-LaTeX Info: Redefining \dots on input line 20.
-LaTeX Info: Redefining \up on input line 20.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Info: Redefining \degres on input line 21.
+LaTeX Info: Redefining \dots on input line 21.
+LaTeX Info: Redefining \up on input line 21.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen126
@@ -603,7 +616,7 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 22.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -612,23 +625,23 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 File: ./image/ua_v_couleur.jpg Graphic file (type jpg)
 
 <use ./image/ua_v_couleur.jpg>
-Package pdftex.def Info: ./image/ua_v_couleur.jpg used on input line 27.
+Package pdftex.def Info: ./image/ua_v_couleur.jpg used on input line 28.
 (pdftex.def)             Requested size: 61.79068pt x 60.52597pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 29.
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 30.
 
 <./image/logo-generique-SD.png, id=2, 209.78375pt x 56.21pt>
 File: ./image/logo-generique-SD.png Graphic file (type png)
 
 <use ./image/logo-generique-SD.png>
-Package pdftex.def Info: ./image/logo-generique-SD.png used on input line 32.
+Package pdftex.def Info: ./image/logo-generique-SD.png used on input line 33.
 (pdftex.def)             Requested size: 209.78322pt x 56.20985pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <12> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 45.
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 46.
 
 [1
 
@@ -642,72 +655,137 @@ LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <12> not available
 File: ./image/principe.jpg Graphic file (type jpg)
 
 <use ./image/principe.jpg>
-Package pdftex.def Info: ./image/principe.jpg used on input line 100.
+Package pdftex.def Info: ./image/principe.jpg used on input line 104.
 (pdftex.def)             Requested size: 301.12425pt x 138.01527pt.
- [2 <./image/principe.jpg>]
-<./image/beadarray.png, id=29, 431.6125pt x 554.07pt>
+ [2]
+<./image/beadarray.png, id=26, 431.6125pt x 554.07pt>
 File: ./image/beadarray.png Graphic file (type png)
 
 <use ./image/beadarray.png>
-Package pdftex.def Info: ./image/beadarray.png used on input line 111.
+Package pdftex.def Info: ./image/beadarray.png used on input line 115.
 (pdftex.def)             Requested size: 215.80571pt x 277.03432pt.
-
-<./image/Direct_Hyb.png, id=30, 367.3725pt x 250.9375pt>
+ [3 <./image/principe.jpg> <./image/beadarray.png>]
+<./image/Direct_Hyb.png, id=34, 367.3725pt x 250.9375pt>
 File: ./image/Direct_Hyb.png Graphic file (type png)
 
 <use ./image/Direct_Hyb.png>
-Package pdftex.def Info: ./image/Direct_Hyb.png used on input line 119.
+Package pdftex.def Info: ./image/Direct_Hyb.png used on input line 123.
 (pdftex.def)             Requested size: 183.68579pt x 125.46843pt.
- [3 <./image/beadarray.png>]
+
 <./image/direct_hybridization_assay_workflow.png, id=35, 760.8425pt x 500.87125
 pt>
 File: ./image/direct_hybridization_assay_workflow.png Graphic file (type png)
  <use ./image/direct_hybridization_assay_workflow.png>
 Package pdftex.def Info: ./image/direct_hybridization_assay_workflow.png used o
-n input line 124.
+n input line 128.
 (pdftex.def)             Requested size: 380.42032pt x 250.435pt.
 
-Overfull \hbox (35.42032pt too wide) in paragraph at lines 124--126
+Overfull \hbox (35.42032pt too wide) in paragraph at lines 128--130
  [] 
  []
 
 <./image/plan.png, id=36, 728.4816pt x 478.9092pt>
 File: ./image/plan.png Graphic file (type png)
  <use ./image/plan.png>
-Package pdftex.def Info: ./image/plan.png used on input line 131.
+Package pdftex.def Info: ./image/plan.png used on input line 135.
 (pdftex.def)             Requested size: 364.23991pt x 239.45401pt.
 
-Overfull \hbox (19.23991pt too wide) in paragraph at lines 131--133
+Overfull \hbox (19.23991pt too wide) in paragraph at lines 135--137
  [] 
  []
 
 [4 <./image/Direct_Hyb.png> <./image/direct_hybridization_assay_workflow.png>]
-Underfull \hbox (badness 1253) in paragraph at lines 199--200
-[]\T1/cmr/m/n/10 Des conta-mi-nants lu-mi-neux peuvent
- []
+Underfull \hbox (badness 10000) in paragraph at lines 161--170
 
-
-Overfull \hbox (35.17125pt too wide) in paragraph at lines 165--204
-[][] 
  []
 
 [5 <./image/plan.png>]
-Overfull \hbox (21.77586pt too wide) in paragraph at lines 212--229
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+[]\T1/cmr/m/n/10 Préparation des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]\T1/cmr/m/n/10 Amplification
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 185--185
+[]\T1/cmr/m/n/10 Variations géo-mé-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
+[]\T1/cmr/m/n/10 Hybridation non-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
+[]\T1/cmr/m/n/10 Limitation de la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+[]\T1/cmr/m/n/10 Alignement
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--201
+[]\T1/cmr/m/n/10 Placement de la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
+[]\T1/cmr/m/n/10 Quantification de
+ []
+
+
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 173--212
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]\T1/cmr/m/n/10 (Serial Num-
+ []
+
+
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 221--238
 [][] 
  []
 
 [6]
-Overfull \hbox (13.3431pt too wide) in paragraph at lines 240--252
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 249--261
 [][] 
  []
 
+[7]
+Underfull \hbox (badness 3769) in paragraph at lines 281--281
+[]\T1/cmr/m/n/10 Contrôle de l'éti-
+ []
 
-Overfull \hbox (1.71513pt too wide) in paragraph at lines 262--262
+
+Underfull \hbox (badness 2302) in paragraph at lines 288--288
+[]\T1/cmr/m/n/10 Contrôle de bruit
+ []
+
+
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 277--291
+ [][] 
+ []
+
+
+Overfull \hbox (1.71513pt too wide) in paragraph at lines 299--299
 []\T1/cmr/bx/n/14.4 ANALYSE DES DON-NÉES DE TRANS-CRIP-
  []
 
-[7] [8] (./rapport_Stage.aux) ) 
+[8] [9] (./rapport_Stage.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  5444 strings out of 494916
  76789 string characters out of 6179763
  151972 words of memory out of 5000000
@@ -738,6 +816,35 @@ Output written on rapport_Stage.pdf (9 pages, 473532 bytes).
 PDF statistics:
  519 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
+=======
+ 5331 strings out of 493013
+ 74997 string characters out of 6135682
+ 155297 words of memory out of 5000000
+ 8791 multiletter control sequences out of 15000+600000
+ 16883 words of font info for 33 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,27n,39p,796b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1000.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1200.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfsx2074.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc0900.pfb>
+Output written on rapport_Stage.pdf (10 pages, 553206 bytes).
+PDF statistics:
+ 127 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
+>>>>>>> cc54b06d339e3d60dad7cb03f6f09a8fb1a49aa8
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

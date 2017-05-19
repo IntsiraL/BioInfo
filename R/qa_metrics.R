@@ -14,6 +14,7 @@ plot (1:12 , type = "b",  ht12snr , pch = 19, ylab = "P95 / P05", xlab = "",main
       frame.plot = TRUE)
 axis (2)
 axis(1, 1:12, nameCol , las = 2)
+abline(h=10, col="red")
 #########################################################
 nameCol <- c()
 for (i in c("Co","AL","LPS","AL_LPS")){
@@ -34,3 +35,4 @@ plot (1:12 ,  ht12snr ,type = "b", pch = 19, ylab = "P95 / P05", xlab = "",main 
       frame.plot = TRUE)
 axis (2)
 axis(1, 1:12, nameCol , las = 2)
+abline(h=10, col="red")
