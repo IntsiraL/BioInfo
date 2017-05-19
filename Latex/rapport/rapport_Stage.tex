@@ -234,7 +234,7 @@ Pour la lecture  des fichiers .idat, l’utilisation d’un fichier manifeste qu
 Dans la suite logique des choses, Illumina fourni un logiciel payant (GenomeStudio Software)  qui aide sur le traitement et l'analyse des puces ADN (Genotyping Module, Gene Expression Module, Methylation Module).
 \subsection{ Données brutes via Bioconductor :}
 Bioconductor est un projet de développement et un ensemble de package (1380 packages en 2017)  gratuit et open source dans l’analyse et la compréhension des données génomiques basé principalement en langage de programmation statistique R.
-Limma est un des packages dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
+Limma est un des packages (de choix) dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
 On obtient après un objet limma de type EListRaw  qui contient les objets suivants:
 \begin{table}[!ht]
 \begin{tabular}{|l|p{9cm}|}
