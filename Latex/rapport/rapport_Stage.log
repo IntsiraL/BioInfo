@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.30)  19 MAY 2017 06:06
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.14)  19 MAY 2017 17:01
->>>>>>> cc54b06d339e3d60dad7cb03f6f09a8fb1a49aa8
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.30)  22 MAY 2017 07:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,17 +520,8 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \@anchorbox=\box29
 \stackedbox=\box30
 \@centerbox=\box31
-<<<<<<< HEAD
 \c@ROWcellindex@=\count112
 ) (./rapport_Stage.aux)
-=======
-\c@ROWcellindex@=\count111
-) (./rapport_Stage.aux
-
-LaTeX Warning: Label `EListRaw' multiply defined.
-
-)
->>>>>>> cc54b06d339e3d60dad7cb03f6f09a8fb1a49aa8
 \openout1 = `rapport_Stage.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -552,7 +539,7 @@ LaTeX Font Info:    ... okay on input line 21.
 LaTeX Info: Redefining \degres on input line 21.
 LaTeX Info: Redefining \dots on input line 21.
 LaTeX Info: Redefining \up on input line 21.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen126
@@ -765,31 +752,56 @@ Underfull \hbox (badness 3769) in paragraph at lines 281--281
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 288--288
+Underfull \hbox (badness 2302) in paragraph at lines 293--293
 []\T1/cmr/m/n/10 Contrôle de bruit
  []
 
 
-Overfull \hbox (20.43306pt too wide) in paragraph at lines 277--291
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 277--296
  [][] 
  []
 
 
-Overfull \hbox (1.71513pt too wide) in paragraph at lines 299--299
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
+[]\T1/cmr/m/n/10 Hybridization
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[]\T1/cmr/m/n/10 Biotin and High
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 312--312
+[]\T1/cmr/m/n/10 Negative Controls
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+\T1/cmr/m/n/10 (Back-ground and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+[]\T1/cmr/m/n/10 Gene In-ten-sity
+ []
+
+
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 302--319
+ [][] 
+ []
+
+
+Overfull \hbox (1.71513pt too wide) in paragraph at lines 327--327
 []\T1/cmr/bx/n/14.4 ANALYSE DES DON-NÉES DE TRANS-CRIP-
  []
 
-[8] [9] (./rapport_Stage.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[8] [9] (./rapport_Stage.aux) ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 5444 strings out of 494916
- 76789 string characters out of 6179763
- 151972 words of memory out of 5000000
- 8658 multiletter control sequences out of 15000+600000
+ 5447 strings out of 494916
+ 76842 string characters out of 6179763
+ 152988 words of memory out of 5000000
+ 8661 multiletter control sequences out of 15000+600000
  16883 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  40i,27n,39p,853b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -812,39 +824,10 @@ ec/eccc1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rapport_Stage.pdf (9 pages, 473532 bytes).
+Output written on rapport_Stage.pdf (10 pages, 481923 bytes).
 PDF statistics:
- 519 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
-=======
- 5331 strings out of 493013
- 74997 string characters out of 6135682
- 155297 words of memory out of 5000000
- 8791 multiletter control sequences out of 15000+600000
- 16883 words of font info for 33 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 40i,27n,39p,796b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1000.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1200.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfsx2074.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc0900.pfb>
-Output written on rapport_Stage.pdf (10 pages, 553206 bytes).
-PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
->>>>>>> cc54b06d339e3d60dad7cb03f6f09a8fb1a49aa8
+ 538 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -170,9 +170,9 @@ Plusieurs efforts ont été menés pour évaluer la fiabilité, la précision et
 
 \begin{table}[!ht]
 \centering
-\begin{tabular}{|l|p{6cm}|}
+\begin{tabular}{|p{3cm}|p{9cm}|}
 \hline
- Facteur & Commentaires\\
+ \emph{Facteur} & \emph{Commentaires}\\
 \hline
 Préparation des mRNA et la transcription &  Tissus, les kits et les procedures variantes \\
 \hline 
@@ -218,9 +218,9 @@ Forme de spot & L'intensité des spots irréguliers sont difficille à segmenter
 Après avoir scanné la puce, le scanner iScan d’Illumina exporte et produit des fichiers de sortie selon les paramètres définis.
 Les fichiers qui contiennent les intensités des spots (.idat) sont encryptés et d’autres fichiers sont fournis à titre indicatif et de mesure pour l’analyse.\\
 \begin{table}[!ht]
-\begin{tabular}{|l|p{9cm}|}
+\begin{tabular}{|p{3cm}|p{9cm}|}
 \hline
-File  & Description \\
+\emph{File}  & \emph{Description} \\
 \hline
  (Serial Number).txt & un fichier qui stocke la positions et l'identité de chaque spots, qui contient quelques informations sur les paramètres du scanner\\
 \hline
@@ -243,10 +243,10 @@ Pour la lecture  des fichiers .idat, l’utilisation d’un fichier manifeste qu
 Dans la suite logique des choses, Illumina fourni un logiciel payant (GenomeStudio Software)  qui aide sur le traitement et l'analyse des puces ADN (Genotyping Module, Gene Expression Module, Methylation Module).
 \subsection{ Données brutes via Bioconductor :}
 Bioconductor est un projet de développement et un ensemble de package (1380 packages en 2017)  gratuit et open source dans l’analyse et la compréhension des données génomiques basé principalement en langage de programmation statistique R.
-Limma est un des packages dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
+Limma est un des packages (de choix) dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
 On obtient après un objet limma de type EListRaw  qui contient les objets suivants:
 \begin{table}[!ht]
-\begin{tabular}{|l|p{9cm}|}
+\begin{tabular}{|p{3cm}|p{9cm}|}
 \hline
  \emph{E} & matrice des intensité brutes\\
 \hline
@@ -268,9 +268,55 @@ Par approximation, on peut considérer qu’un signal émit par la puce soit :
  \item un signal d’une hybridation non-spécifique
  \item un bruit de fond non-spécifique
 \end{itemize}
+La puce d’Illumina introduit alors des sondes appelées sonde de contrôle pour pouvoir mesurer et quantifier la qualité des données obtenues.
+Avec ces probes contrôles, on peut quantifier les bruits et la qualité du signal, de voir la qualité de la mesure d’expression d’un spot d’un BeadArray particulier et de son ensemble. 
+Une valeur anormale produit par un seul BeadArray peut compromettre le résultat d’une analyse sur l’ensemble des données. 
+On ne peut pas donc être assuré d’avoir un bon résultat en phase d’analyse si la qualité des données obtenues n’est pas acceptable.
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+ Contrôle de spécimen biologique & ces sont des gènes appelés ‘housekeeping genes’ qui doivent être exprimés dans tous les échantillons\\
+\hline
+Contrôle de l’étiquetage des échantillons (Labeling)   &  des ARN spécifiques(lysA,pheA,thrB,trpF) sont introduits dans les échantillons juste avant la transcription inverse (cDNA) et l’étiquetage. Des faibles signaux provenant de ses sondes indiquent des éventuelles problèmes lors de la réaction \\
+\hline 
+Contrôle de l’hybridation & 
+\begin{itemize}
+ \item 
+\end{itemize}
+\\
+\hline
+Contrôle de génération des signaux & des ARN sont marqués par de la biotin. On attend un signal d'hybridation positif provenant de ces sondes\\
+\hline
+Contrôle de bruit de fond & des centaines de sondes de séquences aléatoires sans cibles dans le génome sont intégrées dans la puce reflétant les signaux de bruit de fond du système d'imagerie,d'hybridation croisée et autres.On s'attend à des faibles signaux provenant de ces sondes. \\
+\hline
+\end{tabular}
+\caption{Liste des contrôles des données d'Illumina BeadArray}
+\label{Control Illumina}
+\end{table}
 
-
-La puce d’Illumina introduit alors des sondes appelées sonde de contrôle pour pouvoir mesurer et quantifier la qualité des données obtenues. 
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+ \emph{Métiques} & \emph{Valeurs attendues}\\
+\hline
+Hybridization Controls*   &  High > Medium > Low \\
+\hline 
+Low Stringency* & PM > MM2\\
+\hline
+Biotin and High Stringency* & valeurs élevées\\
+\hline
+Negative Controls (Background and Noise) & valeurs faibles \\
+\hline
+Gene Intensity (Housekeeping and All Genes) & Plus élevée que les bruits de fond (Housekeeping > All Genes) \\
+\hline
+Labeling and Background & Labeling >= Background \\
+\hline
+\end{tabular}
+\caption{Contrôle d'hybridation direct de la technologie BeadArray d'Illumina}
+\label{Control Dyrect  Hyb}
+\end{table}
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES :}
 \subsection{Transformation :}
 \subsection{Normalisation :}
