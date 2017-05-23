@@ -319,8 +319,18 @@ Labeling and Background & Labeling >= Background \\
 \caption{Contrôle d'hybridation direct de la technologie BeadArray d'Illumina}
 \label{Control Dyrect  Hyb}
 \end{table}
+\begin{center}
+ \includegraphics[scale=0.7]{../../R/output/SummaryControl.png}
+ % SummaryControl.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+\end{center}
+
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES :}
 \subsection{Transformation :}
+La distribution du niveau d'expression des gènes est très asymétrique avec un petit nombre de valeurs élevées. C’est une source de problèmes, car de nombreuses méthodes statistiques supposent implicitement une distribution gaussienne. 
+Un simple calcul d’écart type ne satisfait donc pas de donner une interprétation habituelle de la distribution. La transformation logarithmique est la plus utilisée. 
+\\Il y a plusieurs avantages d’utiliser la transformation logarithmique. Les données transformées sont plus faciles à interpréter (avec la variation du niveau d’expression des gènes plus réaliste) et aussi plus signifiantes de point de vue biologique (les intensités sont généralement comprises entre 0 et 65 535). 
+L’asymétrie est fortement diminuée et la transformation  rend la distribution du niveau d’expression des gènes presque normale(distribution gaussienne).
+Après transformation, les méthodes statistiques peuvent être utilisées en toute confiance. 
 \subsection{Normalisation :}
 \subsection{Filtrage :}
 

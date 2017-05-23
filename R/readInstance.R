@@ -1,5 +1,5 @@
 library(limma)
-library(illuminaio)
+#library(illuminaio)
 
 idatfilesPath<-getwd()
 #######################################################################################################
@@ -45,13 +45,7 @@ colnames(obj$other$NumBeads) <- nameCol
 colnames(obj$other$STDEV) <- nameCol
 
 #juste un petit control des p-values
-obj$genes$DetectionPValue <- detectionPValues(obj)
-
-
-#correction de bruit de fond et normalisaion (par quantille) avec neqc (ajustement des paramètres au fur et à mesure)
-# à tester la fonction backgroundCorrect()
-#dCorect <- neqc(obj)
-
+#obj$genes$DetectionPValue <- detectionPValues(obj)
 
 #décryptage des fichier idat avec illuminao
 #mydata = list()
@@ -59,8 +53,22 @@ obj$genes$DetectionPValue <- detectionPValues(obj)
 #  mydata[[nameCol[i]]] <- readIDAT(idatFiles[i])
 #}
 
-targetData <- readTargets(file = "../Data/Annot.txt")
+#targetData <- readTargets(file = "../Data/Annot.txt")
 ###############################################################################
 ## Control Data                                                              ##
 ###############################################################################
+controlData <- obj[obj$genes$Status != "regular",]
+bruteData <- obj[obj$genes$Status == "regular",]
 source(file = "controlData.R")
+###############################################################################
+## Preprocessing Transformation Normalization Filtrage                                                              ##
+###############################################################################
+#correction de bruit de fond et normalisaion (par quantille) avec neqc (ajustement des paramètres au fur et à mesure)
+# à tester la fonction backgroundCorrect()
+#dCorect <- neqc(obj)
+#plotMD(obj)
+#plotMD(dCorrect)
+#plotDensities(obj$E[,1:8],legend = "topright",main = "Densité de la population 1 avant la normalisation")
+#plotDensities(dCorect$E[,1:8],legend = "topright",main = "Densité de la population 1 après la normalisation")
+#boxplot(obj$E[,1:8],main="Box plot des signaux de la population 1 avant normalisation", las=2)
+#boxplot(dCorect$E[,1:8],main="Box plot des signaux de la population 1 après normalisation", las=2)

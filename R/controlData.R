@@ -3,8 +3,6 @@
 ############################## CONTROL DATA
 #######################################################################################################
 #######################################################################################################
-controlData <- obj[obj$genes$Status != "regular",]
-bruteData <- obj[obj$genes$Status == "regular",]
 #function to add the error bar representing the confidence interval
 error.bar <- function(x, y, upper, lower=upper, length=0.1,...){
   arrows(x,y+upper, x, y-lower, angle=90, code=3, length=length, ...)
@@ -62,10 +60,6 @@ axis(1, at=c(1:24), labels = nameCol, las=2)
 ## Biotin & High Stringency   | Low Stringency                               ##
 ###############################################################################
 biotC <- obj[obj$genes$Status == "biotin",]
-#stringC <- obj[obj$genes$Status == "low_stringency_hyb",]
-#for(i in c(1:24)){
-#  stringC$E[,i] <- sort(stringC$E[,i])
-#}
 biot = c()
 for(i in c(1:24)){
   biot <- c(biot,mean(c(biotC$E[,i])))
@@ -153,4 +147,14 @@ error.bar(giC_Bar,gi, giSD)
 lbkC_Bar <- barplot(labk, ylim = c(0,1.2*max(labk)), ylab = "Signal",main = "Labeling & Background")
 error.bar(lbkC_Bar,labk, labkSD)
 par(mfcol=c(1,1))
-boxplot(log2(bruteData$E), las= 2)
+#boxplot(log2(bruteData$E), las= 2)
+###############################################################################
+## Dispertion des valeurs entre population                                   ##
+###############################################################################
+boxplot(log2(bruteData$E[,1:8]),main = "Box plot des signaux sur de la Population 1", las= 2)
+boxplot(log2(bruteData$E[,9:16]),main = "Box plot des signaux sur la Population 2", las= 2)
+boxplot(log2(bruteData$E[,17:24]),main = "Box plot des signaux sur de la Population 3", las= 2)
+
+boxplot(log2(c(bruteData$E[,1:8])),main = "Dispersion du signal sur de la Population 1")
+boxplot(log2(c(bruteData$E[,9:16])),main = "Dispersion du signal sur la Population 2")
+boxplot(log2(c(bruteData$E[,17:24])),main = "Dispersion du signal sur de la Population 3")

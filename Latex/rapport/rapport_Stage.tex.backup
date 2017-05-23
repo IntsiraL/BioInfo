@@ -282,7 +282,9 @@ Contrôle de l’étiquetage des échantillons (Labeling)   &  des ARN spécifiq
 \hline 
 Contrôle de l’hybridation & 
 \begin{itemize}
- \item 
+ \item Cy3-labeled hyb : ce contrôle se compose de 6 sondes d’oligonucléotides marqué par le fluorochrome Cy3 avec trois concentrations (low, medium, high) et doit produire des signaux progressivement croissants.
+ \item Low-stringency hyb: ce contrôle de stringence d’hybridation se compose de 8 sondes (medium, high) avec exception que chaque sonde contient deux bases mésappariés  (Perfect Match \& Mismatch )
+ \item High-stringency hyb
 \end{itemize}
 \\
 \hline
