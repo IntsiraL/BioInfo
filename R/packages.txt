@@ -9,7 +9,9 @@ biocLite(c("beadarrayExampleData", "beadarrayExampleData"))  ###juste pour voir 
 cluster
 ade4
 dbscan
+FactoMineR
 ------------------------------------------------
 		Utilitaire linux
 sudo apt-get install libxml2-dev
 sudo apt-get install libcurl4-openssl-dev
+apt-get install libnlopt-dev

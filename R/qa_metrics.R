@@ -36,3 +36,5 @@ plot (1:12 ,  ht12snr ,type = "b", pch = 19, ylab = "P95 / P05", xlab = "",main 
 axis (2)
 axis(1, 1:12, nameCol , las = 2)
 abline(h=10, col="red")
+#########################################
+#sampleGene  <- read.table(paste(path,"/../Data/dataTest_A.csv",sep = ""), sep = "\t", header = TRUE ,as.is = TRUE)

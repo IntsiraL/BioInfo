@@ -23,29 +23,29 @@ for (i in idatFiles64){
 obj<-read.idat(idatFiles, bgxfile, dateinfo=TRUE,annotation = "Symbol",tolerance=0L, verbose = TRUE)
 
 #renomer les colonnes de la matrice des intensités
-nameCol <- c("P1_G_Co","P1_M_AL","P1_G_LPS","P1_G_AL_LPS","P1_M_Co","P1_G_AL","P1_M_LPS","P1_M_AL_LPS")
+nameCol <- c("P1_G","P1_MAL","P1_GLPS","P1_GALLPS","P1_M","P1_GAL","P1_MLPS","P1_MALLPS")
 
-  for (i in c("Co","AL","LPS","AL_LPS")){
-    nameCol <- c(nameCol, paste("P2","G",i,sep = "_"))
+  for (i in c("","AL","LPS","ALLPS")){
+    nameCol <- c(nameCol, paste("P2_G",i,sep = ""))
   }
 
-  for (i in c("Co","AL","LPS","AL_LPS")){
-    nameCol <- c(nameCol, paste("P2","M",i,sep = "_"))
+  for (i in c("","AL","LPS","ALLPS")){
+    nameCol <- c(nameCol, paste("P2_M",i,sep = ""))
   }
 
-  for (i in c("Co","AL","LPS","AL_LPS")){
-    nameCol <- c(nameCol, paste("P3","G",i,sep = "_"))
+  for (i in c("","AL","LPS","AL_LPS")){
+    nameCol <- c(nameCol, paste("P3_G",i,sep = ""))
   }
 
-  for (i in c("Co","AL","LPS","AL_LPS")){
-    nameCol <- c(nameCol, paste("P3","M",i,sep = "_"))
+  for (i in c("","AL","LPS","ALLPS")){
+    nameCol <- c(nameCol, paste("P3_M",i,sep = ""))
   }
 colnames(obj$E) <- nameCol
 colnames(obj$other$NumBeads) <- nameCol
 colnames(obj$other$STDEV) <- nameCol
 
 #juste un petit control des p-values
-#obj$genes$DetectionPValue <- detectionPValues(obj)
+obj$genes$DetectionPValue <- detectionPValues(obj)
 
 #décryptage des fichier idat avec illuminao
 #mydata = list()
@@ -65,10 +65,30 @@ source(file = "controlData.R")
 ###############################################################################
 #correction de bruit de fond et normalisaion (par quantille) avec neqc (ajustement des paramètres au fur et à mesure)
 # à tester la fonction backgroundCorrect()
-#dCorect <- neqc(obj)
-#plotMD(obj)
-#plotMD(dCorrect)
-#plotDensities(obj$E[,1:8],legend = "topright",main = "Densité de la population 1 avant la normalisation")
-#plotDensities(dCorect$E[,1:8],legend = "topright",main = "Densité de la population 1 après la normalisation")
-#boxplot(obj$E[,1:8],main="Box plot des signaux de la population 1 avant normalisation", las=2)
-#boxplot(dCorect$E[,1:8],main="Box plot des signaux de la population 1 après normalisation", las=2)
+dCorect <- neqc(obj)
+plotMD(obj)
+plotMD(dCorect)
+plotDensities(obj$E[,1:8],legend = "topright",main = "Densité de la population 1 avant la normalisation")
+plotDensities(dCorect$E[,1:8],legend = "topright",main = "Densité de la population 1 après la normalisation")
+boxplot(dCorect$E[,1:8],main="Box plot des signaux de la population 1 après normalisation", las=2)
+################################
+# Calcul des moyennes des P-Values
+################################
+tab = c()
+for(i in c(1:nrow(dCorect$E))){
+  tab <- c(tab,mean(dCorect$genes$DetectionPValue[i,1:8]))
+}
+dCorect$genes$mPValuePop1 <- matrix(tab,nrow = nrow(dCorect$E), ncol = 1)
+tab = c()
+for(i in c(1:nrow(dCorect$E))){
+  tab <- c(tab,mean(dCorect$genes$DetectionPValue[i,9:16]))
+}
+dCorect$genes$mPValuePop2 <- matrix(tab,nrow = nrow(dCorect$E), ncol = 1)
+tab = c()
+for(i in c(1:nrow(dCorect$E))){
+  tab <- c(tab,mean(dCorect$genes$DetectionPValue[i,17:24]))
+}
+dCorect$genes$mPValuePop3 <- matrix(tab,nrow = nrow(dCorect$E), ncol = 1)
+boxplot(dCorect$genes$mPValuePop1)
+abline(h=0.01, col="red")
+abline(h=0.05, col="red")
