@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.30)  22 MAY 2017 21:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=latex 2017.1.30)  1 JUN 2017 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -393,18 +393,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: dvips.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count92
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2016/07/10 v3.1a Driver-dependent file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
@@ -423,7 +415,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen113
 \caption@hangindent=\dimen114
 )
-\c@ContinuedFloat=\count93
+\c@ContinuedFloat=\count92
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/06/28 v2.15d AMS math features
@@ -445,13 +437,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count94
+\inf@bad=\count93
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count95
-\leftroot@=\count96
+\uproot@=\count94
+\leftroot@=\count95
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count97
-\DOTSCASE@=\count98
+\classnum@=\count96
+\DOTSCASE@=\count97
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
@@ -460,15 +452,15 @@ LaTeX Info: Redefining \cdots on input line 518.
 \big@size=\dimen117
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count99
-\c@MaxMatrixCols=\count100
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
 \dotsspace@=\muskip10
-\c@parentequation=\count101
-\dspbrk@lvl=\count102
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
 \tag@help=\toks19
-\row@=\count103
-\column@=\count104
-\maxfields@=\count105
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
 \andhelp@=\toks20
 \eqnshift@=\dimen118
 \alignsep@=\dimen119
@@ -489,29 +481,29 @@ ways
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count106
+\etb@tempcnta=\count105
 )
 (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty
 (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_nestcnt=\count107
+\loi_nestcnt=\count106
 )
 Package: listofitems 2016/11/18 v1.3 Grab items in lists using user-specified s
 ep char
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count108
-\calc@Bcount=\count109
+\calc@Acount=\count107
+\calc@Bcount=\count108
 \calc@Adimen=\dimen124
 \calc@Bdimen=\dimen125
 \calc@Askip=\skip53
 \calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count110
+\calc@Ccount=\count109
 \calc@Cskip=\skip55
 )
-\c@@stackindex=\count111
+\c@@stackindex=\count110
 \@boxshift=\skip56
 \stack@tmplength=\skip57
 \temp@stkl=\skip58
@@ -520,7 +512,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \@anchorbox=\box29
 \stackedbox=\box30
 \@centerbox=\box31
-\c@ROWcellindex@=\count112
+\c@ROWcellindex@=\count111
 ) (./rapport_Stage.aux)
 \openout1 = `rapport_Stage.aux'.
 
@@ -539,154 +531,137 @@ LaTeX Font Info:    ... okay on input line 21.
 LaTeX Info: Redefining \degres on input line 21.
 LaTeX Info: Redefining \dots on input line 21.
 LaTeX Info: Redefining \up on input line 21.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen126
-\scratchbox=\box32
-\nofMPsegments=\count114
-\nofMParguments=\count115
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen127
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks24
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 23.
-
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<./image/ua_v_couleur.jpg, id=1, 61.79085pt x 60.52612pt>
-File: ./image/ua_v_couleur.jpg Graphic file (type jpg)
 
-<use ./image/ua_v_couleur.jpg>
-Package pdftex.def Info: ./image/ua_v_couleur.jpg used on input line 28.
-(pdftex.def)             Requested size: 61.79068pt x 60.52597pt.
+! LaTeX Error: Cannot determine size of graphic in ./image/ua_v_couleur.jpg (no
+ BoundingBox).
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 ...\includegraphics{./image/ua_v_couleur.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ./image/ua_v_couleur.jpg Graphic file (type eps)
+<./image/ua_v_couleur.jpg>
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10> not available
 (Font)              Font shape `T1/cmr/m/sc' tried instead on input line 30.
 
-<./image/logo-generique-SD.png, id=2, 209.78375pt x 56.21pt>
-File: ./image/logo-generique-SD.png Graphic file (type png)
 
-<use ./image/logo-generique-SD.png>
-Package pdftex.def Info: ./image/logo-generique-SD.png used on input line 33.
-(pdftex.def)             Requested size: 209.78322pt x 56.20985pt.
+! LaTeX Error: Cannot determine size of graphic in ./image/logo-generique-SD.pn
+g (no BoundingBox).
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...udegraphics{./image/logo-generique-SD.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ./image/logo-generique-SD.png Graphic file (type eps)
+<./image/logo-generique-SD.png>
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <12> not available
 (Font)              Font shape `T1/cmr/m/sc' tried instead on input line 46.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./image/ua_v_couleur.jpg> 
-<./image/logo-generique-SD.png>] (./rapport_Stage.toc)
+] (./rapport_Stage.toc)
 \tf@toc=\write3
 \openout3 = `rapport_Stage.toc'.
 
  [1]
-<./image/principe.jpg, id=21, 602.25pt x 276.03125pt>
-File: ./image/principe.jpg Graphic file (type jpg)
 
-<use ./image/principe.jpg>
-Package pdftex.def Info: ./image/principe.jpg used on input line 104.
-(pdftex.def)             Requested size: 301.12425pt x 138.01527pt.
- [2]
-<./image/beadarray.png, id=26, 431.6125pt x 554.07pt>
-File: ./image/beadarray.png Graphic file (type png)
+! LaTeX Error: Cannot determine size of graphic in ./image/principe.jpg (no Bou
+ndingBox).
 
-<use ./image/beadarray.png>
-Package pdftex.def Info: ./image/beadarray.png used on input line 115.
-(pdftex.def)             Requested size: 215.80571pt x 277.03432pt.
- [3 <./image/principe.jpg> <./image/beadarray.png>]
-<./image/Direct_Hyb.png, id=34, 367.3725pt x 250.9375pt>
-File: ./image/Direct_Hyb.png Graphic file (type png)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 ...graphics[scale=0.5]{./image/principe.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<use ./image/Direct_Hyb.png>
-Package pdftex.def Info: ./image/Direct_Hyb.png used on input line 123.
-(pdftex.def)             Requested size: 183.68579pt x 125.46843pt.
+File: ./image/principe.jpg Graphic file (type eps)
+<./image/principe.jpg> [2]
 
-<./image/direct_hybridization_assay_workflow.png, id=35, 760.8425pt x 500.87125
-pt>
-File: ./image/direct_hybridization_assay_workflow.png Graphic file (type png)
- <use ./image/direct_hybridization_assay_workflow.png>
-Package pdftex.def Info: ./image/direct_hybridization_assay_workflow.png used o
-n input line 128.
-(pdftex.def)             Requested size: 380.42032pt x 250.435pt.
+! LaTeX Error: Cannot determine size of graphic in ./image/beadarray.png (no Bo
+undingBox).
 
-Overfull \hbox (35.42032pt too wide) in paragraph at lines 128--130
- [] 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 ...raphics[scale=0.5]{./image/beadarray.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-<./image/plan.png, id=36, 728.4816pt x 478.9092pt>
-File: ./image/plan.png Graphic file (type png)
- <use ./image/plan.png>
-Package pdftex.def Info: ./image/plan.png used on input line 135.
-(pdftex.def)             Requested size: 364.23991pt x 239.45401pt.
+File: ./image/beadarray.png Graphic file (type eps)
+<./image/beadarray.png>
 
-Overfull \hbox (19.23991pt too wide) in paragraph at lines 135--137
- [] 
- []
+! LaTeX Error: Cannot determine size of graphic in ./image/Direct_Hyb.png (no B
+oundingBox).
 
-[4 <./image/Direct_Hyb.png> <./image/direct_hybridization_assay_workflow.png>]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 ...aphics[scale=0.5]{./image/Direct_Hyb.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ./image/Direct_Hyb.png Graphic file (type eps)
+<./image/Direct_Hyb.png>
+
+! LaTeX Error: Cannot determine size of graphic in ./image/direct_hybridization
+_assay_workflow.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 .../direct_hybridization_assay_workflow.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ./image/direct_hybridization_assay_workflow.png Graphic file (type eps)
+<./image/direct_hybridization_assay_workflow.png>
+
+! LaTeX Error: Cannot determine size of graphic in ./image/plan.png (no Boundin
+gBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 ...ludegraphics[scale=0.5]{./image/plan.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+File: ./image/plan.png Graphic file (type eps)
+<./image/plan.png>
 Underfull \hbox (badness 10000) in paragraph at lines 161--170
 
  []
 
-[5 <./image/plan.png>]
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 177--177
 []\T1/cmr/m/n/10 Préparation des
  []
@@ -741,19 +716,14 @@ Overfull \hbox (20.43306pt too wide) in paragraph at lines 221--238
 [][] 
  []
 
-[6]
+
 Overfull \hbox (20.43306pt too wide) in paragraph at lines 249--261
 [][] 
  []
 
-[7]
+[4] [5]
 Underfull \hbox (badness 3769) in paragraph at lines 281--281
 []\T1/cmr/m/n/10 Contrôle de l'éti-
- []
-
-
-Underfull \hbox (badness 2302) in paragraph at lines 293--293
-[]\T1/cmr/m/n/10 Contrôle de bruit
  []
 
 
@@ -791,59 +761,37 @@ Overfull \hbox (20.43306pt too wide) in paragraph at lines 302--319
  [][] 
  []
 
-<../../R/output/SummaryControl.png, id=60, 571.38469pt x 524.71031pt>
-File: ../../R/output/SummaryControl.png Graphic file (type png)
 
-<use ../../R/output/SummaryControl.png>
-Package pdftex.def Info: ../../R/output/SummaryControl.png used on input line 3
-23.
-(pdftex.def)             Requested size: 399.96655pt x 367.29471pt.
+! LaTeX Error: Cannot determine size of graphic in ../../R/output/SummaryContro
+l.png (no BoundingBox).
 
-Overfull \hbox (54.96655pt too wide) in paragraph at lines 323--325
- [] 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.323 ...e=0.7]{../../R/output/SummaryControl.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-[8]
-Overfull \vbox (305.78183pt too high) has occurred while \output is active []
+File: ../../R/output/SummaryControl.png Graphic file (type eps)
+<../../R/output/SummaryControl.png> [6]
+Overfull \vbox (12.32957pt too high) has occurred while \output is active []
 
 
-[9 <../../R/output/SummaryControl.png>]
+[7]
 Overfull \hbox (1.71513pt too wide) in paragraph at lines 337--337
 []\T1/cmr/bx/n/14.4 ANALYSE DES DON-NÉES DE TRANS-CRIP-
  []
 
-[10] (./rapport_Stage.aux) ) 
+[8] (./rapport_Stage.aux) ) 
 Here is how much of TeX's memory you used:
- 5453 strings out of 494916
- 77026 string characters out of 6179763
- 152988 words of memory out of 5000000
- 8665 multiletter control sequences out of 15000+600000
+ 4506 strings out of 494917
+ 61791 string characters out of 6179789
+ 164025 words of memory out of 5000000
+ 7763 multiletter control sequences out of 15000+600000
  16883 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,27n,39p,853b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecti1000.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecrm0900.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecbx0900.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecxc0900.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecbx1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecrm1000.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecbx1000.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappe
-n/ec/ecbx1440.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecsi1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/
-ec/eccc1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecss1200.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecsx2074.600pk> </home/jao/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/
-eccc1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rapport_Stage.pdf (11 pages, 495513 bytes).
-PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36i,27n,39p,25338b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on rapport_Stage.dvi (9 pages, 30480 bytes).

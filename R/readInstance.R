@@ -60,6 +60,10 @@ obj$genes$DetectionPValue <- detectionPValues(obj)
 controlData <- obj[obj$genes$Status != "regular",]
 bruteData <- obj[obj$genes$Status == "regular",]
 source(file = "controlData.R")
+#estimation de proportion des sondes exprimées
+plot(propexpr(obj),type = "b", main = "Estimation de proportion des sondes exprimées",ylab = "",xlab = "")
+axis(1,1:24,nameCol , las = 2)
+abline(v=12.5, col="red")
 ###############################################################################
 ## Preprocessing Transformation Normalization Filtrage                                                              ##
 ###############################################################################
@@ -92,3 +96,10 @@ dCorect$genes$mPValuePop3 <- matrix(tab,nrow = nrow(dCorect$E), ncol = 1)
 boxplot(dCorect$genes$mPValuePop1)
 abline(h=0.01, col="red")
 abline(h=0.05, col="red")
+################################
+# Analyse différentielle regression linéaire
+################################
+#P1_G vs P1_GAL
+designGvsGAL <- cbind(G=as.numeric(nameCol == "P1_G"),GAL=as.numeric(nameCol == "P1_GAL"))
+p1GvsGAL <- lmFit(dCorect,designGvsGAL)
+p1GvsGAL <- eBayes(p1GvsGAL)
