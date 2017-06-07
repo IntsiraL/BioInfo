@@ -6,6 +6,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{amsmath}
 \usepackage{stackengine}
+\usepackage{setspace}
 %\usepackage{placeins}
 
 \newcommand\tabA[1][0.5cm]{\hspace*{#1}}
@@ -39,21 +40,35 @@
     { \huge \bfseries ANALYSE TRANSCRIPTOMIQUE\\[0.4cm] }
 
     \HRule \\[2cm]
-
-    % Author and supervisor
-    \begin{minipage}{0.4\textwidth}
-      \begin{flushleft} \large
-        \large Présenté par : \\\textsc{RASOLONIAINA Marlino}
-      \end{flushleft}
+    \centering\vspace*{\fill}
+    \begin{minipage}{9\textwidth}
+    \begin{tabular}{cl}
+       \large Présenté par : &\tabC \textsc{RASOLONIAINA Marlino}\\
+       \newline
+       \emph{Maître de stage  :} &\tabC Dr. \textsc{Valérie Segers}\\
+       \emph{Responsable d'équipe : } &\tabC Dr.  \textsc{Yves Delneste} \\
+       
+    \end{tabular}
+    \\\emph{Laboratoire d'accueil :} \tabC \tabA \textsc{INSERM U564}-Equipe 2 
+    \\\tabC \tabC \tabC Bâtiment Montéclair 
+    \\\tabC \tabC \tabC CHU-4,rue Larrey 
+    \\\tabC \tabC \tabC 49933 ANGERS
     \end{minipage}
-    \begin{minipage}{0.4\textwidth}
-      \begin{flushright} \large
-        \emph{Tuteur :} M. Le \textsc{Tuteur}\\
-        \emph{Chef d'équipe : } M. Chef \textsc{D’Équipe}
-      \end{flushright}
-    \end{minipage}
-
-    \vfill
+    \vspace*{\fill}
+     % Author and supervisor
+%      \begin{minipage}{0.4\textwidth}
+%        \begin{flushleft} \large
+%          \large Présenté par : \\\textsc{RASOLONIAINA Marlino}
+%        \end{flushleft}
+%      \end{minipage}
+%      \begin{minipage}{0.4\textwidth}
+%        \begin{flushright} \large
+%          \emph{Maître de stage  :} Dr. \textsc{Valérie Segers}\\
+%          \emph{Responsable d'équipe : } Dr.  \textsc{Yves Delneste}
+%        \end{flushright}
+%      \end{minipage}
+%  
+%      \vfill
 
     % Bottom of the page
     {\large 12 Avril 2017 — 20 Juin 2017}
@@ -367,9 +382,53 @@ Parmi ces sources, on cible plus précisément :
  De la même manière, le principe d’invariance d’une très grande majorité des expressions géniques d’une puce à une autre doit se traduire par une répartition comparable des valeurs des signaux entre les différentes puces. Si des différences marquées existent, il est judicieux de ramener les signaux moyens de chaque puce à la même valeur.
 \end{itemize}
 Avant de s’approcher des hypothèses favorables pour l’analyse différentielle, la normalisation est nécessaire afin de s’assurer que les données des différentes puces sont exploitables et comparable entre elles, que les différences d’intensité sont en effet dues à l’expression différentielle et non aux artefacts et les biais techniques expérimentaux.
+Il y a plusieurs méthodes de normalisation souvent classé en deux catégories :
+\begin{itemize}
+ \item \emph{méthodes qui utilisent des données de référence (baseline array)}: scaling methods and non-linear methods
+ \item \emph{méthodes qui combinent l’information de toutes les sections de la puce dans un ensemble de données donné (méthode complet)}: Lowess,normalisation par quantile,RMA(Robust Multi-Array Analysis)
+\end{itemize}
 
 % \subsection{Filtrage :}
-\subsection{L'Algorithme de normalisation des puces à ADN dans limma :}
+\subsection{La fonction neqc() du package Limma :}
+Le package Limma (écrit par Gordon Smyth,Matthew Ritchie et autres) contient pas mal de fonction de normalisation de puce à ADN que ce soit à une ou double couleur. Mais la fonction qui nous intéresse est la fonction neqc() spécialement personnalisée pour les puces Illumina BeadChips.
+Cette fonction R effectue avant la transformation logarithmique des données une correction de bruit de fond utilisant des sondes de contrôle négatif suivie après par la normalisation par quantile utilisant à la fois les sondes de contrôle positif et négatif.
+\\L’algorithme utilise le modèle « normexp » pour la correction de bruit de fond qui consiste à modéliser les intensités de pixels observées en tant que somme de deux variables aléatoires, une normalement distribuée et l’autre répartie exponentiellement, représentant respectivement le bruit et le signal de fond. 
+La moyenne (\emph{mu}) et l’écart-type (\emph{sigma}) du bruit de fond normalement distribuée du modèle normexp sont estimés avec les valeurs des sondes de contrôle négatif et  la moyenne (\emph{alpha}) du signal répartie exponentiellement est estimée comme la différence entre la moyenne du signal et la moyenne des sondes de contrôle négatif.
+\begin{scriptsize}
+ \\$mu \leftarrow colMeans(xn, na.rm = TRUE)$
+ \\$sigma \leftarrow sqrt(rowSums((t(xn) - mu)^2, na.rm = TRUE)/(nrow(xn) - 1))$
+ \\$alpha \leftarrow pmax(colMeans(xr, na.rm = TRUE) - mu, 10)$
+ \\$mu.sf \leftarrow x - mu - sigma^2/alpha$
+ \\$signal \leftarrow mu.sf + sigma^2 * exp(dnorm(0, mean = mu.sf, sd = sigma, log = TRUE) - pnorm(0, mean = mu.sf, sd = sigma, lower.tail = FALSE, log.p = TRUE))$
+\end{scriptsize}
+\\Après la correction, un petit décalage (offset) est ajouté (par défaut 16) aux intensités corrigées pour  améliorer la performance dans la phase d’analyse d’expression différentielle et on applique la normalisation par quantile(\emph{normalizeBetweenArrays}).
+Le but de la normalisation par quantile est de mettre la distribution, médiane et la moyenne des intensités des sondes de chaque puce sur le même niveau pour toutes les échantillons. Ceci est fait de façon suivante :
+\begin{enumerate}
+ \item Donner la matrice des intensités $X$ de dimensions $p * n$ avec les colonnes représentent les échantillons et les lignes représentent les sondes
+\item Trier chaque colonne de X par ordre croissant pour construire $X_{sort}$
+\item Calculer la moyenne par ligne de $X_{sort}$ et affecter cette moyenne sur chaque élément dans la ligne pour avoir $X_{sm}$
+\item Construire $X_{normalized}$ en réarrangeant  les éléments de chaque colonne de Xsm dans l’ordre de la matrice  original $X$
+\end{enumerate}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/boxplotbeforeNorm.png}
+ % boxplotbeforeNorm.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Box plot des signaux avant normalisation}
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/boxplotAfterNorm.png}
+ % boxplotbeforeNorm.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Box plot des signaux après normalisation}
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/Densitypop1.png}
+ % Densité_pop1.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Densité de la population 1 avant la normalisation}
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/Densitypop1C.png}
+ % Densité_pop1(correct).png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Densité de la population 1 après la normalisation}
+\end{center}
 
 \section{ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}
 % \subsection{Gènes différentiellement exprimés :}

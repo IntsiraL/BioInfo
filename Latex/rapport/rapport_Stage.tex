@@ -6,6 +6,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{amsmath}
 \usepackage{stackengine}
+\usepackage{setspace}
 %\usepackage{placeins}
 
 \newcommand\tabA[1][0.5cm]{\hspace*{#1}}
@@ -39,21 +40,37 @@
     { \huge \bfseries ANALYSE TRANSCRIPTOMIQUE\\[0.4cm] }
 
     \HRule \\[2cm]
-
-    % Author and supervisor
-    \begin{minipage}{0.4\textwidth}
-      \begin{flushleft} \large
-        \large Présenté par : \\\textsc{RASOLONIAINA Marlino}
-      \end{flushleft}
+    \centering\vspace*{\fill}
+    \begin{minipage}{9\textwidth}
+    \begin{doublespace}
+    \begin{tabular}{cl}
+       \large Présenté par : &\tabC \tabA \textsc{RASOLONIAINA Marlino}\\
+       \newline
+       \emph{Maître de stage  :} &\tabC \tabA Dr. \textsc{Valérie Seegers}\\
+       \emph{Responsable d'équipe : } &\tabC \tabA Dr.  \textsc{Yves Delneste} \\
+       
+    \end{tabular}
+     \end{doublespace}
+    \emph{Laboratoire d'accueil :} \tabC \tabA \textsc{INSERM U1232}-Equipe 7
+    \\\tabC \tabC \tabC \tabA Bâtiment IRIS 
+    \\\tabC \tabC \tabC \tabA CHU-4,rue Larrey 
+    \\\tabC \tabC \tabC \tabA 49933 ANGERS
     \end{minipage}
-    \begin{minipage}{0.4\textwidth}
-      \begin{flushright} \large
-        \emph{Tuteur :} M. Le \textsc{Tuteur}\\
-        \emph{Chef d'équipe : } M. Chef \textsc{D’Équipe}
-      \end{flushright}
-    \end{minipage}
-
-    \vfill
+    \vspace*{\fill}
+     % Author and supervisor
+%      \begin{minipage}{0.4\textwidth}
+%        \begin{flushleft} \large
+%          \large Présenté par : \\\textsc{RASOLONIAINA Marlino}
+%        \end{flushleft}
+%      \end{minipage}
+%      \begin{minipage}{0.4\textwidth}
+%        \begin{flushright} \large
+%          \emph{Maître de stage  :} Dr. \textsc{Valérie Segers}\\
+%          \emph{Responsable d'équipe : } Dr.  \textsc{Yves Delneste}
+%        \end{flushright}
+%      \end{minipage}
+%  
+%      \vfill
 
     % Bottom of the page
     {\large 12 Avril 2017 — 20 Juin 2017}
@@ -104,9 +121,9 @@ Besoin d'inspiration
   Plusieurs  types  de  puces  à  ADN  
 existent selon le support, la nature des fragments fixés à la surface, le mode de fabrication, la 
 densité, le mode de marquage des cibles et les méthodes d’hybridation.
-On sait que toutes les technologies à puce ADN se base sur le principe fondamental de l’hybridation complémentaire des brins d’acide nucléique même si leurs techniques se diffèrent largement entre-elles, 
+On sait que toutes les technologies des puces ADN se basent sur le principe fondamental de l’hybridation complémentaire des brins d’acide nucléique même si leurs techniques se diffèrent largement entre-elles, 
 par exemple sur la longueur et la type de la sonde utilisée (cDNA arrays, oligonucleotide array), l’étiquetage et le protocole d’hybridation…
-La vraie différence entre ses approches réside sur la précision, la spécificité, la sensibilité et la robustesse de chaque plateforme.
+La vraie différence entre ces approches résident sur la précision, la spécificité, la sensibilité et la robustesse de chaque plateforme.
 \begin{center}
  \includegraphics[scale=0.5]{./image/principe.jpg}
  % Etapes_d'une_expérience_de_biopuces.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
@@ -114,7 +131,7 @@ La vraie différence entre ses approches réside sur la précision, la spécific
 \end{center}
 
 \subsection{La technologie Illumina :}
-Illumina, Inc. est une société américaine qui fabrique et commercialise des systèmes intégrés pour l'analyse de la variation génétique et la fonction biologique 
+Illumina, Inc. est une société américaine qui fabrique et commercialise des systèmes intégrés pour l'analyse de la variation génétique et la fonction biologique, 
 notamment des gammes de produits et services qui servent les marchés du séquençage, génotypage et expression génétique.
 \newline
 Une de ces récentes fabrications, la puce ``BeadArray technologie''.
@@ -374,7 +391,46 @@ Il y a plusieurs méthodes de normalisation souvent classé en deux catégories�
 \end{itemize}
 
 % \subsection{Filtrage :}
-\subsection{L'Algorithme de normalisation des puces à ADN dans limma :}
+\subsection{La fonction neqc() du package Limma :}
+Le package Limma (écrit par Gordon Smyth,Matthew Ritchie et autres) contient pas mal de fonction de normalisation de puce à ADN que ce soit à une ou double couleur. Mais la fonction qui nous intéresse est la fonction neqc() spécialement personnalisée pour les puces Illumina BeadChips.
+Cette fonction R effectue avant la transformation logarithmique des données une correction de bruit de fond utilisant des sondes de contrôle négatif suivie après par la normalisation par quantile utilisant à la fois les sondes de contrôle positif et négatif.
+\\L’algorithme utilise le modèle « normexp » pour la correction de bruit de fond qui consiste à modéliser les intensités de pixels observées en tant que somme de deux variables aléatoires, une normalement distribuée et l’autre répartie exponentiellement, représentant respectivement le bruit et le signal de fond. 
+La moyenne (\emph{mu}) et l’écart-type (\emph{sigma}) du bruit de fond normalement distribuée du modèle normexp sont estimés avec les valeurs des sondes de contrôle négatif et  la moyenne (\emph{alpha}) du signal répartie exponentiellement est estimée comme la différence entre la moyenne du signal et la moyenne des sondes de contrôle négatif.
+\begin{scriptsize}
+ \\$mu \leftarrow colMeans(xn, na.rm = TRUE)$
+ \\$sigma \leftarrow sqrt(rowSums((t(xn) - mu)^2, na.rm = TRUE)/(nrow(xn) - 1))$
+ \\$alpha \leftarrow pmax(colMeans(xr, na.rm = TRUE) - mu, 10)$
+ \\$mu.sf \leftarrow x - mu - sigma^2/alpha$
+ \\$signal \leftarrow mu.sf + sigma^2 * exp(dnorm(0, mean = mu.sf, sd = sigma, log = TRUE) - pnorm(0, mean = mu.sf, sd = sigma, lower.tail = FALSE, log.p = TRUE))$
+\end{scriptsize}
+\\Après la correction, un petit décalage (offset) est ajouté (par défaut 16) aux intensités corrigées pour  améliorer la performance dans la phase d’analyse d’expression différentielle et on applique la normalisation par quantile(\emph{normalizeBetweenArrays}).
+Le but de la normalisation par quantile est de mettre la distribution, médiane et la moyenne des intensités des sondes de chaque puce sur le même niveau pour toutes les échantillons. Ceci est fait de façon suivante :
+\begin{enumerate}
+ \item Donner la matrice des intensités $X$ de dimensions $p * n$ avec les colonnes représentent les échantillons et les lignes représentent les sondes
+\item Trier chaque colonne de X par ordre croissant pour construire $X_{sort}$
+\item Calculer la moyenne par ligne de $X_{sort}$ et affecter cette moyenne sur chaque élément dans la ligne pour avoir $X_{sm}$
+\item Construire $X_{normalized}$ en réarrangeant  les éléments de chaque colonne de Xsm dans l’ordre de la matrice  original $X$
+\end{enumerate}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/boxplotbeforeNorm.png}
+ % boxplotbeforeNorm.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Box plot des signaux avant normalisation}
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/boxplotAfterNorm.png}
+ % boxplotbeforeNorm.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Box plot des signaux après normalisation}
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/Densitypop1.png}
+ % Densité_pop1.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Densité de la population 1 avant la normalisation}
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/Densitypop1C.png}
+ % Densité_pop1(correct).png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Densité de la population 1 après la normalisation}
+\end{center}
 
 \section{ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}
 % \subsection{Gènes différentiellement exprimés :}

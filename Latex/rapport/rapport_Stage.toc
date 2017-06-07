@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {6}PR\'{E}TRAITEMENT DES DONN\'{E}ES :}{12}
 \contentsline {subsection}{\numberline {6.1}Transformation :}{12}
 \contentsline {subsection}{\numberline {6.2}Normalisation :}{12}
-\contentsline {subsection}{\numberline {6.3}L'Algorithme de normalisation des puces \IeC {\`a} ADN dans limma :}{13}
-\contentsline {section}{\numberline {7}ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}{13}
-\contentsline {section}{\numberline {8}INTERP\'{E}TATION :}{13}
-\contentsline {section}{\numberline {9}CONCLUSION :}{13}
+\contentsline {subsection}{\numberline {6.3}La fonction neqc() du package Limma :}{13}
+\contentsline {section}{\numberline {7}ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}{16}
+\contentsline {section}{\numberline {8}INTERP\'{E}TATION :}{16}
+\contentsline {section}{\numberline {9}CONCLUSION :}{16}
