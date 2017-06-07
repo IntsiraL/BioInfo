@@ -65,6 +65,13 @@
 \tableofcontents
 \newpage
 \section{INTRODUCTION :}
+Besoin d'inspiration
+\section{PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL :}
+\subsection{Présentation générale (activité, organisation, services...) :}
+\subsection{Présentation du service rattaché :}
+\section{PR\'{E}SENTATION DU SUJET DE STAGE :}
+\subsection{Objet et missions du stage :}
+\subsection{Missions réellement réalisées :}
 \section{ACQUISITION DES DONN\'{E}ES :}
 \subsection{Les puces à ADN :}
   Une puce à ADN est constituée d'un support physique (le plus
@@ -174,7 +181,7 @@ Plusieurs efforts ont été menés pour évaluer la fiabilité, la précision et
 \hline
  \emph{Facteur} & \emph{Commentaires}\\
 \hline
-Préparation des mRNA et la transcription &  Tissus, les kits et les procedures variantes \\
+Préparation des mRNA  &  Tissus, les kits et les procedures variantes \\
 \hline 
 Transcription & Les variations inhérentes dans la réaction, le type de l'enzymes utilisé  \\
 \hline 
@@ -188,9 +195,9 @@ Volume de l'échantillon & fluctue stochastiquement même pour la même broche (
 \hline
 Fixation de l'échantillon & La fraction de l'ADNc cible (une gouttelette) qui est chimiquement liée à la surface de la diapositive n'est pas prise en compte \\
 \hline
- Paramètre d'hybridation&  influencé par plusieurs facteurs comme la temperature,le temps,le buffering \\
+ Paramètre d'hybridation &  influencé par plusieurs facteurs comme la temperature,le temps,le buffering \\
 \hline
- Hybridation non-spécifique& un ADNc s'hybride avec une sequence qui n'est pas exactement son complémentaire \\
+ Hybridation non-spécifique & un ADNc s'hybride avec une sequence qui n'est pas exactement son complémentaire \\
 \hline
 Réglages de gain & déplace la répartition des intensités de pixels \\
 \hline
@@ -198,15 +205,15 @@ Limitation de la plage dynamique & Variabilité de la saturation au bas de gamme
 \hline
 Alignement d'image & Les images d'un même BeadArray à diverses longueurs d'onde correspondant à des canaux différents ne sont pas alignées; différents pixels sont considérés pour le même emplacement \\
 \hline
- Placement de la grille& le centre du spot n’est pas bien localisé  \\
+ Placement de la grille & le centre du spot n’est pas bien localisé  \\
 \hline
  Bruit de fond non-spécifique& Élévation erronée de la moyenne de l'intensité du bruit de fond \\
 \hline
 Forme de spot & L'intensité des spots irréguliers sont difficille à segmenter en bruit de fond \\
 \hline
- Segmentation& Des contaminants lumineux peuvent ressembler comme un signal(ex: poussière) \\
+ Segmentation & Des contaminants lumineux peuvent ressembler comme un signal(ex: poussière) \\
 \hline
- Quantification de spot& la moyenne des pixels, la médiane,... \\
+ Quantification de spot & la moyenne des pixels, la médiane,... \\
 \hline
 \end{tabular}
 \caption{Sources of fluctuations in a typical cDNA microarray experiment}
@@ -290,7 +297,7 @@ Contrôle de l’hybridation &
 \hline
 Contrôle de génération des signaux & des ARN sont marqués par de la biotin. On attend un signal d'hybridation positif provenant de ces sondes\\
 \hline
-Contrôle de bruit de fond & des centaines de sondes de séquences aléatoires sans cibles dans le génome sont intégrées dans la puce reflétant les signaux de bruit de fond du système d'imagerie,d'hybridation croisée et autres.On s'attend à des faibles signaux provenant de ces sondes. \\
+Contrôle de sonde négative & des centaines de sondes de séquences aléatoires sans cibles dans le génome sont intégrées dans la puce reflétant les signaux de bruit de fond du système d'imagerie,d'hybridation croisée et autres.On s'attend à des faibles signaux provenant de ces sondes. \\
 \hline
 \end{tabular}
 \caption{Liste des contrôles des données d'Illumina BeadArray}
@@ -322,6 +329,24 @@ Labeling and Background & Labeling >= Background \\
 \begin{center}
  \includegraphics[scale=0.7]{../../R/output/SummaryControl.png}
  % SummaryControl.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{Résume de l'ensemble de contôle d'hybridation direct de la technologie BeadArray d'Illumina}
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/signal_to_noise.png}
+ % signal_to_noise.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{Rapport signal-bruit sur les deux puces}
+ Un rapport signal/bruit (SNR) peut être calculé en utilisant les mesures fournies par le scanner (dans le fichier metrics.txt) incluant les 95(P95) et 5(P05) quantiles de toutes les intensités de pixels de  l’image de chaque section. 
+ Ces informations de mesures dépendent du paramètre de scanner et sont tout aussi utile pour l’évaluation de la qualité des données des échantillons ou bien pour évaluer si des échantillons semblent être des valeurs aberrantes. 
+ Illumina recommande que le ratio SNR soit supérieur à 10 pour les puces HT-12.
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/propexpr.png}
+ % propexpr.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{ Estimation de proportion des sondes exprimées sur les deux puces avec la fonction propexpr() de limma}
+ Ces valeurs ne sont pas vraiment des probabilités, elles estiment la proportion globale de sondes sur chaque section de la puce Illumina BeadChip qui correspondent à des gènes exprimés selon la méthode de Shi et al (2010).
+ $pi1= (pb-p)/(pb-p1) $ avec $(pi1[pi1 > 1] \leftarrow 1 $ et $pi1[pi1 < 0] \leftarrow 0)$\\
+ La fonction compare la distribution d’intensité empirique des sondes de contrôle négatif avec celle des sondes régulières. 
+ Un modèle de mélange est adapté aux données de chaque échantillon de la puce pour inférer la distribution d’intensité des sondes exprimées et estimer la proportion exprimée.
 \end{center}
 
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES :}
@@ -332,14 +357,26 @@ Un simple calcul d’écart type ne satisfait donc pas de donner une interpréta
 L’asymétrie est fortement diminuée et la transformation  rend la distribution du niveau d’expression des gènes presque normale(distribution gaussienne).
 Après transformation, les méthodes statistiques peuvent être utilisées en toute confiance. 
 \subsection{Normalisation :}
-\subsection{Filtrage :}
+Il n’est pas très judicieux de se lancer tout de suite à la comparaison et l’analyse des expressions des gènes à partir des échantillons multiples, car des sources parasites de variations des expressions peuvent fausser le résultat, exemples :quantité d’ARN différentes dans les échantillons, efficacité de la détection 
+de fluorescence, biais systématiques, artefacts, conditions d’hybridation des échantillons.
+Parmi ces sources, on cible plus précisément :
+\begin{itemize}
+ \item \emph{l’hétérogénéité du bruit de fond} :
+ Si le bruit de fond présente des variations très différentes d’une puce à une autre, ou très structurées spatialement sur une puce, alors on peut être amené à corriger le signal par soustraction du bruit de fond. 
+ \item \emph{l’hétérogénéité du signal} :
+ De la même manière, le principe d’invariance d’une très grande majorité des expressions géniques d’une puce à une autre doit se traduire par une répartition comparable des valeurs des signaux entre les différentes puces. Si des différences marquées existent, il est judicieux de ramener les signaux moyens de chaque puce à la même valeur.
+\end{itemize}
+Avant de s’approcher des hypothèses favorables pour l’analyse différentielle, la normalisation est nécessaire afin de s’assurer que les données des différentes puces sont exploitables et comparable entre elles, que les différences d’intensité sont en effet dues à l’expression différentielle et non aux artefacts et les biais techniques expérimentaux.
+
+% \subsection{Filtrage :}
+\subsection{L'Algorithme de normalisation des puces à ADN dans limma :}
 
 \section{ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}
-\subsection{Gènes différentiellement exprimés :}
-\subsection{Gènes co-exprimés :}
-
+% \subsection{Gènes différentiellement exprimés :}
+% \subsection{Gènes co-exprimés :}
+=> En cours
 \section{INTERP\'{E}TATION :}
-Caractérisation d’un ensemble de gènes
-\begin{abstract}
-\end{abstract}
+=> Pas de temps
+% (Caractérisation d’un ensemble de gènes)
+\section{CONCLUSION :}
 \end{document}          

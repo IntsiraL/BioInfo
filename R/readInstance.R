@@ -57,6 +57,7 @@ obj$genes$DetectionPValue <- detectionPValues(obj)
 ###############################################################################
 ## Control Data                                                              ##
 ###############################################################################
+source(file = "qa_metrics.R")
 controlData <- obj[obj$genes$Status != "regular",]
 bruteData <- obj[obj$genes$Status == "regular",]
 source(file = "controlData.R")
@@ -100,6 +101,12 @@ abline(h=0.05, col="red")
 # Analyse différentielle regression linéaire
 ################################
 #P1_G vs P1_GAL
-designGvsGAL <- cbind(G=as.numeric(nameCol == "P1_G"),GAL=as.numeric(nameCol == "P1_GAL"))
-p1GvsGAL <- lmFit(dCorect,designGvsGAL)
-p1GvsGAL <- eBayes(p1GvsGAL)
+design <- model.matrix(~0+nameCol)
+colnames(design) <- nameCol
+contMatrix <- makeContrasts(GvsGAL=P1_G-P1_GAL,MvsG=P1_M-P1_G,levels = design)
+fit <- lmFit(dCorect, design)
+fitC <- contrasts.fit(fit, contMatrix)
+fitC <- eBayes(fitC)
+# designGvsGAL <- cbind(G=as.numeric(nameCol == "P1_G"),GAL=as.numeric(nameCol == "P1_GAL"))
+# p1GvsGAL <- lmFit(dCorect,designGvsGAL)
+# p1GvsGAL <- eBayes(p1GvsGAL)
