@@ -42,17 +42,19 @@
     \HRule \\[2cm]
     \centering\vspace*{\fill}
     \begin{minipage}{9\textwidth}
+    \begin{doublespace}
     \begin{tabular}{cl}
-       \large Présenté par : &\tabC \textsc{RASOLONIAINA Marlino}\\
+       \large Présenté par : &\tabC \tabA \textsc{RASOLONIAINA Marlino}\\
        \newline
-       \emph{Maître de stage  :} &\tabC Dr. \textsc{Valérie Segers}\\
-       \emph{Responsable d'équipe : } &\tabC Dr.  \textsc{Yves Delneste} \\
+       \emph{Maître de stage  :} &\tabC \tabA Dr. \textsc{Valérie Seegers}\\
+       \emph{Responsable d'équipe : } &\tabC \tabA Dr.  \textsc{Yves Delneste} \\
        
     \end{tabular}
-    \\\emph{Laboratoire d'accueil :} \tabC \tabA \textsc{INSERM U564}-Equipe 2 
-    \\\tabC \tabC \tabC Bâtiment Montéclair 
-    \\\tabC \tabC \tabC CHU-4,rue Larrey 
-    \\\tabC \tabC \tabC 49933 ANGERS
+     \end{doublespace}
+    \emph{Laboratoire d'accueil :} \tabC \tabA \textsc{INSERM U1232}-Equipe 7
+    \\\tabC \tabC \tabC \tabA Bâtiment IRIS 
+    \\\tabC \tabC \tabC \tabA CHU-4,rue Larrey 
+    \\\tabC \tabC \tabC \tabA 49933 ANGERS
     \end{minipage}
     \vspace*{\fill}
      % Author and supervisor
@@ -88,6 +90,38 @@ Besoin d'inspiration
 \subsection{Objet et missions du stage :}
 \subsection{Missions réellement réalisées :}
 \section{ACQUISITION DES DONN\'{E}ES :}
+
+\subsection{ Plan expérimental :}
+Le sujet du stage s’inscrit dans la thématique principale du laboratoire qui porte sur l’adaptation du macrophage aux modifications environnementales et plus précisément : l’impact de la présence d’acide lactique (AL), qui s’accumule au sein des tumeurs, sur l’expression génique des macrophages de type M1 (pro-inflammatoires et initiateurs de la réponse immunitaire) et de type M2 (immunotolérants et qui s’accumulent dans les tissus cancéreux).
+
+Pour répondre à cette question, le laboratoire modélise in vitro la polarisation des macrophages en modifiant les conditions de culture des cellules envisageant ainsi 8 conditions expérimentales. (Graphique) Comme il y avait 3 donneurs différents, 24 prélèvements ont été préparés et analysés sur les puces ADN.
+
+Les questions biologiques à explorer sont les suivantes : Quels gènes sont différentiellement exprimés par les macrophages  G (M1) et par les macrophages M (M2) en présence d’acide lactique (AL), en dehors de toute stimulation par LPS ? Avec une stimulation par LPS ? Quels sont les processus biologiques concernés par l’exposition des macrophages à l’acide lactique ? Quelles sont les voies de signalisation concernées ?
+\begin{center}
+ \includegraphics[scale=0.5]{./image/plan.png}
+ % plan.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{Plan éxpérimental }
+\end{center}
+L’expérience a été faite avec la puce ADN  Illumina HumanHT-12 v4.0 BeadChip 12x1 avec 48210 sondes pour chaque prélèvement.
+887 de ses sondes sont classés comme des sondes de contrôles.
+On se trouve donc avec 47323 individus sur 24 variables. 
+Ce qui nous donne une matrice de données de dimension :
+\def\tmp{
+  \begin{pmatrix}
+  a_{11} & \cdots & a_{1m} \\
+
+   \vdots & \ddots &\vdots \\
+
+   a_{n1} & \cdots & a_{nm} 
+ \end{pmatrix}
+}
+\[
+\stackMath\def\stackalignment{r}
+  \stackon
+    {\mathrm{47323~rows}\left\{\tmp\right.}
+    {\overbrace{\phantom{\smash{\tmp\mkern -36mu}}}^{\mathrm{\textstyle 24~columns}}\mkern 20mu}
+\]
+
 \subsection{Les puces à ADN :}
   Une puce à ADN est constituée d'un support physique (le plus
   souvent une lame de verre) sur lequel sont déposées des molécules
@@ -97,8 +131,8 @@ Besoin d'inspiration
   s'hybrident sur les fragments d'ADN complémentaires. La quantité d'ARN
   fixée reflète la concentration de cet ARN dans la solution.
   \newline
- Pour des raisons pratiques, on utilise des ADNc plutôt que directement
-  les ARN. Les ADNc sont marqués par un nucléotide radioactif ou
+ Pour des raisons pratiques, on utilise de l’ADN complémentaire plutôt que directement
+  l'acide ribonucléique car l’ADN est plus stable. Les ADNc sont marqués par un nucléotide radioactif ou
   un fluorochrome. Il est possible d'étudier simultanément plusieurs
   populations d'ADNc sur une même puce en utilisant des fluorochromes différents.
   La meilleure façon d'utiliser cette possibilité est de marquer
@@ -119,9 +153,9 @@ Besoin d'inspiration
   Plusieurs  types  de  puces  à  ADN  
 existent selon le support, la nature des fragments fixés à la surface, le mode de fabrication, la 
 densité, le mode de marquage des cibles et les méthodes d’hybridation.
-On sait que toutes les technologies à puce ADN se base sur le principe fondamental de l’hybridation complémentaire des brins d’acide nucléique même si leurs techniques se diffèrent largement entre-elles, 
+On sait que toutes les technologies des puces ADN se basent sur le principe fondamental de l’hybridation complémentaire des brins d’acide nucléique même si leurs techniques se diffèrent largement entre-elles, 
 par exemple sur la longueur et la type de la sonde utilisée (cDNA arrays, oligonucleotide array), l’étiquetage et le protocole d’hybridation…
-La vraie différence entre ses approches réside sur la précision, la spécificité, la sensibilité et la robustesse de chaque plateforme.
+La vraie différence entre ces approches résident sur la précision, la spécificité, la sensibilité et la robustesse de chaque plateforme.
 \begin{center}
  \includegraphics[scale=0.5]{./image/principe.jpg}
  % Etapes_d'une_expérience_de_biopuces.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
@@ -129,18 +163,18 @@ La vraie différence entre ses approches réside sur la précision, la spécific
 \end{center}
 
 \subsection{La technologie Illumina :}
-Illumina, Inc. est une société américaine qui fabrique et commercialise des systèmes intégrés pour l'analyse de la variation génétique et la fonction biologique 
+Illumina, Inc. est une société américaine qui fabrique et commercialise des systèmes intégrés pour l'analyse de la variation génétique et la fonction biologique, 
 notamment des gammes de produits et services qui servent les marchés du séquençage, génotypage et expression génétique.
 \newline
-Une de ces récentes fabrications, la puce ``BeadArray technologie''.
+Une de ces récentes fabrications est la puce ``BeadArray technologie''.
 \begin{center}
  \includegraphics[scale=0.5]{./image/beadarray.png}
  % beadarray_multi_sample_array_formats_lg.gif: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
  \captionof{figure}{Illumina BeadArray Technologie }
 \end{center}
 Dans l’analyse des expressions des gènes, Illumina utilise deux approches différentes : l’hybridation directe(Direct Hybridization assay) et le DASL (cDNA-mediated Annealing Selection Extension and Ligation).
-L’expérience est faite avec la première approche qui consiste à utiliser un simple brin de la séquence d’ADN par spot. Cette séquence monocaténaire est censée s’hybrider avec la séquence cible étiquetée dans l’échantillon. 
-La quantité du signal fluorescente produit détermine la quantité de l’ARN cible dans l’échantillon.
+L’expérience est faite avec la première approche qui consiste à utiliser un simple brin de la séquence d’ADN (pour chaque sonde). Cette séquence monocaténaire s’hybride avec la séquence cible étiquetée dans l’échantillon. 
+La quantité du signal fluorescent produit détermine la quantité de l’ARN cible dans l’échantillon.
 \begin{center}
  \includegraphics[scale=0.5]{./image/Direct_Hyb.png}
  % direct_hybridization_assay_workflow_lg.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
@@ -152,43 +186,17 @@ La quantité du signal fluorescente produit détermine la quantité de l’ARN c
  \captionof{figure}{ Direct Hybridization assay workflow}
 \end{center}
 
-\subsection{ Plan expérimental :}
-\begin{center}
- \includegraphics[scale=0.5]{./image/plan.png}
- % plan.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
- \captionof{figure}{Plan éxpérimental }
-\end{center}
-L’expérience a été faite avec la puce ADN  Illumina HumanHT-12 v4.0 BeadChip 12x1 avec 48210 sondes pour chaque prélèvement.
-887 de ses sondes sont classés comme des sondes de contrôles.
-On se trouve donc avec 47323 individus sur 24 variables. 
-Ce qui nous donne une matrice de données de dimmension :
-\def\tmp{
-  \begin{pmatrix}
-  a_{11} & \cdots & a_{1m} \\
-
-   \vdots & \ddots &\vdots \\
-
-   a_{n1} & \cdots & a_{nm} 
- \end{pmatrix}
-}
-\[
-\stackMath\def\stackalignment{r}
-  \stackon
-    {\mathrm{47323~rows}\left\{\tmp\right.}
-    {\overbrace{\phantom{\smash{\tmp\mkern -36mu}}}^{\mathrm{\textstyle 24~columns}}\mkern 20mu}
-\]
-
 \subsection{Les sources de variations et les défis sur l'utilisation des puces ADN :}
 
-La littérature nous raconte que si on effectue à plusieurs reprises une même expérience, on peut se heurter à des valeurs d’expérience légèrement différentes à chaque exécution.
+En Biologie,si on effectue à plusieurs reprises une même expérience, on peut se heurter à des valeurs d’expérience légèrement différentes à chaque exécution.
 Il est de ce fait très intéressant de voir de plus près les grandes étapes et les effets des processus biologiques qui sont derrières ces sources de quantité de variabilité dans l’étude des expressions génomique avec les puces ADN.
 De ce point de vue, ces variations sont considérées comme des bruits dans la phase d’analyse des expressions.\\
-Est-ce que la variation d’un gène particulier est due au bruit de fond de la puce ou c’est réellement une différence entre les différentes expériences testées ? C’est là le vrai challenge. 
+Est-ce que la variation d’un gène particulier est due au bruit de fond de la puce ou c’est réellement une différence entre les conditions expérimentales? C’est là le vrai defi. 
 Si on prend un gène spécifique, combien de quantité de sa valeur représente la mesure de la variance due à la régulation des gènes et due à la quantité de bruit ?
-Ces sources de variation (Tableau :~\ref{Sources de variation})nous mènent aux problèmes de fiabilité et de reproductibilité dans les mesures des puces ADN qui sont souvent négligés.
+Ces sources de variation (Tableau :~\ref{Sources de variation}) nous mènent aux problèmes de fiabilité et de reproductibilité dans les mesures des puces ADN qui sont souvent négligés.
 Néanmoins, une grande partie de la variabilité induite par la puce elle-même  peut être déterminée à l'aide des techniques 
 de réplications ou d’autres techniques de séparations des bruits (Exemples : conception d’expérience statistique, normalisation des données).
-Plusieurs efforts ont été menés pour évaluer la fiabilité, la précision et la reproductibilité des puces ADN, inclus des projets comme MAQC( MicroArray Quality Control). \\
+Plusieurs efforts ont été menés pour évaluer la fiabilité, la précision et la reproductibilité des puces ADN, inclus des projets comme MAQC(MicroArray Quality Control). \\
 
 \begin{table}[!ht]
 \centering
@@ -237,8 +245,8 @@ Forme de spot & L'intensité des spots irréguliers sont difficille à segmenter
 %\FloatBarrier
 \section{DESCRIPTION DES DONN\'{E}ES :}
 \subsection{ Décryptage et lecture :}
-Après avoir scanné la puce, le scanner iScan d’Illumina exporte et produit des fichiers de sortie selon les paramètres définis.
-Les fichiers qui contiennent les intensités des spots (.idat) sont encryptés et d’autres fichiers sont fournis à titre indicatif et de mesure pour l’analyse.\\
+Après avoir scanné la puce, le scanner iScan d’Illumina exporte et produit des fichiers de sortie (Tableau :~\ref{Fichiers_Sorties}) .
+Les fichiers qui contiennent les intensités de chaque sonde (.idat) sont encryptés et d’autres fichiers sont fournis à titre indicatif et de mesure pour l’analyse.\\
 \begin{table}[!ht]
 \begin{tabular}{|p{3cm}|p{9cm}|}
 \hline
@@ -261,7 +269,7 @@ physique d'une section et savoir les sections liées sur chaque échantillons\\
 \label{Fichiers_Sorties}
 \end{table}
 \newline
-Pour la lecture  des fichiers .idat, l’utilisation d’un fichier manifeste qui contient l’ensemble de tout les informations nécessaires concernant la puce est indispensable pour le décryptage : le nom et l’identifiant  des gènes ( Probe\_id, Array\_Address\_Id, Symbol, Barcode), le statut d’un spot (regular, negative, biotin,...)
+Pour la lecture  des fichiers .idat, l’utilisation d’un fichier manifeste qui contient l’ensemble de tout les informations nécessaires concernant la puce est indispensable pour le décryptage : le nom et l’identifiant  des gènes ( Probe\_id, Array\_Address\_Id, Symbol, Barcode), le statut d’une sonde (regular, negative, biotin,...)
 Dans la suite logique des choses, Illumina fourni un logiciel payant (GenomeStudio Software)  qui aide sur le traitement et l'analyse des puces ADN (Genotyping Module, Gene Expression Module, Methylation Module).
 \subsection{ Données brutes via Bioconductor :}
 Bioconductor est un projet de développement et un ensemble de package (1380 packages en 2017)  gratuit et open source dans l’analyse et la compréhension des données génomiques basé principalement en langage de programmation statistique R.
@@ -284,14 +292,14 @@ On obtient après un objet limma de type EListRaw  qui contient les objets suiva
 \label{EListRaw}
 \end{table}
 \subsection{ Contrôle et qualité :}
-Par approximation, on peut considérer qu’un signal émit par la puce soit :
+Par approximation, on peut considérer qu’un signal émis par la puce soit :
 \begin{itemize}
  \item la vraie intensité produit par le gène cible
  \item un signal d’une hybridation non-spécifique
  \item un bruit de fond non-spécifique
 \end{itemize}
 La puce d’Illumina introduit alors des sondes appelées sonde de contrôle pour pouvoir mesurer et quantifier la qualité des données obtenues.
-Avec ces probes contrôles, on peut quantifier les bruits et la qualité du signal, de voir la qualité de la mesure d’expression d’un spot d’un BeadArray particulier et de son ensemble. 
+Avec ces sondes de contrôles, on peut quantifier les bruits et la qualité du signal, vérifier la qualité de la mesure d’expression de l'ensemble des sondes de la puce. 
 Une valeur anormale produit par un seul BeadArray peut compromettre le résultat d’une analyse sur l’ensemble des données. 
 On ne peut pas donc être assuré d’avoir un bon résultat en phase d’analyse si la qualité des données obtenues n’est pas acceptable.
 \begin{table}[!ht]
