@@ -1,0 +1,15 @@
+\select@language {french}
+\contentsline {figure}{\numberline {1}{\ignorespaces Plan \IeC {\'e}xp\IeC {\'e}rimental \relax }}{7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Principe g\IeC {\'e}n\IeC {\'e}ral d'utilisation des puces ADN \relax }}{8}
+\contentsline {figure}{\numberline {3}{\ignorespaces Illumina BeadArray Technologie \relax }}{9}
+\contentsline {figure}{\numberline {4}{\ignorespaces An Illumina Direct Hybridization probe \relax }}{9}
+\contentsline {figure}{\numberline {5}{\ignorespaces Direct Hybridization assay workflow\relax }}{10}
+\contentsline {figure}{\numberline {6}{\ignorespaces Cont\IeC {\^o}le d'hybridation \relax }}{13}
+\contentsline {figure}{\numberline {7}{\ignorespaces Low Stringency control\relax }}{15}
+\contentsline {figure}{\numberline {8}{\ignorespaces R\IeC {\'e}sume de l'ensemble de cont\IeC {\^o}le d'hybridation direct de la technologie BeadArray d'Illumina\relax }}{16}
+\contentsline {figure}{\numberline {9}{\ignorespaces Rapport signal-bruit sur les deux puces\relax }}{16}
+\contentsline {figure}{\numberline {10}{\ignorespaces Estimation de proportion des sondes exprim\IeC {\'e}es sur les deux puces avec la fonction propexpr() de limma\relax }}{17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Box plot des signaux avant normalisation\relax }}{20}
+\contentsline {figure}{\numberline {12}{\ignorespaces Box plot des signaux apr\IeC {\`e}s normalisation\relax }}{21}
+\contentsline {figure}{\numberline {13}{\ignorespaces Densit\IeC {\'e} de la population 1 avant la normalisation\relax }}{21}
+\contentsline {figure}{\numberline {14}{\ignorespaces Densit\IeC {\'e} de la population 1 apr\IeC {\`e}s la normalisation\relax }}{22}

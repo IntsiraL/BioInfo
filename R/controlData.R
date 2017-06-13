@@ -151,10 +151,10 @@ par(mfcol=c(1,1))
 ###############################################################################
 ## Dispertion des valeurs entre population                                   ##
 ###############################################################################
-boxplot(log2(bruteData$E[,1:8]),main = "Box plot des signaux sur de la Population 1", las= 2)
-boxplot(log2(bruteData$E[,9:16]),main = "Box plot des signaux sur la Population 2", las= 2)
-boxplot(log2(bruteData$E[,17:24]),main = "Box plot des signaux sur de la Population 3", las= 2)
-
-boxplot(log2(c(bruteData$E[,1:8])),main = "Dispersion du signal sur de la Population 1")
-boxplot(log2(c(bruteData$E[,9:16])),main = "Dispersion du signal sur la Population 2")
-boxplot(log2(c(bruteData$E[,17:24])),main = "Dispersion du signal sur de la Population 3")
+# boxplot(log2(bruteData$E[,1:8]),main = "Box plot des signaux sur de la Population 1", las= 2)
+# boxplot(log2(bruteData$E[,9:16]),main = "Box plot des signaux sur la Population 2", las= 2)
+# boxplot(log2(bruteData$E[,17:24]),main = "Box plot des signaux sur de la Population 3", las= 2)
+# 
+# boxplot(log2(c(bruteData$E[,1:8])),main = "Dispersion du signal sur de la Population 1")
+# boxplot(log2(c(bruteData$E[,9:16])),main = "Dispersion du signal sur la Population 2")
+# boxplot(log2(c(bruteData$E[,17:24])),main = "Dispersion du signal sur de la Population 3")

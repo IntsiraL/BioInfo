@@ -81,15 +81,42 @@
 \newpage
 \tableofcontents
 \newpage
-\section{INTRODUCTION :}
+\section{INTRODUCTION }
 Besoin d'inspiration
-\section{PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL :}
-\subsection{Présentation générale (activité, organisation, services...) :}
-\subsection{Présentation du service rattaché :}
-\section{PR\'{E}SENTATION DU SUJET DE STAGE :}
-\subsection{Objet et missions du stage :}
+\section{PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL }
+\subsection{Organisme d’accueil : Centre de Recherche en Cancérologie et Immunologie Nantes Angers (CRCINA)}
+Le CRCINA est une structure de recherche intégrée aux universités de Nantes et d’Angers et labellisée par l’Institut National de la Santé et de la Recherche Médicale (Inserm). 
+Le CRCINA regroupe environ 400 personnes dont environ 150 chercheurs et enseignants/chercheurs\footnote{http://www.crcina.org/}.
+
+Le CRCINA développe des programmes multidisciplinaires alliant recherche fondamentale et clinique, principalement dans le domaine de l’oncologie. Il est organisé autour de trois départements :
+\begin{itemize}
+ \item le département « Immunologie et Immunothérapie » regroupe 8 équipes dont les travaux se focalisent sur l’étude de l’immunité cellulaire humaine antitumorale et antivirale et sous un angle plus appliqué sur la mise en oeuvre de protocoles d’immunothérapie passive ou active
+\item le département « Oncogénèse et Thérapies Ciblées »
+\item le département « Ciblage immunospécifique des radionucléides et radiobiologie » 
+\end{itemize}
+Les équipes de recherche sont installées sur différents sites : CHU de Nantes, CHU d’Angers et Institut de Cancérologie de l’Ouest (site Gauducheau à Nantes et site Papin à Angers).
+Les activités de recherche sont adossées à des plateformes technologiques et plateaux techniques localisés dans les différents sites ; ces laboratoires sont, pour la plupart, intégrés dans les structures fédératives de recherche des sites Santé des Universités de Nantes et d’Angers (SFR Bonamy à Nantes ; SFR ICAT à Angers).
+\subsection{Service du rattaché : Équipe 7 de l’U1232 Immunité innée et immunothérapie}
+Le système immunitaire est organisé autour de deux composantes, le système immunitaire inné et le système immunitaire adaptatif. Le système immunitaire inné est spécialisé dans la détection des signaux de danger, qu’ils soient d’origine endogène (le soi modifié), représenté par les cellules mortes, ou d’origine exogène (le non soi), à savoir les microbes. 
+Toute altération du système immunitaire inné peut avoir des conséquences pathologiques sévères, pouvant aller du déficit immunitaire aux maladies inflammatoires chroniques. Ainsi, les cellules myéloïdes (monocytes, macrophages…) jouent un rôle essentiel dans la réponse immunitaire. Elles sont impliquées dans l’élimination des microbes et des cellules mortes ainsi que dans l’initiation et la polarisation des réponses immunitaires adaptatives. 
+
+Un des objectifs de l’unité est de comprendre les mécanismes cellulaires et moléculaires impliqués dans la polarisation fonctionnelle des macrophages et identifier des stratégies immunothérapeutiques ciblant les macrophages associés aux tumeurs (cf projet d’équipe au point suivant). 
+Pour explorer la polarisation des macrophages, l’équipe a utilisé la technologie des puces à ADN pour comprendre les mécanismes d’expression géniques mobilisés par les macrophages en conditions physiologiques particulières (Acide Lactique) par analogie avec un milieu tumoral. 
+\section{PR\'{E}SENTATION DU SUJET DE STAGE }
+\subsection{Projet d’équipe où s’inscrit le stage :}
+Les macrophages sont des cellules d’origine myéloïde présentes dans tous les tissus.
+Principalement connus pour leur activité de sentinelles immunitaires impliquées dans l’élimination des microbes, les macrophages sont également impliqués dans le maintien de l’homéostasie et le métabolisme tissulaire. Différentes sous-classes de macrophages ont été définies pour décrire cette diversité fonctionnelle. 
+\begin{itemize}
+ \item Les macrophages de type M1 sont impliqués dans la réponse anti-microbienne et sont caractérisés par un profil pro-inflammatoire 
+\item Les macrophages de type M2 sont impliqués dans la réparation tissulaire et sont caractérisés par un profil anti-inflammatoire. 
+\item Il est actuellement admis que ces deux sous-types de macrophages représentent les extrêmes d’un continuum de cellules \cite{sica2012macrophage}.
+\end{itemize}
+Une des caractéristiques essentielles des macrophages est leur plasticité, c’est-à-dire leur capacité à adopter différents phénotypes en fonction de la nature des signaux reçus localement.
+ 
+Les macrophages jouent un rôle essentiel dans le développement des tumeurs et leur accumulation est, dans la majorité des tumeurs solides, de mauvais pronostic. De nombreuses études ont montré que le statut métabolique de la tumeur est altéré comparativement aux tissus sains, avec notamment une importante glycolyse. Le laboratoire s’est donc intéressé à l’analyse de l’impact de l’acide lactique, métabolite de la glycolyse qui s’accumule en grande quantité dans les tumeurs, et en particulier le cancer de l’ovaire, sur la polarisation fonctionnelle (M1 versus M2) des macrophages humains.
+Une étude transcriptomique a donc été réalisée pour analyser l’impact de l’acide lactique sur la différentiation des monocytes en macrophages.
 \subsection{Missions réellement réalisées :}
-\section{ACQUISITION DES DONN\'{E}ES :}
+\section{ACQUISITION DES DONN\'{E}ES }
 
 \subsection{ Plan expérimental :}
 Le sujet du stage s’inscrit dans la thématique principale du laboratoire qui porte sur l’adaptation du macrophage aux modifications environnementales et plus précisément : l’impact de la présence d’acide lactique (AL), qui s’accumule au sein des tumeurs, sur l’expression génique des macrophages de type M1 (pro-inflammatoires et initiateurs de la réponse immunitaire) et de type M2 (immunotolérants et qui s’accumulent dans les tissus cancéreux).
@@ -210,7 +237,7 @@ Transcription & Les variations inhérentes dans la réaction, le type de l'enzym
 \hline 
 L'étiquetage (Labeling) & Depend du type,des procédures et l'âge de l'étiquette  \\
 \hline
-Amplification (PCR) & Il est difficille de quantifier le rendement du PCR\\
+Amplification (PCR) & Il est difficille de quantifier le rendement de la PCR\\
 \hline
 Variations géométriques des broches & différentes surfaces et propriétés dues à des erreurs aléatoires de production \\
 \hline
@@ -228,22 +255,23 @@ Limitation de la plage dynamique & Variabilité de la saturation au bas de gamme
 \hline
 Alignement d'image & Les images d'un même BeadArray à diverses longueurs d'onde correspondant à des canaux différents ne sont pas alignées; différents pixels sont considérés pour le même emplacement \\
 \hline
- Placement de la grille & le centre du spot n’est pas bien localisé  \\
+ Placement de la grille & le centre de la sonde (spot) n’est pas bien localisé  \\
 \hline
  Bruit de fond non-spécifique& Élévation erronée de la moyenne de l'intensité du bruit de fond \\
 \hline
-Forme de spot & L'intensité des spots irréguliers sont difficille à segmenter en bruit de fond \\
+Forme de la sonde (spot) & L'intensité des sondes irréguliers sont difficille à segmenter en bruit de fond \\
 \hline
  Segmentation & Des contaminants lumineux peuvent ressembler comme un signal(ex: poussière) \\
 \hline
- Quantification de spot & la moyenne des pixels, la médiane,... \\
+ Quantification & la moyenne des pixels, la médiane,... \\
 \hline
 \end{tabular}
-\caption{Sources of fluctuations in a typical cDNA microarray experiment}
+\caption{Sources typiques de fluctuations dans une expérience avec les puces à ADN}
+%\caption{Sources of fluctuations in a typical cDNA microarray experiment}
 \label{Sources de variation}
 \end{table}
 %\FloatBarrier
-\section{DESCRIPTION DES DONN\'{E}ES :}
+\section{DESCRIPTION DES DONN\'{E}ES }
 \subsection{ Décryptage et lecture :}
 Après avoir scanné la puce, le scanner iScan d’Illumina exporte et produit des fichiers de sortie (Tableau :~\ref{Fichiers_Sorties}) .
 Les fichiers qui contiennent les intensités de chaque sonde (.idat) sont encryptés et d’autres fichiers sont fournis à titre indicatif et de mesure pour l’analyse.\\
@@ -252,7 +280,7 @@ Les fichiers qui contiennent les intensités de chaque sonde (.idat) sont encryp
 \hline
 \emph{File}  & \emph{Description} \\
 \hline
- (Serial Number).txt & un fichier qui stocke la positions et l'identité de chaque spots, qui contient quelques informations sur les paramètres du scanner\\
+ (Serial Number).txt & un fichier qui stocke la positions et l'identité de chaque sonde, qui contient quelques informations sur les paramètres du scanner\\
 \hline
 Metrics.txt &  un pour chaque BeadChip  et contient des informations récapitulatives sur l'intensité des signals,
 la quantité de saturation, la mise au point et l'enregistrement sur l'image (s) de chaque section \\
@@ -262,7 +290,7 @@ Effective.cfg & fichier de configuration des paramètres du scanner\\
 (Serial Number).sdf & fichier de description des échantillons d'Illumina utilisé pour déterminer les propriétes (positions)
 physique d'une section et savoir les sections liées sur chaque échantillons\\
 \hline
-*.idat & contiennent la moyenne des intensités du signal de chaque spots \\
+*.idat & contiennent la moyenne des intensités du signal de chaque sonde \\
 \hline
 \end{tabular}
 \caption{Description des fichiers de sortie}
@@ -274,15 +302,16 @@ Dans la suite logique des choses, Illumina fourni un logiciel payant (GenomeStud
 \subsection{ Données brutes via Bioconductor :}
 Bioconductor est un projet de développement et un ensemble de package (1380 packages en 2017)  gratuit et open source dans l’analyse et la compréhension des données génomiques basé principalement en langage de programmation statistique R.
 Limma est un des packages (de choix) dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
-On obtient après un objet limma de type EListRaw  qui contient les objets suivants:
+Après la lecture, on obtient un objet de type ElistRaw de limma (Tableau :~\ref{EListRaw}) qui contient les informations qu’on a besoin. 
+Il est pratique par la suite de mettre en correspondance les informations liées aux échantillons avec l’objet nouvellement crée, par exemple changer les noms de la colonne de la matrice des intensités.
 \begin{table}[!ht]
 \begin{tabular}{|p{3cm}|p{9cm}|}
 \hline
  \emph{E} & matrice des intensité brutes\\
 \hline
-\emph{other\$NumBeads }   &  matrice de mêmes dimensions que E donnant les nombre de spots (bead) utilisées pour chaque valeur d'intensité. \\
+\emph{other\$NumBeads }   &  matrice de mêmes dimensions que E donnant les nombre de la sonde (bead) utilisées pour chaque valeur d'intensité. \\
 \hline 
-\emph{other\$STDEV} & matrice de mêmes dimensions que E donnant un écart type au niveau des spots ou une erreur standard pour chaque valeur d'intensité.\\
+\emph{other\$STDEV} & matrice de mêmes dimensions que E donnant un écart type ou une erreur standard pour chaque valeur d'intensité.\\
 \hline
 \emph{genes} & un data.frame des annotations des sondes qui contient des informations extraites du fichier manifeste relatif au type de puce utilisé : Probe\_Id, Array\_Address\_Id, Status
 \\
@@ -301,7 +330,7 @@ Par approximation, on peut considérer qu’un signal émis par la puce soit :
 La puce d’Illumina introduit alors des sondes appelées sonde de contrôle pour pouvoir mesurer et quantifier la qualité des données obtenues.
 Avec ces sondes de contrôles, on peut quantifier les bruits et la qualité du signal, vérifier la qualité de la mesure d’expression de l'ensemble des sondes de la puce. 
 Une valeur anormale produit par un seul BeadArray peut compromettre le résultat d’une analyse sur l’ensemble des données. 
-On ne peut pas donc être assuré d’avoir un bon résultat en phase d’analyse si la qualité des données obtenues n’est pas acceptable.
+On ne peut pas donc être assuré d’avoir un bon résultat en phase d’analyse si la qualité des données obtenues n’est pas acceptable (Tableau :~\ref{Control Dyrect  Hyb}).
 \begin{table}[!ht]
 \centering
 \begin{tabular}{|p{3cm}|p{9cm}|}
@@ -331,7 +360,7 @@ Contrôle de sonde négative & des centaines de sondes de séquences aléatoires
 \centering
 \begin{tabular}{|p{3cm}|p{9cm}|}
 \hline
- \emph{Métiques} & \emph{Valeurs attendues}\\
+ \emph{Contrôle} & \emph{Valeurs attendues}\\
 \hline
 Hybridization Controls*   &  High > Medium > Low \\
 \hline 
@@ -348,7 +377,19 @@ Labeling and Background & Labeling >= Background \\
 \end{tabular}
 \caption{Contrôle d'hybridation direct de la technologie BeadArray d'Illumina}
 \label{Control Dyrect  Hyb}
+Les contrôles marqués par (*) sont fortement recommandé par Illumina.
 \end{table}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/hybControl.png}
+ % hybControl.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{Contôle d'hybridation }
+\end{center}
+\begin{center}
+ \includegraphics[scale=0.5]{../../R/output/LowStringency.png}
+ % LowStringency.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \captionof{figure}{Low Stringency control}
+\end{center}
+
 \begin{center}
  \includegraphics[scale=0.7]{../../R/output/SummaryControl.png}
  % SummaryControl.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
@@ -372,13 +413,14 @@ Labeling and Background & Labeling >= Background \\
  Un modèle de mélange est adapté aux données de chaque échantillon de la puce pour inférer la distribution d’intensité des sondes exprimées et estimer la proportion exprimée.
 \end{center}
 
-\section{PR\'{E}TRAITEMENT DES DONN\'{E}ES :}
+\section{PR\'{E}TRAITEMENT DES DONN\'{E}ES }
+\subsection{Correction de bruit de fond :}
 \subsection{Transformation :}
 La distribution du niveau d'expression des gènes est très asymétrique avec un petit nombre de valeurs élevées. C’est une source de problèmes, car de nombreuses méthodes statistiques supposent implicitement une distribution gaussienne. 
 Un simple calcul d’écart type ne satisfait donc pas de donner une interprétation habituelle de la distribution. La transformation logarithmique est la plus utilisée. 
 \\Il y a plusieurs avantages d’utiliser la transformation logarithmique. Les données transformées sont plus faciles à interpréter (avec la variation du niveau d’expression des gènes plus réaliste) et aussi plus signifiantes de point de vue biologique (les intensités sont généralement comprises entre 0 et 65 535). 
 L’asymétrie est fortement diminuée et la transformation  rend la distribution du niveau d’expression des gènes presque normale(distribution gaussienne).
-Après transformation, les méthodes statistiques peuvent être utilisées en toute confiance. 
+Après transformation, les conditions d'application des méthodes et des tests statistiques sont mieux satisfaites. 
 \subsection{Normalisation :}
 Il n’est pas très judicieux de se lancer tout de suite à la comparaison et l’analyse des expressions des gènes à partir des échantillons multiples, car des sources parasites de variations des expressions peuvent fausser le résultat, exemples :quantité d’ARN différentes dans les échantillons, efficacité de la détection 
 de fluorescence, biais systématiques, artefacts, conditions d’hybridation des échantillons.
@@ -446,4 +488,7 @@ Le but de la normalisation par quantile est de mettre la distribution, médiane 
 => Pas de temps
 % (Caractérisation d’un ensemble de gènes)
 \section{CONCLUSION :}
+\bibliographystyle{plain} 
+\bibliography{rapport_Stage}
+
 \end{document}          

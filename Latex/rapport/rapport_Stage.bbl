@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{druaghici2016statistics}
+Sorin Dr{\u{a}}ghici.
+\newblock {\em Statistics and data analysis for microarrays using R and
+  bioconductor}.
+\newblock CRC Press, 2016.
+
+\bibitem{miller2002optimal}
+Lance~D Miller, Philip~M Long, Limsoon Wong, Sayan Mukherjee, Lisa~M McShane,
+  and Edison~T Liu.
+\newblock Optimal gene expression analysis by microarrays.
+\newblock {\em Cancer cell}, 2(5):353--361, 2002.
+
+\bibitem{shi2006microarray}
+Leming Shi, Laura~H Reid, Wendell~D Jones, Richard Shippy, Janet~A Warrington,
+  Shawn~C Baker, Patrick~J Collins, Francoise De~Longueville, Ernest~S
+  Kawasaki, Kathleen~Y Lee, et~al.
+\newblock The microarray quality control (maqc) project shows inter-and
+  intraplatform reproducibility of gene expression measurements.
+\newblock {\em Nature biotechnology}, 24(9):1151--1161, 2006.
+
+\bibitem{sica2012macrophage}
+Antonio Sica and Alberto Mantovani.
+\newblock Macrophage plasticity and polarization: in vivo veritas.
+\newblock {\em The Journal of clinical investigation}, 122(3):787--795, 2012.
+
+\bibitem{silver2009microarray}
+Jeremy~D Silver, Matthew~E Ritchie, and Gordon~K Smyth.
+\newblock Microarray background correction: maximum likelihood estimation for
+  the normal--exponential convolution.
+\newblock {\em Biostatistics}, page kxn042, 2009.
+
+\bibitem{smyth2005limma}
+Gordon Smyth.
+\newblock Limma: linear models for microarray data.
+\newblock {\em Bioinformatics and computational biology solutions using R and
+  Bioconductor}, pages 397--420, 2005.
+
+\end{thebibliography}

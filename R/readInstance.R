@@ -58,9 +58,9 @@ obj$genes$DetectionPValue <- detectionPValues(obj)
 ## Control Data                                                              ##
 ###############################################################################
 # source(file = "qa_metrics.R")
-# controlData <- obj[obj$genes$Status != "regular",]
-# bruteData <- obj[obj$genes$Status == "regular",]
-# source(file = "controlData.R")
+controlData <- obj[obj$genes$Status != "regular",]
+bruteData <- obj[obj$genes$Status == "regular",]
+source(file = "controlData.R")
 # #estimation de proportion des sondes exprimées
 # plot(propexpr(obj),type = "b", main = "Estimation de proportion des sondes exprimées",ylab = "",xlab = "")
 # axis(1,1:24,nameCol , las = 2)
@@ -106,7 +106,7 @@ summary(lm(formula = P1_GAL ~ P1_G,data=as.data.frame(dCorect$E[,c("P1_GAL","P1_
 summary(lm(formula = P1_M ~ P1_G,data=as.data.frame(dCorect$E[,c("P1_M","P1_G")])))
 
 #P1_G vs P1_GAL
-design <- model.matrix(~0+nameCol)
+design <- model.matrix(~1+nameCol)
 colnames(design) <- nameCol
 contMatrix <- makeContrasts(GvsGAL=P1_G-P1_GAL,MvsG=P1_M-P1_G,levels = design)
 fit <- lmFit(dCorect, design)

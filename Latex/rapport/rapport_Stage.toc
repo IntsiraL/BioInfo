@@ -1,24 +1,26 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}INTRODUCTION :}{2}
-\contentsline {section}{\numberline {2}PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL :}{2}
-\contentsline {subsection}{\numberline {2.1}Pr\IeC {\'e}sentation g\IeC {\'e}n\IeC {\'e}rale (activit\IeC {\'e}, organisation, services...) :}{2}
-\contentsline {subsection}{\numberline {2.2}Pr\IeC {\'e}sentation du service rattach\IeC {\'e} :}{2}
-\contentsline {section}{\numberline {3}PR\'{E}SENTATION DU SUJET DE STAGE :}{2}
-\contentsline {subsection}{\numberline {3.1}Objet et missions du stage :}{2}
-\contentsline {subsection}{\numberline {3.2}Missions r\IeC {\'e}ellement r\IeC {\'e}alis\IeC {\'e}es :}{2}
-\contentsline {section}{\numberline {4}ACQUISITION DES DONN\'{E}ES :}{2}
-\contentsline {subsection}{\numberline {4.1} Plan exp\IeC {\'e}rimental :}{2}
-\contentsline {subsection}{\numberline {4.2}Les puces \IeC {\`a} ADN :}{3}
-\contentsline {subsection}{\numberline {4.3}La technologie Illumina :}{4}
-\contentsline {subsection}{\numberline {4.4}Les sources de variations et les d\IeC {\'e}fis sur l'utilisation des puces ADN :}{6}
-\contentsline {section}{\numberline {5}DESCRIPTION DES DONN\'{E}ES :}{7}
-\contentsline {subsection}{\numberline {5.1} D\IeC {\'e}cryptage et lecture :}{7}
-\contentsline {subsection}{\numberline {5.2} Donn\IeC {\'e}es brutes via Bioconductor :}{8}
-\contentsline {subsection}{\numberline {5.3} Contr\IeC {\^o}le et qualit\IeC {\'e} :}{8}
-\contentsline {section}{\numberline {6}PR\'{E}TRAITEMENT DES DONN\'{E}ES :}{12}
-\contentsline {subsection}{\numberline {6.1}Transformation :}{12}
-\contentsline {subsection}{\numberline {6.2}Normalisation :}{12}
-\contentsline {subsection}{\numberline {6.3}La fonction neqc() du package Limma :}{13}
-\contentsline {section}{\numberline {7}ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}{16}
-\contentsline {section}{\numberline {8}INTERP\'{E}TATION :}{16}
-\contentsline {section}{\numberline {9}CONCLUSION :}{16}
+\contentsline {section}{\numberline {1}INTRODUCTION }{4}
+\contentsline {section}{\numberline {2}PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL }{4}
+\contentsline {subsection}{\numberline {2.1}Organisme d\IeC {\textquoteright }accueil\IeC {\nobreakspace }: Centre de Recherche en Canc\IeC {\'e}rologie et Immunologie Nantes Angers (CRCINA)}{4}
+\contentsline {subsection}{\numberline {2.2}Service du rattach\IeC {\'e}\IeC {\nobreakspace }: \IeC {\'E}quipe 7 de l\IeC {\textquoteright }U1232 Immunit\IeC {\'e} inn\IeC {\'e}e et immunoth\IeC {\'e}rapie}{4}
+\contentsline {section}{\numberline {3}PR\'{E}SENTATION DU SUJET DE STAGE }{5}
+\contentsline {subsection}{\numberline {3.1}Projet d\IeC {\textquoteright }\IeC {\'e}quipe o\IeC {\`u} s\IeC {\textquoteright }inscrit le stage :}{5}
+\contentsline {subsection}{\numberline {3.2}Objectif et missions du stage :}{5}
+\contentsline {subsection}{\numberline {3.3}Missions r\IeC {\'e}ellement r\IeC {\'e}alis\IeC {\'e}es :}{6}
+\contentsline {section}{\numberline {4}ACQUISITION DES DONN\'{E}ES }{6}
+\contentsline {subsection}{\numberline {4.1} Plan exp\IeC {\'e}rimental :}{6}
+\contentsline {subsection}{\numberline {4.2}Les puces \IeC {\`a} ADN :}{7}
+\contentsline {subsection}{\numberline {4.3}La technologie Illumina :}{8}
+\contentsline {subsection}{\numberline {4.4}Les sources de variations et les d\IeC {\'e}fis sur l'utilisation des puces ADN :}{10}
+\contentsline {section}{\numberline {5}DESCRIPTION DES DONN\'{E}ES }{11}
+\contentsline {subsection}{\numberline {5.1} D\IeC {\'e}cryptage et lecture :}{11}
+\contentsline {subsection}{\numberline {5.2} Donn\IeC {\'e}es brutes via Bioconductor :}{12}
+\contentsline {subsection}{\numberline {5.3} Contr\IeC {\^o}le et qualit\IeC {\'e} :}{12}
+\contentsline {section}{\numberline {6}PR\'{E}TRAITEMENT DES DONN\'{E}ES }{17}
+\contentsline {subsection}{\numberline {6.1}Correction de bruit de fond :}{17}
+\contentsline {subsection}{\numberline {6.2}Transformation :}{17}
+\contentsline {subsection}{\numberline {6.3}Normalisation :}{18}
+\contentsline {subsection}{\numberline {6.4}La fonction neqc() du package Limma :}{18}
+\contentsline {section}{\numberline {7}ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}{22}
+\contentsline {section}{\numberline {8}INTERP\'{E}TATION :}{22}
+\contentsline {section}{\numberline {9}CONCLUSION :}{22}
