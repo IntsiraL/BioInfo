@@ -234,7 +234,7 @@ Il est de ce fait très intéressant de voir de plus près les grandes étapes e
 De ce point de vue, ces variations sont considérées comme des bruits dans la phase d’analyse des expressions.\\
 Est-ce que la variation d’un gène particulier est due au bruit de fond de la puce ou c’est réellement une différence entre les conditions expérimentales? C’est là le vrai defi. 
 Si on prend un gène spécifique, combien de quantité de sa valeur représente la mesure de la variance due à la régulation des gènes et due à la quantité de bruit ?
-Ces sources de variation (Tableau :~\ref{Sources de variation}\cite{miller2002optimal}) nous mènent aux problèmes de fiabilité et de reproductibilité dans les mesures des puces ADN qui sont souvent négligés.
+Ces sources de variation (Tableau :~\ref{Sources de variation}\cite{miller2002optimal,wildsmith2001research}) nous mènent aux problèmes de fiabilité et de reproductibilité dans les mesures des puces ADN. %qui sont souvent négligés.
 Néanmoins, une grande partie de la variabilité induite par la puce elle-même  peut être déterminée à l'aide des techniques 
 de réplications ou d’autres techniques de séparations des bruits (Exemples : conception d’expérience statistique, normalisation des données).
 Plusieurs efforts ont été menés pour évaluer la fiabilité, la précision et la reproductibilité des puces ADN, inclus des projets comme MAQC(MicroArray Quality Control\cite{shi2006microarray}). \\
@@ -419,6 +419,7 @@ Les contrôles marqués par (*) sont fortement recommandé par Illumina.
  Un rapport signal/bruit (SNR) peut être calculé en utilisant les mesures fournies par le scanner (dans le fichier metrics.txt) incluant les 95(P95) et 5(P05) quantiles de toutes les intensités de pixels de  l’image de chaque section. 
  Ces informations de mesures dépendent du paramètre de scanner et sont tout aussi utile pour l’évaluation de la qualité des données des échantillons ou bien pour évaluer si des échantillons semblent être des valeurs aberrantes. 
  Illumina recommande que le ratio SNR soit supérieur à 10 pour les puces HT-12.
+ \label{SNR}
 \end{center}
 \begin{center}
  \includegraphics[scale=0.5]{../../R/output/propexpr.png}
@@ -429,7 +430,8 @@ Les contrôles marqués par (*) sont fortement recommandé par Illumina.
  La fonction compare la distribution d’intensité empirique des sondes de contrôle négatif avec celle des sondes régulières. 
  Un modèle de mélange est adapté aux données de chaque échantillon de la puce pour inférer la distribution d’intensité des sondes exprimées et estimer la proportion exprimée.
 \end{center}
-
+\subsection{ Commentaire des résultats :}
+Un premier préavis sur la qualité de notre donnée est indiqué par le rapport signal/bruit du figure
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES }
 \subsection{Correction de bruit de fond :}
 \subsection{Transformation :}
@@ -504,8 +506,11 @@ Le but de la normalisation par quantile est de mettre la distribution, médiane 
 \section{INTERP\'{E}TATION :}
 => Pas de temps
 % (Caractérisation d’un ensemble de gènes)
-\section{ANNEXE: Scripts R développé et quelques fonctions de Limma}
-
+\section{ANNEXE: Scripts R développés et quelques fonctions de Limma}
+\subsection{Lecture des fichiers IDAT :}
+\subsection{Contrôle des données :}
+\subsection{Prétraitement des données :}
+\subsection{Analyse des données :}
 \section{CONCLUSION :}
 \nocite{smyth2005limma}
 \nocite{druaghici2016statistics}

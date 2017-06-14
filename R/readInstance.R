@@ -57,7 +57,7 @@ obj$genes$DetectionPValue <- detectionPValues(obj)
 ###############################################################################
 ## Control Data                                                              ##
 ###############################################################################
-# source(file = "qa_metrics.R")
+source(file = "qa_metrics.R")
 controlData <- obj[obj$genes$Status != "regular",]
 bruteData <- obj[obj$genes$Status == "regular",]
 source(file = "controlData.R")

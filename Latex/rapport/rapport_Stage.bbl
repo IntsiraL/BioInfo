@@ -20,6 +20,13 @@ Leming Shi, Laura~H Reid, Wendell~D Jones, Richard Shippy, Janet~A Warrington,
   intraplatform reproducibility of gene expression measurements.
 \newblock {\em Nature biotechnology}, 24(9):1151--1161, 2006.
 
+\bibitem{shi2010estimating}
+Wei Shi, Carolyn~A de~Graaf, Sarah~A Kinkel, Ariel~H Achtman, Tracey Baldwin,
+  Louis Schofield, Hamish~S Scott, Douglas~J Hilton, and Gordon~K Smyth.
+\newblock Estimating the proportion of microarray probes expressed in an rna
+  sample.
+\newblock {\em Nucleic acids research}, 38(7):2168--2176, 2010.
+
 \bibitem{sica2012macrophage}
 Antonio Sica and Alberto Mantovani.
 \newblock Macrophage plasticity and polarization: in vivo veritas.
@@ -43,5 +50,10 @@ Gordon Smyth.
 \newblock Limma: linear models for microarray data.
 \newblock {\em Bioinformatics and computational biology solutions using R and
   Bioconductor}, pages 397--420, 2005.
+
+\bibitem{wildsmith2001research}
+SE~Wildsmith, GE~Archer, AJ~Winkley, PW~Lane, and PJ~Bugelski.
+\newblock Research report maximization of signal derived from cdna microarrays.
+\newblock {\em Biotechniques}, 30(1):202--208, 2001.
 
 \end{thebibliography}

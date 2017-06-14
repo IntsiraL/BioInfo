@@ -158,3 +158,29 @@ par(mfcol=c(1,1))
 # boxplot(log2(c(bruteData$E[,1:8])),main = "Dispersion du signal sur de la Population 1")
 # boxplot(log2(c(bruteData$E[,9:16])),main = "Dispersion du signal sur la Population 2")
 # boxplot(log2(c(bruteData$E[,17:24])),main = "Dispersion du signal sur de la Population 3")
+###############################################################################
+## Outliers                 & Missing Value                                  ##
+###############################################################################
+outliers <- function(i){
+  q <- quantile(obj$E[,i])
+  length(obj$E[obj$E[,i] > q[4] + 1.5*IQR(obj$E[,i]),i])
+}
+missV <- function(i){
+  q <- quantile(obj$E[,i])
+  length(obj$E[obj$E[,i] < q[1] - 1.5*IQR(obj$E[,i]),i])
+}
+abr=c()
+for(i in c(1:24)){
+  abr <- c(abr,outliers(i))
+}
+###############################################################################
+## Nombre des gènes detecter                                   ##
+###############################################################################
+###############################################################################
+## Problème de spécificité                                                   ##
+###############################################################################
+plot(pm/mm2, type = "b", ylab = "Ration of PM/MM2 Signals",xaxt="n", xlab = "",main = " Comparison Across Control Metrics, 
+PM/MM2 Ratio Line Plot")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+abline(h=c(1.8,2.2), col="blue")
+abline(v=12.5, col="red")

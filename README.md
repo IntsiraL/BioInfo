@@ -33,3 +33,5 @@ https://support.illumina.com/content/dam/illumina-support/courses/Gene_Expressio
 http://compdiag.molgen.mpg.de/ngfn/docs/2005/sep/beissbarth_cDNA_QCPP.pdf
 http://compdiag.molgen.mpg.de/ngfn/docs/2005/mar/mansmann-cDNA.pdf
 http://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/11/technote_gene_expression_data_quality_control.pdf
+http://compdiag.molgen.mpg.de/ngfn/docs/2004/nov/mansmann-cDNA.pdf
+https://github.com/bioinformatics-core-shared-training/microarray-analysis/blob/master/illumina.Rmd
