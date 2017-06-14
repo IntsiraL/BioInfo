@@ -7,6 +7,7 @@
 \usepackage{amsmath}
 \usepackage{stackengine}
 \usepackage{setspace}
+\usepackage[hyphens]{url}
 %\usepackage{placeins}
 
 \newcommand\tabA[1][0.5cm]{\hspace*{#1}}
@@ -16,7 +17,6 @@
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\interfootnotelinepenalty=10000
 
 % Title Page
 \begin{document}
@@ -86,11 +86,11 @@
 \listoftables
 \newpage
 \section{INTRODUCTION }
-Besoin d'inspiration
+
 \section{PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL }
 \subsection{Organisme d’accueil : Centre de Recherche en Cancérologie et Immunologie Nantes Angers (CRCINA)}
 Le CRCINA est une structure de recherche intégrée aux universités de Nantes et d’Angers et labellisée par l’Institut National de la Santé et de la Recherche Médicale (Inserm). 
-Le CRCINA regroupe environ 400 personnes dont environ 150 chercheurs et enseignants/chercheurs\footnote{http://www.crcina.org/}.
+Le CRCINA regroupe environ 400 personnes dont environ 150 chercheurs et enseignants/chercheurs\footnote{\url{http://www.crcina.org/}}.
 
 Le CRCINA développe des programmes multidisciplinaires alliant recherche fondamentale et clinique, principalement dans le domaine de l’oncologie. Il est organisé autour de trois départements :
 \begin{itemize}
@@ -128,8 +128,8 @@ L’étudiant a pu choisir en arrivant entre 3 sujets concernant la question bio
 \end{itemize}
 L’objectif est de permettre à l’étudiant de se familiariser avec l’une des étapes du traitement des données d’expression génique.
 \subsection{Missions réellement réalisées :}
-La première partie du projet, donc le premier sujet, a été choisi et réellement réalisée par l’étudiant à partir des données brutes issues de la technologie illumina. 
-Il a identifié la structure des données contenues dans ce fichier, et toutes les étapes de contrôle et de prétraitement des données nécessaires aux analyses statistiques ultérieures.
+%La première partie du projet, donc le premier sujet, a été choisi et réellement réalisée par l’étudiant à partir des données brutes issues de la technologie illumina. 
+%Il a identifié la structure des données contenues dans ce fichier, et toutes les étapes de contrôle et de prétraitement des données nécessaires aux analyses statistiques ultérieures.
 \section{ACQUISITION DES DONN\'{E}ES }
 
 \subsection{ Plan expérimental :}
@@ -207,13 +207,13 @@ La vraie différence entre ces approches résident sur la précision, la spécif
 Illumina, Inc. est une société américaine qui fabrique et commercialise des systèmes intégrés pour l'analyse de la variation génétique et la fonction biologique, 
 notamment des gammes de produits et services qui servent les marchés du séquençage, génotypage et expression génétique.
 \newline
-Une de ces récentes fabrications est la puce ``BeadArray technologie''\footnote{https://www.illumina.com/technology/beadarray-technology.html}.
+Une de ces récentes fabrications est la puce ``BeadArray technologie''\footnote{\url{https://www.illumina.com/technology/beadarray-technology.html}}.
 \begin{center}
  \includegraphics[scale=0.5]{./image/beadarray.png}
  % beadarray_multi_sample_array_formats_lg.gif: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
  \captionof{figure}{Illumina BeadArray Technologie }
 \end{center}
-Dans l’analyse des expressions des gènes, Illumina utilise deux approches différentes : l’hybridation directe(Direct Hybridization assay\footnote{https://support.illumina.com/array/array\_kits/humanht-12\_v4\_expression\_beadchip\_kit/training.html}) et le DASL (cDNA-mediated Annealing Selection Extension and Ligation).
+Dans l’analyse des expressions des gènes, Illumina utilise deux approches différentes : l’hybridation directe (Direct Hybridization assay)\footnote{\url{https://support.illumina.com/array/array\_kits/humanht-12\_v4\_expression\_beadchip\_kit/training.html}} et le DASL (cDNA-mediated Annealing Selection Extension and Ligation).
 L’expérience est faite avec la première approche qui consiste à utiliser un simple brin de la séquence d’ADN (pour chaque sonde). Cette séquence monocaténaire s’hybride avec la séquence cible étiquetée dans l’échantillon. 
 La quantité du signal fluorescent produit détermine la quantité de l’ARN cible dans l’échantillon.
 \begin{center}
@@ -312,11 +312,12 @@ physique d'une section et savoir les sections liées sur chaque échantillons\\
 \end{table}
 \newline
 Pour la lecture  des fichiers .idat, l’utilisation d’un fichier manifeste qui contient l’ensemble de tout les informations nécessaires concernant la puce est indispensable pour le décryptage : le nom et l’identifiant  des gènes ( Probe\_id, Array\_Address\_Id, Symbol, Barcode), le statut d’une sonde (regular, negative, biotin,...)
-Dans la suite logique des choses, Illumina fourni un logiciel payant (GenomeStudio Software\footnote{https://support.illumina.com/content/dam/illumina-support/documents/documentation/software\_documentation/genomestudio/genomestudio-2011-1/genomestudio-gx-module-v1-0-user-guide-11319121-a.pdf})  qui aide sur le traitement et l'analyse des puces ADN (Genotyping Module, Gene Expression Module, Methylation Module).
+Dans la suite logique des choses, Illumina fourni un logiciel payant (GenomeStudio Software\footnote{\url{https://support.illumina.com/content/dam/illumina-support/documents/documentation/software\_documentation/genomestudio/genomestudio-2011-1/genomestudio-gx-module-v1-0-user-guide-11319121-a.pdf}})  qui aide sur le traitement et l'analyse des puces ADN (Genotyping Module, Gene Expression Module, Methylation Module).
 \subsection{ Données brutes via Bioconductor :}
 Bioconductor est un projet de développement et un ensemble de package (1380 packages en 2017)  gratuit et open source dans l’analyse et la compréhension des données génomiques basé principalement en langage de programmation statistique R.
-Limma\footnote{https://bioconductor.org/packages/release/bioc/vignettes/limma/inst/doc/usersguide.pdf} est un des packages (de choix) dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
-Après la lecture, on obtient un objet de type ElistRaw de limma (Tableau :~\ref{EListRaw}) qui contient les informations qu’on a besoin. 
+\\Limma\footnote{\url{https://bioconductor.org/packages/release/bioc/vignettes/limma/inst/doc/usersguide.pdf}} est un des packages (de choix) dans Bioconductor pour l’analyse des expressions génomique des puces  ADN. La function read.idat() de package Limma permet de lire les fichiers idat d’Illumina BeadArray en fournissant en paramètre le fichier manifeste .bgx correspondant à la plateforme d’expression de gène à étudier.
+En fait, read.idat () améliore la fonction readIDAT() du package Illuminaio\cite{smith2013illuminaio} en se basant sur les statuts des sondes (régulier, négatif) parce qu’actuellement, il est le seul package R qui est conçu de décrypter et extraire toutes les informations possibles d’un fichier binaire IDAT (encodé en base64) de plateforme BeadArrayd’Illumina.
+\\Après la lecture, on obtient un objet de type ElistRaw de limma (Tableau :~\ref{EListRaw}) qui contient les informations qu’on a besoin. 
 Il est pratique par la suite de mettre en correspondance les informations liées aux échantillons avec l’objet nouvellement crée, par exemple changer les noms de la colonne de la matrice des intensités.
 \begin{table}[!ht]
 \begin{tabular}{|p{3cm}|p{9cm}|}
@@ -345,8 +346,8 @@ La puce d’Illumina introduit alors des sondes appelées sonde de contrôle pou
 Avec ces sondes de contrôles, on peut quantifier les bruits et la qualité du signal, vérifier la qualité de la mesure d’expression de l'ensemble des sondes de la puce. 
 Une valeur anormale produit par un seul BeadArray peut compromettre le résultat d’une analyse sur l’ensemble des données. 
 On ne peut pas donc être assuré d’avoir un bon résultat en phase d’analyse si la qualité des données obtenues n’est pas acceptable (Tableau :~\ref{Control Dyrect  Hyb})
-\footnote{https://www.bioconductor.org/packages/release/data/experiment/vignettes/BeadArrayUseCases/inst/doc/BeadArrayUseCases.pdf}
-\footnote{http://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/11/technote\_gene\_expression\_data\_quality\_control.pdf}.
+\footnote{\url{https://www.bioconductor.org/packages/release/data/experiment/vignettes/BeadArrayUseCases/inst/doc/BeadArrayUseCases.pdf}}
+\footnote{\url{http://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/11/technote\_gene\_expression\_data\_quality\_control.pdf}}.
 \begin{table}[!ht]
 \centering
 \begin{tabular}{|p{3cm}|p{9cm}|}
@@ -428,7 +429,9 @@ Les contrôles marqués par (*) sont fortement recommandé par Illumina.
  La fonction compare la distribution d’intensité empirique des sondes de contrôle négatif avec celle des sondes régulières. 
  Un modèle de mélange est adapté aux données de chaque échantillon de la puce pour inférer la distribution d’intensité des sondes exprimées et estimer la proportion exprimée.
 \end{center}
-
+\begin{center}
+ Commentaire des résultats
+\end{center}
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES }
 \subsection{Correction de bruit de fond :}
 \subsection{Transformation :}
@@ -503,6 +506,11 @@ Le but de la normalisation par quantile est de mettre la distribution, médiane 
 \section{INTERP\'{E}TATION :}
 => Pas de temps
 % (Caractérisation d’un ensemble de gènes)
+\section{ANNEXE: Scripts R développés et quelques fonctions de Limma}
+\subsection{Lecture des fichiers IDAT :}
+\subsection{Contrôle des données :}
+\subsection{Prétraitement des données :}
+\subsection{Analyse des données :}
 \section{CONCLUSION :}
 \nocite{smyth2005limma}
 \nocite{druaghici2016statistics}

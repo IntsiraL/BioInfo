@@ -31,6 +31,13 @@ Jeremy~D Silver, Matthew~E Ritchie, and Gordon~K Smyth.
   the normal--exponential convolution.
 \newblock {\em Biostatistics}, page kxn042, 2009.
 
+\bibitem{smith2013illuminaio}
+Mike~L Smith, Keith~A Baggerly, Henrik Bengtsson, Matthew~E Ritchie, and
+  Kasper~D Hansen.
+\newblock illuminaio: An open source idat parsing tool for illumina
+  microarrays.
+\newblock {\em F1000Research}, 2, 2013.
+
 \bibitem{smyth2005limma}
 Gordon Smyth.
 \newblock Limma: linear models for microarray data.

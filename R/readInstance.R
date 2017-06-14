@@ -1,12 +1,12 @@
-library(limma)
+#library(limma)
 #library(illuminaio)
-
-idatfilesPath<-getwd()
 #######################################################################################################
 #######################################################################################################
 ############################## LECTURE DES FICHIERS IDATS
 #######################################################################################################
 #######################################################################################################
+require(limma)
+idatfilesPath<-getwd()
 idatFiles44 <- list.files(paste(idatfilesPath,"/../Data/200729890044/",sep = ""),all.files=FALSE,pattern=".idat")
 idatFiles64 <- list.files(paste(idatfilesPath,"/../Data/200796240064/",sep = ""),all.files=FALSE,pattern=".idat")
 bgxfile=paste(idatfilesPath,"/../Data/HumanHT-12_V4_0_R2_15002873_B.bgx",sep = "")
@@ -22,7 +22,7 @@ for (i in idatFiles64){
 #lectures des fichiers idat par ordre alphabétique des noms des fichiers avec read.idat de limma
 obj<-read.idat(idatFiles, bgxfile, dateinfo=TRUE,annotation = "Symbol",tolerance=0L, verbose = TRUE)
 
-#renomer les colonnes de la matrice des intensités
+#renommer les colonnes de la matrice des intensités
 nameCol <- c("P1_G","P1_MAL","P1_GLPS","P1_GALLPS","P1_M","P1_GAL","P1_MLPS","P1_MALLPS")
 
   for (i in c("","AL","LPS","ALLPS")){
@@ -44,7 +44,7 @@ colnames(obj$E) <- nameCol
 colnames(obj$other$NumBeads) <- nameCol
 colnames(obj$other$STDEV) <- nameCol
 
-#juste un petit control des p-values
+#Contrôle de p-values
 obj$genes$DetectionPValue <- detectionPValues(obj)
 
 #décryptage des fichier idat avec illuminao
