@@ -34,6 +34,7 @@ plot(medium, type = "b", ylab = "Signal",xaxt="n", xlab = "",main = "QC Report H
 axis(1, at=c(1:24), labels = nameCol, las=2)
 plot(high, type = "b", ylab = "Signal",xaxt="n", xlab = "",main = "QC Report Hybridation Controls: high")
 axis(1, at=c(1:24), labels = nameCol, las=2)
+abline(v=12.5, col="red")
 ###############################################################################
 ## Negative controls                                                         ##
 ###############################################################################
@@ -66,9 +67,6 @@ for(i in c(1:24)){
 }
 #A voir
 highStingc = rep(55,24)
-#for(i in c(1:24)){
-#  highStingc <- c(highStingc,mean(c(stringC$E[8,i])))
-#}
 mm2 = c()
 for(i in c(1:24)){
   mm2 <- c(mm2,mean(controlData$E[controlProfil$Reporter_Group_id=="phage_lambda_genome:mm2",i]))
@@ -147,6 +145,46 @@ error.bar(giC_Bar,gi, giSD)
 lbkC_Bar <- barplot(labk, ylim = c(0,1.2*max(labk)), ylab = "Signal",main = "Labeling & Background")
 error.bar(lbkC_Bar,labk, labkSD)
 par(mfcol=c(1,1))
+###############################################################################
+## Outliers                 & Missing Value                                  ##
+###############################################################################
+outliers <- function(i){
+  q <- quantile(bruteData$E[,i])
+  length(bruteData$E[bruteData$E[,i] > q[4] + 1.5*IQR(bruteData$E[,i]),i])
+}
+abr=c()
+for(i in c(1:24)){
+  abr <- c(abr,outliers(i))
+}
+par(mfcol=c(2,1))
+plot(abr, type = "b", ylab = "Number of Genes (Intensity > q3 + 1.5(q3 - q1))",xaxt="n", xlab = "",main = " Outliers for Each Sample")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+abline(v=12.5, col="blue")
+plot(abr/nrow(bruteData$E), type = "b", ylab = "NbOutliers/NbGenes",xaxt="n", xlab = "",main = " Outliers for Each Sample")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+abline(v=12.5, col="red")
+###############################################################################
+## Nombre des gènes detecter                                                 ##
+###############################################################################
+gDetect=c()
+for(i in c(1:24)){
+  gDetect <- c(gDetect,length(bruteData$genes$DetectionPValue[bruteData$genes$DetectionPValue[,i] < 0.05,i]))
+}
+par(mfcol=c(2,1))
+hybC_Bar <- barplot(mean(gDetect),ylim = c(0,1.5*mean(gDetect)), ylab = "Number of Genes",xlab="All Array",main = "Detected Genes (p-value < 0.05)")
+error.bar(hybC_Bar,mean(gDetect), sd(gDetect))
+plot(gDetect, type = "b", ylab = "Detected Genes (p-value < 0.05)",xaxt="n", xlab = "",main = " Number of Genes Detected for Each Sample")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+abline(v=12.5, col="red")
+par(mfcol=c(1,1))
+###############################################################################
+## PM/MM2 Ratio                                                              ##
+###############################################################################
+plot(pm/mm2, type = "b", ylab = "Ration of PM/MM2 Signals",xaxt="n", xlab = "",main = "PM/MM2 Ratio Line Plot")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+abline(h=c(1.8,2.2), col="blue")
+abline(v=12.5, col="red")
+
 #boxplot(log2(bruteData$E), las= 2)
 ###############################################################################
 ## Dispertion des valeurs entre population                                   ##
@@ -158,36 +196,3 @@ par(mfcol=c(1,1))
 # boxplot(log2(c(bruteData$E[,1:8])),main = "Dispersion du signal sur de la Population 1")
 # boxplot(log2(c(bruteData$E[,9:16])),main = "Dispersion du signal sur la Population 2")
 # boxplot(log2(c(bruteData$E[,17:24])),main = "Dispersion du signal sur de la Population 3")
-###############################################################################
-## Outliers                 & Missing Value                                  ##
-###############################################################################
-outliers <- function(i){
-  q <- quantile(obj$E[,i])
-  length(obj$E[obj$E[,i] > q[4] + 1.5*IQR(obj$E[,i]),i])
-}
-missV <- function(i){
-  q <- quantile(obj$E[,i])
-  length(obj$E[obj$E[,i] < q[1] - 1.5*IQR(obj$E[,i]),i])
-}
-abr=c()
-for(i in c(1:24)){
-  abr <- c(abr,outliers(i))
-}
-###############################################################################
-## Nombre des gènes detecter                                   ##
-###############################################################################
-gDetect=c()
-for(i in c(1:24)){
-  gDetect <- c(gDetect,length(bruteData$genes$DetectionPValue[bruteData$genes$DetectionPValue[,i] < 0.05,i]))
-}
-plot(gDetect, type = "b", ylab = "Detected Genes (p-value < 0.05)",xaxt="n", xlab = "",main = " Number of Genes Detected for Each Sample")
-axis(1, at=c(1:24), labels = nameCol, las=2)
-abline(v=12.5, col="red")
-sd(gDetect)
-###############################################################################
-## Problème de spécificité                                                   ##
-###############################################################################
-plot(pm/mm2, type = "b", ylab = "Ration of PM/MM2 Signals",xaxt="n", xlab = "",main = "PM/MM2 Ratio Line Plot")
-axis(1, at=c(1:24), labels = nameCol, las=2)
-abline(h=c(1.8,2.2), col="blue")
-abline(v=12.5, col="red")

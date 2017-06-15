@@ -8,6 +8,9 @@
 \usepackage{stackengine}
 \usepackage{setspace}
 \usepackage[hyphens]{url}
+\usepackage{color}
+%\usepackage{pdfcolmk}
+\usepackage{Sweave}
 %\usepackage{placeins}
 
 \newcommand\tabA[1][0.5cm]{\hspace*{#1}}
@@ -26,7 +29,13 @@
 
     % Upper part of the page. The '~' is needed because \\
     % only works if a paragraph has started.
-    \includegraphics{./image/ua_v_couleur.jpg}
+    %\includegraphics[scale=0.1]{./image/ua_v_couleur.jpg}
+    \begin{figure}
+ \centering
+ \includegraphics[scale=0.01]{./image/ua_v_couleur.jpg}
+ % ua_v_couleur.jpg: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+\end{figure}
+
     
     \textsc{ UNIVERSIT\'{E} D'ANGERS \\ UFR INFORMATIQUE}\\[0.5cm]
     \textsc{ \\ Rapport de stage \\ Master 1 2016-2017 }\\[1.5cm]
@@ -85,6 +94,8 @@
 \newpage
 \listoftables
 \newpage
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{formatcom = {\color[rgb]{0, 0, 0.56}}}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{formatcom = {\color[rgb]{0.56, 0, 0}}}
 \section{INTRODUCTION }
 
 \section{PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL }
@@ -396,53 +407,109 @@ Labeling and Background & Labeling >= Background \\
 \label{Control Dyrect  Hyb}
 Les contrôles marqués par (*) sont fortement recommandé par Illumina.
 \end{table}
-\begin{center}
+\begin{figure}
+ \centering
  \includegraphics[scale=0.5]{../../R/output/hybControl.png}
  % hybControl.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
- \captionof{figure}{Contôle d'hybridation }
-\end{center}
-\begin{center}
+ \caption{Contôle d'hybridation}
+ \label{fig:hybControl}
+\end{figure}
+\begin{figure}
+ \centering
  \includegraphics[scale=0.5]{../../R/output/LowStringency.png}
  % LowStringency.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
- \captionof{figure}{Low Stringency control}
-\end{center}
-
-\begin{center}
- \includegraphics[scale=0.7]{../../R/output/SummaryControl.png}
+ \caption{Low Stringency control}
+ \label{fig:lowStringency}
+\end{figure}
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.5]{../../R/output/SummaryControl.png}
  % SummaryControl.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
- \captionof{figure}{Résume de l'ensemble de contôle d'hybridation direct de la technologie BeadArray d'Illumina}
-\end{center}
-\begin{center}
+ \caption{Résume de l'ensemble de contôle d'hybridation direct de la technologie BeadArray d'Illumina}
+ \label{fig:summaryControl}
+\end{figure}
+\begin{figure}
+ \centering
  \includegraphics[scale=0.5]{../../R/output/signal_to_noise.png}
  % signal_to_noise.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
- \captionof{figure}{Rapport signal-bruit sur les deux puces}
+ \caption{Rapport signal-bruit sur les deux puces}
  Un rapport signal/bruit (SNR) peut être calculé en utilisant les mesures fournies par le scanner (dans le fichier metrics.txt) incluant les 95(P95) et 5(P05) quantiles de toutes les intensités de pixels de  l’image de chaque section. 
  Ces informations de mesures dépendent du paramètre de scanner et sont tout aussi utile pour l’évaluation de la qualité des données des échantillons ou bien pour évaluer si des échantillons semblent être des valeurs aberrantes. 
  Illumina recommande que le ratio SNR soit supérieur à 10 pour les puces HT-12.
- \label{SNR}
-\end{center}
-\begin{center}
+ \label{fig:SNR}
+\end{figure}
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.5]{../../R/output/Detectedgenes.png}
+ % Detectedgenes.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \caption{Nombre des genes detectés sur chaque échantillon}
+ \label{fig:detectedGene}
+\end{figure}
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.5]{../../R/output/outliers.png}
+ % Outliers.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \caption{Détection des valeurs abérrantes}
+ \label{fig:outliers}
+\end{figure}
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.5]{../../R/output/ratiopmmm2.png}
+ % ratiopmmm2.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+ \caption{Rapport PM/MM2}
+ \label{fig:pmmm2ratio}
+ Certains échantillons présentent une divergence de ratio : entre P1\_M et P2\_G pour la première puce, et l’échantillon P3\_MALLPS pour la deuxième puce.
+\end{figure}
+\begin{figure}
+ \centering
  \includegraphics[scale=0.5]{../../R/output/propexpr.png}
  % propexpr.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
- \captionof{figure}{ Estimation de proportion des sondes exprimées sur les deux puces avec la fonction propexpr() de limma}
+ \caption{ Estimation de proportion des sondes exprimées sur les deux puces avec la fonction propexpr() de limma}
  Ces valeurs ne sont pas vraiment des probabilités, elles estiment la proportion globale de sondes sur chaque section de la puce Illumina BeadChip qui correspondent à des gènes exprimés selon la méthode de Shi et al (2010)\cite{shi2010estimating}.
  $pi1= (pb-p)/(pb-p1) $ avec $(pi1[pi1 > 1] \leftarrow 1 $ et $pi1[pi1 < 0] \leftarrow 0)$\\
  La fonction compare la distribution d’intensité empirique des sondes de contrôle négatif avec celle des sondes régulières. 
  Un modèle de mélange est adapté aux données de chaque échantillon de la puce pour inférer la distribution d’intensité des sondes exprimées et estimer la proportion exprimée.
-\end{center}
+\label{fig:propexpr}
+ \end{figure}
 \subsection{ Commentaire des résultats :}
-Un premier préavis sur la qualité de notre donnée est indiqué par le rapport signal/bruit( Figure ~\ref{SNR}).\\
-\begin{scriptsize}
-  > summary(ht12snr)\#Signal -to-noise  ratio  for  200729890044  data\\
-   \tabA Min.	1st Qu. 	Median 	Mean 	3rd Qu. 	Max. \\
-  \tabA 6.968   9.290   9.775   9.886  10.520  12.920 \\
-  > summary(ht12snrB)\#Signal -to-noise  ratio  for  200796240064  data\\
-  \tabA Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \\
-  \tabA 7.841   8.817   9.561   9.813  11.050  11.570 \\
-\end{scriptsize}
+Un premier préavis sur la qualité de notre donnée est indiqué par le rapport signal/bruit( Figure ~\ref{fig:SNR}).\\
+\begin{Schunk}
+\begin{Sinput}
+#########################################
+ summary(ht12snr)#Signal -to-noise  ratio  for  200729890044  data
+\end{Sinput}
+\begin{Soutput}
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  6.968   9.290   9.775   9.886  10.520  12.920 
+\end{Soutput}
+\begin{Sinput}
+ summary(ht12snrB)#Signal -to-noise  ratio  for  200796240064  data
+\end{Sinput}
+\begin{Soutput}
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  7.841   8.817   9.561   9.813  11.050  11.570 
+\end{Soutput}
+\begin{Sinput}
+ sd(ht12snr)
+\end{Sinput}
+\begin{Soutput}
+[1] 1.628862
+\end{Soutput}
+\begin{Sinput}
+ sd(ht12snrB)
+\end{Sinput}
+\begin{Soutput}
+[1] 1.317086
+\end{Soutput}
+\end{Schunk}
+
 Les valeurs SNR minimumes respectivement pour la puce 44 et 64 sont $6.968$ et $7.871$. Ces chiffres sont inférieurs à la valeur préconisée par Illumina mais en moyenne, on voit que la moitie des échantillons sur chaque puce a un SNR aux alentours de 10. Les valeurs ne sont pas très critiques.
-En examinant la figure 6, on trouve pas des anomalies particuliers sur l’ensemble des contrôles. On voit que les  housekeeping genes produisent des signaux presque 100 fois plus fort que les sondes négatives ($12000 > 120$).
-L’écart type de l’estimation de la proportion des sondes exprimés sur l’ensemble des échantillons n’est pas énorme ($sd(propexpr(obj))=0.03361209$ de variance $0.001129773$) et donc pas signifiant.
+\\En examinant la figure \ref{fig:summaryControl}, on trouve pas des anomalies particulières sur l’ensemble des contrôles. On voit que les  housekeeping genes produisent des signaux presque 100 fois plus fort que les sondes négatives ($12000 > 120$).
+La proportion des valeurs aberrantes sur chaque échantillon reste faible (Figure \ref{fig:outliers}). 
+Pour la figure \ref{fig:pmmm2ratio}, la divergence de ratio trouvée indique une différence possible de stringence d’hybridation entre les échantillons concernés (problème de spécificité dans l’expérience). \\
+Tous les échantillons préparés à partir de la même source d’échantillon devraient avoir un nombre similaire de transcrits détectés, c'est un peu le cas dans la figure \ref{fig:detectedGene}.
+L’écart type de l’estimation de la proportion des sondes exprimés sur l’ensemble des échantillons n’est pas énorme ($sd(propexpr(obj))=0.03361209$) par rapport à la moyenne($mean(propexpr(obj))=0.4087041$), donc la variation de la dite proportion entre les échantillons n'est pas signifiante.
+\\En somme, il n’y a pas un facteur discriminatoire sur l’ensemble des contrôles effectués qui peut ne pas valider les données en termes de qualité. Toutefois, la phase de prétraitement doit tenir compte de quelque spécificité liée à la qualité (Exemple : le fait qu’on a deux puces,...) pour mener à bien l'analyse.
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES }
 \subsection{Correction de bruit de fond :}
 \subsection{Transformation :}
@@ -519,8 +586,564 @@ Le but de la normalisation par quantile est de mettre la distribution, médiane 
 % (Caractérisation d’un ensemble de gènes)
 \section{ANNEXE: Scripts R développés et quelques fonctions de Limma}
 \subsection{Lecture des fichiers IDAT :}
+\begin{Schunk}
+\begin{Sinput}
+ require(limma)
+ idatfilesPath<-getwd()
+ idatFiles44 <- list.files(paste(idatfilesPath,"/../Data/200729890044/",sep = ""),
+                           all.files=FALSE,pattern=".idat")
+ idatFiles64 <- list.files(paste(idatfilesPath,"/../Data/200796240064/",sep = ""),
+                           all.files=FALSE,pattern=".idat")
+ bgxfile=paste(idatfilesPath,"/../Data/HumanHT-12_V4_0_R2_15002873_B.bgx",sep = "")
+ controlProfil  <- read.table(paste(idatfilesPath,"/../Data/controlProfil.txt",sep = ""), 
+                              sep = "\t", header = TRUE ,as.is = TRUE)
+ idatFiles = c()
+ for (i in idatFiles44){
+   idatFiles <- c(idatFiles,paste(idatfilesPath,"/../Data/200729890044/",i,sep = ""))
+ }
+ for (i in idatFiles64){
+   idatFiles <- c(idatFiles,paste(idatfilesPath,"/../Data/200796240064/",i,sep = ""))
+ }
+ #lectures des fichiers idat par ordre alphabétique des noms des fichiers avec 
+			    read.idat de limma
+ obj<-read.idat(idatFiles, bgxfile, dateinfo=TRUE,annotation = "Symbol",tolerance=0L, 
+			    verbose = TRUE)
+\end{Sinput}
+\begin{Soutput}
+Reading manifest file ../Data/HumanHT-12_V4_0_R2_15002873_B.bgx ... Done
+	 ../Data/200729890044/200729890044_A_Grn.idat ... Done
+	 ../Data/200729890044/200729890044_B_Grn.idat ... Done
+	  ....................................................
+	 ../Data/200796240064/200796240064_K_Grn.idat ... Done
+	 ../Data/200796240064/200796240064_L_Grn.idat ... Done
+Finished reading data.
+\end{Soutput}
+\begin{Sinput}
+ #renommer les colonnes de la matrice des intensités
+ nameCol <- c("P1_G","P1_MAL","P1_GLPS","P1_GALLPS","P1_M","P1_GAL","P1_MLPS","P1_MALLPS")
+   for (i in c("","AL","LPS","ALLPS")){
+     nameCol <- c(nameCol, paste("P2_G",i,sep = ""))
+   }
+   for (i in c("","AL","LPS","ALLPS")){
+     nameCol <- c(nameCol, paste("P2_M",i,sep = ""))
+   }
+   for (i in c("","AL","LPS","AL_LPS")){
+     nameCol <- c(nameCol, paste("P3_G",i,sep = ""))
+   }
+   for (i in c("","AL","LPS","ALLPS")){
+     nameCol <- c(nameCol, paste("P3_M",i,sep = ""))
+   }
+ colnames(obj$E) <- nameCol
+ colnames(obj$other$NumBeads) <- nameCol
+ colnames(obj$other$STDEV) <- nameCol
+ #Contrôle de p-values$
+ obj$genes$DetectionPValue <- detectionPValues(obj)
+ controlData <- obj[obj$genes$Status != "regular",]
+ bruteData <- obj[obj$genes$Status == "regular",]
+\end{Sinput}
+\end{Schunk}
 \subsection{Contrôle des données :}
+Utilisation du fichier Metrics.txt :
+\begin{Schunk}
+\begin{Sinput}
+ par(mfcol=c(2,1))
+ ht12metrics  <- read.table(paste(idatfilesPath,"/../Data/200729890044/Metrics.txt",
+ sep = ""),sep = "\t", header = TRUE ,as.is = TRUE)
+ ht12snr  <- ht12metrics$P95Grn/ht12metrics$P05Grn
+ labs  <- paste(ht12metrics[, 2],  ht12metrics[, 3], sep = "_")
+ par(mai = c(1.5, 0.8, 0.3, 0.1))
+ plot (1:12 , type = "b",  ht12snr , pch = 19, ylab = "P95 / P05", xlab = "",
+ main = "Signal -to-noise  ratio  for  200729890044  data", axes = FALSE ,
+ frame.plot = TRUE)
+ axis (2)
+ axis(1, 1:12, nameCol[1:12] , las = 2)
+ abline(h=10, col="red")
+ #########################################################
+ ht12metricsB  <- read.table(paste(idatfilesPath,"/../Data/200796240064/Metrics.txt",
+ sep = ""),sep = "\t", header = TRUE ,as.is = TRUE)
+ ht12snrB  <- ht12metricsB$P95Grn/ht12metricsB$P05Grn
+ par(mai = c(1.5, 0.8, 0.3, 0.1))
+ plot (1:12 ,  ht12snrB ,type = "b", pch = 19, ylab = "P95 / P05", xlab = "",
+ main = "Signal -to-noise  ratio  for  200796240064  data", axes = FALSE ,
+ frame.plot = TRUE)
+ axis (2)
+ axis(1, 1:12, nameCol[13:24] , las = 2)
+ abline(h=10, col="red")
+ par(mfcol=c(1,1))
+ #########################################
+\end{Sinput}
+\end{Schunk}
+Utilisation des données pour le contrôle:
+\begin{Schunk}
+\begin{Sinput}
+ ###############################################################################
+ ###############################################################################
+ ############################## CONTROL DATA	################################
+ ###############################################################################
+ ###############################################################################
+ #function to add the error bar representing the confidence interval
+ error.bar <- function(x, y, upper, lower=upper, length=0.1,...){
+   arrows(x,y+upper, x, y-lower, angle=90, code=3, length=length, ...)
+ }
+ ###############################################################################
+ ## Hybridation controls                                                      ##
+ ###############################################################################
+ low = c()
+ for(i in c(1:24)){
+   low <- c(low,mean(controlData$E[controlProfil$Reporter_Group_id==
+   "phage_lambda_genome:low",i]))
+ }
+ medium = c()
+ for(i in c(1:24)){
+   medium <- c(medium,mean(controlData$E[controlProfil$Reporter_Group_id==
+   "phage_lambda_genome:med",i]))
+ }
+ high = c()
+ for(i in c(1:24)){
+   high <- c(high,mean(controlData$E[controlProfil$Reporter_Group_id==
+   "phage_lambda_genome:high",i]))
+ }
+ vv <- c(mean(low),mean(medium),mean(high))
+ vvSD <- c(sd(low),sd(medium),sd(high))
+ names(vv) <- c("Low","Medium", "High")
+ par(mfcol=c(2,2))
+ hybC_Bar <- barplot(vv,ylim = c(0,1.2*max(vv)), ylab = "Signal",main = 
+ "Hybridation Controls")
+ error.bar(hybC_Bar,vv, vvSD)
+ plot(low, type = "b", ylab = "Signal",xaxt="n", xlab = "",main = 
+ "QC Report Hybridation Controls: low")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ plot(medium, type = "b", ylab = "Signal",xaxt="n", xlab = "",main = 
+ "QC Report Hybridation Controls: medium")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ plot(high, type = "b", ylab = "Signal",xaxt="n", xlab = "",main = 
+ "QC Report Hybridation Controls: high")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ abline(v=12.5, col="red")
+ ###############################################################################
+ ## Negative controls                                                         ##
+ ###############################################################################
+ negC <- obj[obj$genes$Status == "negative",]
+ background = c()
+ for(i in c(1:24)){
+   background <- c(background,mean(c(negC$E[,i])))
+ }
+ noise = c()
+ for(i in c(1:24)){
+   noise <- c(noise,sd(c(negC$E[,i])))
+ }
+ nn <- c(mean(background),mean(noise))
+ nnSD <- c(sd(background),sd(noise))
+ names(nn) <- c("Background", "Noise")
+ par(mfcol=c(2,2))
+ negC_Bar <- barplot(nn,ylim = c(0,1.2*max(nn)), ylab = "Signal",
+ main = "Negative Controls")
+ error.bar(negC_Bar,nn, nnSD)
+ plot(background, type = "b", ylab = "Signal",xaxt="n", xlab = "",
+ main = "QC Report background")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ plot(noise, type = "b", ylab = "Signal",xaxt="n", xlab = "",
+ main = "QC Report noise")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ ###############################################################################
+ ## Biotin & High Stringency   | Low Stringency                               ##
+ ###############################################################################
+ biotC <- obj[obj$genes$Status == "biotin",]
+ biot = c()
+ for(i in c(1:24)){
+   biot <- c(biot,mean(c(biotC$E[,i])))
+ }
+ #A voir$
+ highStingc = rep(55,24)
+ mm2 = c()
+ for(i in c(1:24)){
+   mm2 <- c(mm2,mean(controlData$E[controlProfil$Reporter_Group_id==
+   "phage_lambda_genome:mm2",i]))
+ }
+ pm = c()
+ for(i in c(1:24)){
+   pm <- c(pm,mean(controlData$E[controlProfil$Reporter_Group_id==
+   "phage_lambda_genome:pm",i]))
+ }
+ ss <- c(mean(biot),mean(highStingc))
+ ssSD <- c(sd(biot),sd(highStingc))
+ names(ss) <- c("Biotin", "High stringency")
+ lss <- c(mean(mm2),mean(pm))
+ lssSD <- c(sd(mm2),sd(pm))
+ names(lss) <- c("mm2", "pm")
+ par(mfcol=c(2,2))
+ bhC_Bar <- barplot(ss,ylim = c(0,1.2*max(ss)), ylab = "Signal",
+ main = "Biotin & High Stringency")
+ error.bar(bhC_Bar,ss, ssSD)
+ plot(biot, type = "b", ylab = "Signal",xaxt="n", xlab = "",
+ main = "QC Report biotin")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ plot(highStingc, type = "b", ylab = "Signal",xaxt="n", xlab = "",
+ main = "QC Report high stringency")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ par(mfcol=c(2,2))
+ lsC_Bar <- barplot(lss,ylim = c(0,1.2*max(lss)), ylab = "Signal",
+ main = "Low Stringency")
+ error.bar(lsC_Bar,lss, lssSD)
+ plot(mm2, type = "b", ylab = "Signal",xaxt="n", xlab = "",
+ main = "QC Report mm2")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ plot(pm, type = "b", ylab = "Signal",xaxt="n", xlab = "",
+ main = "QC Report pm")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ ###############################################################################
+ ## Gene Intensity                                                            ##
+ ###############################################################################
+ houseKC <- obj[obj$genes$Status == "housekeeping",]
+ housk = c()
+ for(i in c(1:24)){
+   housk <- c(housk,mean(c(houseKC$E[,i])))
+ }
+ allge = c()
+ for(i in c(1:24)){
+   allge <- c(allge,mean(c(bruteData$E[,i])))
+ }
+ gi <- c(mean(housk),mean(allge))
+ giSD <- c(sd(housk),sd(allge))
+ names(gi) <- c("Housekeeping genes", "all genes")
+ par(mfcol=c(2,2))
+ giC_Bar <- barplot(gi, ylim = c(0,1.2*max(gi)), ylab = "Signal",
+ main = "Gene Intensity")
+ error.bar(giC_Bar,gi, giSD)
+ plot(housk, type = "b", ylab = "Signal",xaxt="n", xlab = "",
+ main = "QC Report Housekeeping")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ plot(allge, type = "b", ylab = "Signal",xaxt="n", xlab = "",
+ main = "QC Report gene")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ ###############################################################################
+ ## Labeling & Background  | Control Summary                                 ##
+ ###############################################################################
+ labelC <- obj[obj$genes$Status == "labeling",]
+ labl = c()
+ for(i in c(1:24)){
+   labl <- c(labl,mean(c(labelC$E[,i])))
+ }
+ #$
+ labk <- c(mean(labl),mean(background))
+ labkSD <- c(sd(labl),sd(background))
+ names(labk) <- c("Labeling","Background")
+ par(mfcol=c(3,2))
+ hybC_Bar <- barplot(vv,ylim = c(0,1.2*max(vv)), ylab = "Signal",
+ main = "Hybridation Controls")
+ error.bar(hybC_Bar,vv, vvSD)
+ bhC_Bar <- barplot(ss,ylim = c(0,1.2*max(ss)), ylab = "Signal",
+ main = "Biotin & High Stringency")
+ error.bar(bhC_Bar,ss, ssSD)
+ lsC_Bar <- barplot(lss,ylim = c(0,1.2*max(lss)), ylab = "Signal",
+ main = "Low Stringency")
+ error.bar(lsC_Bar,lss, lssSD)
+ negC_Bar <- barplot(nn,ylim = c(0,1.2*max(nn)), ylab = "Signal",
+ main = "Negative Controls")
+ error.bar(negC_Bar,nn, nnSD)
+ giC_Bar <- barplot(gi, ylim = c(0,1.2*max(gi)), ylab = "Signal",
+ main = "Gene Intensity")
+ error.bar(giC_Bar,gi, giSD)
+ lbkC_Bar <- barplot(labk, ylim = c(0,1.2*max(labk)), ylab = "Signal",
+ main = "Labeling & Background")
+ error.bar(lbkC_Bar,labk, labkSD)
+ par(mfcol=c(1,1))
+ ###############################################################################
+ ## Outliers                 & Missing Value                                  ##
+ ###############################################################################
+ outliers <- function(i){
+   q <- quantile(bruteData$E[,i])
+   length(bruteData$E[bruteData$E[,i] > q[4] + 1.5*IQR(bruteData$E[,i]),i])
+ }
+ abr=c()
+ for(i in c(1:24)){
+   abr <- c(abr,outliers(i))
+ }
+ par(mfcol=c(2,1))
+ plot(abr, type = "b", ylab = "Number of Genes (Intensity > q3 + 1.5(q3 - q1))",
+ xaxt="n", xlab = "",main = " Outliers for Each Sample")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ abline(v=12.5, col="blue")
+ plot(abr/nrow(bruteData$E), type = "b", ylab = "NbOutliers/NbGenes",xaxt="n", 
+ xlab = "",main = " Outliers for Each Sample")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ abline(v=12.5, col="red")
+ #$
+ ###############################################################################
+ ## Nombre des gènes detecter                                                 ##
+ ###############################################################################
+ gDetect=c()
+ for(i in c(1:24)){
+   gDetect <- c(gDetect,length(bruteData$genes$DetectionPValue[bruteData
+   $genes$DetectionPValue[,i] < 0.05,i]))
+ }
+ par(mfcol=c(2,1))
+ hybC_Bar <- barplot(mean(gDetect),ylim = c(0,1.5*mean(gDetect)), ylab = 
+ "Number of Genes",xlab="All Array",main = "Detected Genes (p-value < 0.05)")
+ error.bar(hybC_Bar,mean(gDetect), sd(gDetect))
+ plot(gDetect, type = "b", ylab = "Detected Genes (p-value < 0.05)",xaxt="n", 
+ xlab = "",main = " Number of Genes Detected for Each Sample")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ abline(v=12.5, col="red")
+ par(mfcol=c(1,1))
+ ###############################################################################
+ ## PM/MM2 Ratio                                                              ##
+ ###############################################################################
+ plot(pm/mm2, type = "b", ylab = "Ration of PM/MM2 Signals",xaxt="n", xlab = "",
+ main = "PM/MM2 Ratio Line Plot")
+ axis(1, at=c(1:24), labels = nameCol, las=2)
+ abline(h=c(1.8,2.2), col="blue")
+ abline(v=12.5, col="red")
+\end{Sinput}
+La fonction propexpr() de limma :
+\begin{Sinput}
+ propexpr()
+\end{Sinput}
+\begin{Soutput}
+function (x, neg.x = NULL, status = x$genes$Status, labels = c("negative", 
+    "regular")) 
+{
+    if (is.null(neg.x)) {
+        ineg <- grep(tolower(labels[1]), tolower(status))
+        if (length(labels) > 1) {
+            ireg <- grep(tolower(labels[2]), tolower(status))
+        }
+        else {
+            ireg <- -ineg
+        }
+        x <- as.matrix(x)
+        neg.x <- x[ineg, , drop = FALSE]
+        x <- x[ireg, , drop = FALSE]
+    }
+    else {
+        x <- as.matrix(x)
+        neg.x <- as.matrix(neg.x)
+    }
+    narrays <- ncol(x)
+    p <- pb <- p1 <- rep(NA, narrays)
+    for (i in 1:narrays) {
+        b <- neg.x[, i]
+        b <- b[!is.na(b)]
+        nb <- length(b)
+        r <- x[, i]
+        r <- r[!is.na(r)]
+        nr <- length(r)
+        mu <- mean(b)
+        alpha <- max(mean(r) - mu, 10)
+        b1 <- median(b)
+        p1[i] <- mean(pexp(b1 - b, rate = 1/alpha))
+        pb[i] <- (sum(b < b1) + sum(b == b1)/2)/nb
+        p[i] <- (sum(r < b1) + sum(r == b1)/2)/nr
+    }
+    pi1 <- (pb - p)/(pb - p1)
+    pi1[pi1 > 1] <- 1
+    pi1[pi1 < 0] <- 0
+    names(pi1) <- colnames(x)
+    pi1
+}
+\end{Soutput}
+\end{Schunk}
 \subsection{Prétraitement des données :}
+\begin{Schunk}
+\begin{Sinput}
+ dCorect <- neqc(obj)
+\end{Sinput}
+La fonction neqc() de limma :
+\begin{Sinput}
+ neqc
+\end{Sinput}
+\begin{Soutput}
+function (x, neg.x = NULL, status = x$genes$Status, labels = c("negative", 
+    "regular")) 
+{
+    if (is.null(neg.x)) {
+        ineg <- grep(tolower(labels[1]), tolower(status))
+        if (length(labels) > 1) {
+            ireg <- grep(tolower(labels[2]), tolower(status))
+        }
+        else {
+            ireg <- -ineg
+        }
+        x <- as.matrix(x)
+        neg.x <- x[ineg, , drop = FALSE]
+        x <- x[ireg, , drop = FALSE]
+    }
+    else {
+        x <- as.matrix(x)
+        neg.x <- as.matrix(neg.x)
+    }
+    narrays <- ncol(x)
+    p <- pb <- p1 <- rep(NA, narrays)
+    for (i in 1:narrays) {
+        b <- neg.x[, i]
+        b <- b[!is.na(b)]
+        nb <- length(b)
+        r <- x[, i]
+        r <- r[!is.na(r)]
+        nr <- length(r)
+        mu <- mean(b)
+        alpha <- max(mean(r) - mu, 10)
+        b1 <- median(b)
+        p1[i] <- mean(pexp(b1 - b, rate = 1/alpha))
+        pb[i] <- (sum(b < b1) + sum(b == b1)/2)/nb
+        p[i] <- (sum(r < b1) + sum(r == b1)/2)/nr
+    }
+    pi1 <- (pb - p)/(pb - p1)
+    pi1[pi1 > 1] <- 1
+    pi1[pi1 < 0] <- 0
+    names(pi1) <- colnames(x)
+    pi1
+}
+\end{Soutput}
+\begin{Sinput}
+ neqc
+\end{Sinput}
+\begin{Soutput}
+function (x, status = NULL, negctrl = "negative", regular = "regular", 
+    offset = 16, robust = FALSE, detection.p = "Detection", ...) 
+{
+    x.bg <- nec(x, status, negctrl, regular, offset, robust, 
+        detection.p)
+    if (is(x.bg, "EListRaw")) {
+        y <- normalizeBetweenArrays(x.bg, method = "quantile", 
+            ...)
+        if (is.null(status)) 
+            status <- y$genes$Status
+        if (!is.null(status)) {
+            y <- y[tolower(status) == tolower(regular), ]
+            y$genes$Status <- NULL
+        }
+    }
+    else {
+        x.bg <- as.matrix(x.bg)
+        y <- log2(normalizeBetweenArrays(x.bg, method = "quantile", 
+            ...))
+        if (!is.null(status)) 
+            y <- y[tolower(status) == tolower(regular), ]
+    }
+    y
+}
+\end{Soutput}
+La fonction nec() de limma :
+\begin{Sinput}
+ nec
+\end{Sinput}
+\begin{Soutput}
+function (x, status = NULL, negctrl = "negative", regular = "regular", 
+    offset = 16, robust = FALSE, detection.p = "Detection") 
+{
+    if (is(x, "EListRaw")) {
+        if (!is.null(x$Eb)) {
+            x$E <- x$E - x$Eb
+            x$Eb <- NULL
+        }
+        if (is.null(status)) 
+            status <- x$genes$Status
+        if (any(tolower(status) %in% tolower(negctrl))) {
+            normexp.par <- normexp.fit.control(x, status, negctrl, 
+                regular, robust)
+        }
+        else {
+            normexp.par <- normexp.fit.detection.p(x, detection.p)
+            message("Note: inferring mean and variance of negative 
+            control probe intensities from the detection p-values.")
+        }
+        for (i in 1:ncol(x)) x$E[, i] <- normexp.signal(normexp.par[i, 
+            ], x$E[, i])
+        x$E <- x$E + offset
+    }
+    else {
+        x <- as.matrix(x)
+        if (any(tolower(status) %in% tolower(negctrl))) {
+            normexp.par <- normexp.fit.control(x, status, negctrl, 
+                regular, robust)
+        }
+        else {
+            normexp.par <- normexp.fit.detection.p(x, detection.p)
+        }
+        for (i in 1:ncol(x)) x[, i] <- normexp.signal(normexp.par[i, 
+            ], x[, i])
+        x <- x + offset
+    }
+    x
+}
+#$
+\end{Soutput}
+La fonction normexp.fit.control() de limma :
+\begin{Sinput}
+ normexp.fit.control
+\end{Sinput}
+\begin{Soutput}
+function (x, status = NULL, negctrl = "negative", regular = "regular", 
+    robust = FALSE) 
+{
+    if (is(x, "EListRaw")) {
+        if (is.null(status)) 
+            status <- x$genes$Status
+        x <- x$E
+    }
+    x <- as.matrix(x)
+    if (is.null(status)) 
+        stop("Probe status not found")
+    xr <- x[tolower(status) == tolower(regular), , drop = FALSE]
+    if (nrow(xr) == 0) 
+        stop("No regular probes found")
+    xn <- x[tolower(status) == tolower(negctrl), , drop = FALSE]
+    if (nrow(xn) < 2) 
+        stop("Fewer than two negative control probes found")
+    if (robust) {
+        if (!requireNamespace("MASS", quietly = TRUE)) 
+            stop("MASS package required but is not available")
+        narrays <- ncol(xn)
+        m <- s <- rep(0, narrays)
+        for (j in 1:ncol(xn)) {
+            h <- MASS::huber(log(xn[, j]))
+            m[j] <- h$mu
+            s[j] <- h$s
+        }
+        mu <- exp(m + s^2/2)
+        omega <- exp(s^2)
+        sigma <- sqrt(omega * (omega - 1)) * exp(m)
+    }
+    else {
+        mu <- colMeans(xn, na.rm = TRUE)
+        sigma <- sqrt(rowSums((t(xn) - mu)^2, na.rm = TRUE)/(nrow(xn) - 
+            1))
+    }
+    alpha <- pmax(colMeans(xr, na.rm = TRUE) - mu, 10)
+    cbind(mu = mu, logsigma = log(sigma), logalpha = log(alpha))
+}
+#$
+\end{Soutput}
+La fonction normexp.signal() de limma :
+\begin{Sinput}
+ normexp.signal
+\end{Sinput}
+\begin{Soutput}
+function (par, x) 
+{
+    mu <- par[1]
+    sigma <- exp(par[2])
+    sigma2 <- sigma * sigma
+    alpha <- exp(par[3])
+    if (alpha <= 0) 
+        stop("alpha must be positive")
+    if (sigma <= 0) 
+        stop("sigma must be positive")
+    mu.sf <- x - mu - sigma2/alpha
+    signal <- mu.sf + sigma2 * exp(dnorm(0, mean = mu.sf, sd = sigma, 
+        log = TRUE) - pnorm(0, mean = mu.sf, sd = sigma, lower.tail = FALSE, 
+        log.p = TRUE))
+    o <- !is.na(signal)
+    if (any(signal[o] < 0)) {
+        warning("Limit of numerical accuracy reached with very low intensity 
+        or very high background:\nsetting adjusted intensities to small value")
+        signal[o] <- pmax(signal[o], 1e-06)
+    }
+    signal
+}
+\end{Soutput}
+\end{Schunk}
 \subsection{Analyse des données :}
 \section{CONCLUSION :}
 \nocite{smyth2005limma}
