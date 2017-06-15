@@ -176,11 +176,18 @@ for(i in c(1:24)){
 ###############################################################################
 ## Nombre des gènes detecter                                   ##
 ###############################################################################
+gDetect=c()
+for(i in c(1:24)){
+  gDetect <- c(gDetect,length(bruteData$genes$DetectionPValue[bruteData$genes$DetectionPValue[,i] < 0.05,i]))
+}
+plot(gDetect, type = "b", ylab = "Detected Genes (p-value < 0.05)",xaxt="n", xlab = "",main = " Number of Genes Detected for Each Sample")
+axis(1, at=c(1:24), labels = nameCol, las=2)
+abline(v=12.5, col="red")
+sd(gDetect)
 ###############################################################################
 ## Problème de spécificité                                                   ##
 ###############################################################################
-plot(pm/mm2, type = "b", ylab = "Ration of PM/MM2 Signals",xaxt="n", xlab = "",main = " Comparison Across Control Metrics, 
-PM/MM2 Ratio Line Plot")
+plot(pm/mm2, type = "b", ylab = "Ration of PM/MM2 Signals",xaxt="n", xlab = "",main = "PM/MM2 Ratio Line Plot")
 axis(1, at=c(1:24), labels = nameCol, las=2)
 abline(h=c(1.8,2.2), col="blue")
 abline(v=12.5, col="red")

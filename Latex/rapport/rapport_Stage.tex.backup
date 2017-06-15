@@ -425,13 +425,24 @@ Les contrôles marqués par (*) sont fortement recommandé par Illumina.
  \includegraphics[scale=0.5]{../../R/output/propexpr.png}
  % propexpr.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
  \captionof{figure}{ Estimation de proportion des sondes exprimées sur les deux puces avec la fonction propexpr() de limma}
- Ces valeurs ne sont pas vraiment des probabilités, elles estiment la proportion globale de sondes sur chaque section de la puce Illumina BeadChip qui correspondent à des gènes exprimés selon la méthode de Shi et al (2010).
+ Ces valeurs ne sont pas vraiment des probabilités, elles estiment la proportion globale de sondes sur chaque section de la puce Illumina BeadChip qui correspondent à des gènes exprimés selon la méthode de Shi et al (2010)\cite{shi2010estimating}.
  $pi1= (pb-p)/(pb-p1) $ avec $(pi1[pi1 > 1] \leftarrow 1 $ et $pi1[pi1 < 0] \leftarrow 0)$\\
  La fonction compare la distribution d’intensité empirique des sondes de contrôle négatif avec celle des sondes régulières. 
  Un modèle de mélange est adapté aux données de chaque échantillon de la puce pour inférer la distribution d’intensité des sondes exprimées et estimer la proportion exprimée.
 \end{center}
 \subsection{ Commentaire des résultats :}
-Un premier préavis sur la qualité de notre donnée est indiqué par le rapport signal/bruit du figure
+Un premier préavis sur la qualité de notre donnée est indiqué par le rapport signal/bruit( Figure ~\ref{SNR}).\\
+\begin{scriptsize}
+  > summary(ht12snr)\#Signal -to-noise  ratio  for  200729890044  data\\
+   \tabA Min.	1st Qu. 	Median 	Mean 	3rd Qu. 	Max. \\
+  \tabA 6.968   9.290   9.775   9.886  10.520  12.920 \\
+  > summary(ht12snrB)\#Signal -to-noise  ratio  for  200796240064  data\\
+  \tabA Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \\
+  \tabA 7.841   8.817   9.561   9.813  11.050  11.570 \\
+\end{scriptsize}
+Les valeurs SNR minimumes respectivement pour la puce 44 et 64 sont $6.968$ et $7.871$. Ces chiffres sont inférieurs à la valeur préconisée par Illumina mais en moyenne, on voit que la moitie des échantillons sur chaque puce a un SNR aux alentours de 10. Les valeurs ne sont pas très critiques.
+En examinant la figure 6, on trouve pas des anomalies particuliers sur l’ensemble des contrôles. On voit que les  housekeeping genes produisent des signaux presque 100 fois plus fort que les sondes négatives ($12000 > 120$).
+L’écart type de l’estimation de la proportion des sondes exprimés sur l’ensemble des échantillons n’est pas énorme ($sd(propexpr(obj))=0.03361209$ de variance $0.001129773$) et donc pas signifiant.
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES }
 \subsection{Correction de bruit de fond :}
 \subsection{Transformation :}

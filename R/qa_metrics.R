@@ -21,7 +21,8 @@ par(mfcol=c(1,1))
 #########################################
 summary(ht12snr)#Signal -to-noise  ratio  for  200729890044  data
 summary(ht12snrB)#Signal -to-noise  ratio  for  200796240064  data
-
+sd(ht12snr)
+sd(ht12snrB)
 # Region<- c("PA","PA","PA","RA","RA","RA","PA","PA","PA","RA","RA","RA")
 # Labor <- c("TNL","TNL","TNL","TNL","TNL","TNL","TIL","TIL","TIL","TIL","TIL","TIL")
 # REG <- factor(Region)
