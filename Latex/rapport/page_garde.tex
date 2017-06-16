@@ -1,0 +1,87 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{amsmath}
+\usepackage{stackengine}
+\usepackage{setspace}
+
+%opening
+\title{}
+\author{Marlino}
+
+\newcommand\tabA[1][0.5cm]{\hspace*{#1}}
+\newcommand\tabB[1][1.5cm]{\hspace*{#1}}
+\newcommand\tabC[1][2cm]{\hspace*{#1}}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Title Page
+\begin{document}
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+
+    % Upper part of the page. The '~' is needed because \\
+    % only works if a paragraph has started.
+ \begin{center}
+ \includegraphics[scale=0.5]{./image/ualogo.png}
+ % ualogo.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+\end{center}
+
+    \textsc{ UNIVERSIT\'{E} D'ANGERS \\ UFR INFORMATIQUE}\\[0.5cm]
+    \textsc{ \\ Rapport de stage \\ Master 1 2016-2017 }\\[1.5cm]
+    
+    \includegraphics{./image/logo-generique-SD.png}
+    
+    \textsc{UMR INSERM 1232 \\-Equipe Immunité Innée et Immunothérapie}\\[1cm]
+     
+    % Title
+    \HRule \\[0.4cm]
+    { \huge \bfseries ANALYSE TRANSCRIPTOMIQUE\\[0.4cm] }
+
+    \HRule \\[2cm]
+    \centering\vspace*{\fill}
+    \begin{minipage}{9\textwidth}
+    \begin{doublespace}
+    \begin{tabular}{cl}
+       \large Présenté par : &\tabC \tabA \textsc{RASOLONIAINA Marlino}\\
+       \newline
+       \emph{Maître de stage  :} &\tabC \tabA Dr. \textsc{Valérie Seegers}\\
+       \emph{Responsable d'équipe : } &\tabC \tabA Dr.  \textsc{Yves Delneste} \\
+       
+    \end{tabular}
+     \end{doublespace}
+    \emph{Laboratoire d'accueil :} \tabC \tabA \textsc{INSERM U1232}-Equipe 7
+    \\\tabC \tabC \tabC \tabA Bâtiment IRIS 
+    \\\tabC \tabC \tabC \tabA CHU-4,rue Larrey 
+    \\\tabC \tabC \tabC \tabA 49933 ANGERS
+    \end{minipage}
+    \vspace*{\fill}
+     % Author and supervisor
+%      \begin{minipage}{0.4\textwidth}
+%        \begin{flushleft} \large
+%          \large Présenté par : \\\textsc{RASOLONIAINA Marlino}
+%        \end{flushleft}
+%      \end{minipage}
+%      \begin{minipage}{0.4\textwidth}
+%        \begin{flushright} \large
+%          \emph{Maître de stage  :} Dr. \textsc{Valérie Segers}\\
+%          \emph{Responsable d'équipe : } Dr.  \textsc{Yves Delneste}
+%        \end{flushright}
+%      \end{minipage}
+%  
+%      \vfill
+
+    % Bottom of the page
+    {\large 12 Avril 2017 — 20 Juin 2017}
+
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
+
+\end{document}

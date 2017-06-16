@@ -1,32 +1,36 @@
 \select@language {french}
-\contentsline {section}{\numberline {1}INTRODUCTION }{5}
-\contentsline {section}{\numberline {2}PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL }{5}
-\contentsline {subsection}{\numberline {2.1}Organisme d\IeC {\textquoteright }accueil\IeC {\nobreakspace }: Centre de Recherche en Canc\IeC {\'e}rologie et Immunologie Nantes Angers (CRCINA)}{5}
-\contentsline {subsection}{\numberline {2.2}Service du rattach\IeC {\'e}\IeC {\nobreakspace }: \IeC {\'E}quipe 7 de l\IeC {\textquoteright }U1232 Immunit\IeC {\'e} inn\IeC {\'e}e et immunoth\IeC {\'e}rapie}{5}
-\contentsline {section}{\numberline {3}PR\'{E}SENTATION DU SUJET DE STAGE }{6}
-\contentsline {subsection}{\numberline {3.1}Projet d\IeC {\textquoteright }\IeC {\'e}quipe o\IeC {\`u} s\IeC {\textquoteright }inscrit le stage :}{6}
-\contentsline {subsection}{\numberline {3.2}Objectif et missions du stage :}{6}
-\contentsline {subsection}{\numberline {3.3}Missions r\IeC {\'e}ellement r\IeC {\'e}alis\IeC {\'e}es :}{7}
-\contentsline {section}{\numberline {4}ACQUISITION DES DONN\'{E}ES }{7}
-\contentsline {subsection}{\numberline {4.1} Plan exp\IeC {\'e}rimental :}{7}
-\contentsline {subsection}{\numberline {4.2}Les puces \IeC {\`a} ADN :}{8}
-\contentsline {subsection}{\numberline {4.3}La technologie Illumina :}{9}
-\contentsline {subsection}{\numberline {4.4}Les sources de variations et les d\IeC {\'e}fis sur l'utilisation des puces ADN :}{11}
-\contentsline {section}{\numberline {5}DESCRIPTION DES DONN\'{E}ES }{12}
-\contentsline {subsection}{\numberline {5.1} D\IeC {\'e}cryptage et lecture :}{12}
-\contentsline {subsection}{\numberline {5.2} Donn\IeC {\'e}es brutes via Bioconductor :}{12}
-\contentsline {subsection}{\numberline {5.3} Contr\IeC {\^o}le et qualit\IeC {\'e} :}{13}
-\contentsline {subsection}{\numberline {5.4} Commentaire des r\IeC {\'e}sultats :}{14}
-\contentsline {section}{\numberline {6}PR\'{E}TRAITEMENT DES DONN\'{E}ES }{24}
-\contentsline {subsection}{\numberline {6.1}Correction de bruit de fond :}{24}
-\contentsline {subsection}{\numberline {6.2}Transformation :}{24}
-\contentsline {subsection}{\numberline {6.3}Normalisation :}{24}
-\contentsline {subsection}{\numberline {6.4}La fonction neqc() du package Limma :}{25}
-\contentsline {section}{\numberline {7}ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}{28}
-\contentsline {section}{\numberline {8}INTERP\'{E}TATION :}{28}
-\contentsline {section}{\numberline {9}ANNEXE: Scripts R d\IeC {\'e}velopp\IeC {\'e}s et quelques fonctions de Limma}{28}
-\contentsline {subsection}{\numberline {9.1}Lecture des fichiers IDAT :}{28}
-\contentsline {subsection}{\numberline {9.2}Contr\IeC {\^o}le des donn\IeC {\'e}es :}{29}
-\contentsline {subsection}{\numberline {9.3}Pr\IeC {\'e}traitement des donn\IeC {\'e}es :}{35}
-\contentsline {subsection}{\numberline {9.4}Analyse des donn\IeC {\'e}es :}{39}
-\contentsline {section}{\numberline {10}CONCLUSION :}{39}
+\contentsline {section}{\numberline {1}PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL }{5}
+\contentsline {subsection}{\numberline {1.1}Organisme d\IeC {\textquoteright }accueil\IeC {\nobreakspace }: Centre de Recherche en Canc\IeC {\'e}rologie et Immunologie Nantes Angers (CRCINA)}{5}
+\contentsline {subsection}{\numberline {1.2}Service du rattach\IeC {\'e}\IeC {\nobreakspace }: \IeC {\'E}quipe 7 de l\IeC {\textquoteright }U1232 Immunit\IeC {\'e} inn\IeC {\'e}e et immunoth\IeC {\'e}rapie}{5}
+\contentsline {section}{\numberline {2}PR\'{E}SENTATION DU SUJET DE STAGE }{6}
+\contentsline {subsection}{\numberline {2.1}Projet d\IeC {\textquoteright }\IeC {\'e}quipe o\IeC {\`u} s\IeC {\textquoteright }inscrit le stage :}{6}
+\contentsline {subsection}{\numberline {2.2}Objectif et missions du stage :}{6}
+\contentsline {subsection}{\numberline {2.3}Missions r\IeC {\'e}ellement r\IeC {\'e}alis\IeC {\'e}es :}{7}
+\contentsline {section}{\numberline {3}ACQUISITION DES DONN\'{E}ES }{7}
+\contentsline {subsection}{\numberline {3.1} Plan exp\IeC {\'e}rimental :}{7}
+\contentsline {subsection}{\numberline {3.2}Les puces \IeC {\`a} ADN :}{8}
+\contentsline {subsection}{\numberline {3.3}La technologie Illumina :}{9}
+\contentsline {subsection}{\numberline {3.4}Les sources de variations et les d\IeC {\'e}fis sur l'utilisation des puces ADN :}{11}
+\contentsline {section}{\numberline {4}DESCRIPTION DES DONN\'{E}ES }{12}
+\contentsline {subsection}{\numberline {4.1} D\IeC {\'e}cryptage et lecture :}{12}
+\contentsline {subsection}{\numberline {4.2} Donn\IeC {\'e}es brutes via Bioconductor :}{12}
+\contentsline {subsection}{\numberline {4.3} Contr\IeC {\^o}le et qualit\IeC {\'e} :}{13}
+\contentsline {subsection}{\numberline {4.4} Commentaire des r\IeC {\'e}sultats :}{14}
+\contentsline {section}{\numberline {5}PR\'{E}TRAITEMENT DES DONN\'{E}ES }{24}
+\contentsline {subsection}{\numberline {5.1}Correction de bruit de fond :}{24}
+\contentsline {subsection}{\numberline {5.2}Transformation :}{24}
+\contentsline {subsection}{\numberline {5.3}Normalisation :}{24}
+\contentsline {subsection}{\numberline {5.4}La fonction neqc() du package Limma :}{25}
+\contentsline {section}{\numberline {6}CONCLUSION :}{28}
+\contentsline {section}{\numberline {7}ANNEXE: Scripts R d\IeC {\'e}velopp\IeC {\'e}s et quelques fonctions de Limma}{28}
+\contentsline {subsection}{\numberline {7.1}Lecture des fichiers IDAT :}{28}
+\contentsline {subsection}{\numberline {7.2}Contr\IeC {\^o}le des donn\IeC {\'e}es :}{29}
+\contentsline {subsubsection}{\numberline {7.2.1} Utilisation du fichier Metrics.txt :}{29}
+\contentsline {subsubsection}{\numberline {7.2.2}Utilisation des donn\IeC {\'e}es pour le contr\IeC {\^o}le:}{30}
+\contentsline {subsubsection}{\numberline {7.2.3}La fonction propexpr() de limma :}{34}
+\contentsline {subsection}{\numberline {7.3}Pr\IeC {\'e}traitement des donn\IeC {\'e}es :}{35}
+\contentsline {subsubsection}{\numberline {7.3.1}La fonction neqc() de limma :}{35}
+\contentsline {subsubsection}{\numberline {7.3.2}La fonction nec() de limma :}{36}
+\contentsline {subsubsection}{\numberline {7.3.3}La fonction normexp.fit.control() de limma :}{37}
+\contentsline {subsubsection}{\numberline {7.3.4}La fonction normexp.signal() de limma :}{38}
+\contentsline {subsection}{\numberline {7.4}Analyse des donn\IeC {\'e}es :}{38}
