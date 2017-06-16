@@ -1,4 +1,10 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{bolstad2003comparison}
+Benjamin~M Bolstad, Rafael~A Irizarry, Magnus {\AA}strand, and Terence~P Speed.
+\newblock A comparison of normalization methods for high density
+  oligonucleotide array data based on variance and bias.
+\newblock {\em Bioinformatics}, 19(2):185--193, 2003.
 
 \bibitem{druaghici2016statistics}
 Sorin Dr{\u{a}}ghici.

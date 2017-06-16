@@ -2,15 +2,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
-\usepackage{graphicx}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{amsmath}
 \usepackage{stackengine}
 \usepackage{setspace}
 \usepackage[hyphens]{url}
 \usepackage{color}
-%\usepackage{pdfcolmk}
+\usepackage{pdfcolmk}
 \usepackage{Sweave}
+\usepackage{graphicx}
 %\usepackage{placeins}
 
 \newcommand\tabA[1][0.5cm]{\hspace*{#1}}
@@ -29,14 +29,11 @@
 
     % Upper part of the page. The '~' is needed because \\
     % only works if a paragraph has started.
-    %\includegraphics[scale=0.1]{./image/ua_v_couleur.jpg}
-    \begin{figure}
- \centering
- \includegraphics[scale=0.01]{./image/ua_v_couleur.jpg}
- % ua_v_couleur.jpg: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
-\end{figure}
+ \begin{center}
+ \includegraphics{./image/ualogo.png}
+ % ualogo.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+\end{center}
 
-    
     \textsc{ UNIVERSIT\'{E} D'ANGERS \\ UFR INFORMATIQUE}\\[0.5cm]
     \textsc{ \\ Rapport de stage \\ Master 1 2016-2017 }\\[1.5cm]
     
@@ -96,7 +93,7 @@
 \newpage
 \DefineVerbatimEnvironment{Sinput}{Verbatim}{formatcom = {\color[rgb]{0, 0, 0.56}}}
 \DefineVerbatimEnvironment{Soutput}{Verbatim}{formatcom = {\color[rgb]{0.56, 0, 0}}}
-\section{INTRODUCTION }
+%\section{INTRODUCTION }
 
 \section{PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL }
 \subsection{Organisme d’accueil : Centre de Recherche en Cancérologie et Immunologie Nantes Angers (CRCINA)}
@@ -105,9 +102,9 @@ Le CRCINA regroupe environ 400 personnes dont environ 150 chercheurs et enseigna
 
 Le CRCINA développe des programmes multidisciplinaires alliant recherche fondamentale et clinique, principalement dans le domaine de l’oncologie. Il est organisé autour de trois départements :
 \begin{itemize}
- \item le département « Immunologie et Immunothérapie » regroupe 8 équipes dont les travaux se focalisent sur l’étude de l’immunité cellulaire humaine antitumorale et antivirale et sous un angle plus appliqué sur la mise en oeuvre de protocoles d’immunothérapie passive ou active
-\item le département « Oncogénèse et Thérapies Ciblées »
-\item le département « Ciblage immunospécifique des radionucléides et radiobiologie » 
+ \item le département \textgravedbl Immunologie et Immunothérapie \textacutedbl  regroupe 8 équipes dont les travaux se focalisent sur l’étude de l’immunité cellulaire humaine antitumorale et antivirale et sous un angle plus appliqué sur la mise en oeuvre de protocoles d’immunothérapie passive ou active
+\item le département \textgravedbl Oncogénèse et Thérapies Ciblées \textacutedbl
+\item le département \textgravedbl Ciblage immunospécifique des radionucléides et radiobiologie \textacutedbl 
 \end{itemize}
 Les équipes de recherche sont installées sur différents sites : CHU de Nantes, CHU d’Angers et Institut de Cancérologie de l’Ouest (site Gauducheau à Nantes et site Papin à Angers).
 Les activités de recherche sont adossées à des plateformes technologiques et plateaux techniques localisés dans les différents sites ; ces laboratoires sont, pour la plupart, intégrés dans les structures fédératives de recherche des sites Santé des Universités de Nantes et d’Angers (SFR Bonamy à Nantes ; SFR ICAT à Angers).
@@ -131,13 +128,13 @@ Une des caractéristiques essentielles des macrophages est leur plasticité, c�
 Les macrophages jouent un rôle essentiel dans le développement des tumeurs et leur accumulation est, dans la majorité des tumeurs solides, de mauvais pronostic. De nombreuses études ont montré que le statut métabolique de la tumeur est altéré comparativement aux tissus sains, avec notamment une importante glycolyse. Le laboratoire s’est donc intéressé à l’analyse de l’impact de l’acide lactique, métabolite de la glycolyse qui s’accumule en grande quantité dans les tumeurs, et en particulier le cancer de l’ovaire, sur la polarisation fonctionnelle (M1 versus M2) des macrophages humains.
 Une étude transcriptomique a donc été réalisée pour analyser l’impact de l’acide lactique sur la différentiation des monocytes en macrophages.
 \subsection{Objectif et missions du stage :}
-L’étudiant a pu choisir en arrivant entre 3 sujets concernant la question biologique « Impact de l’acide lactique sur la polarisation et l’expression génique des macrophages » (actuellement dans l’unité par 3 doctorants)  avec des puces ADN. Chacun de ces sujets faisait appel à des compétences plus particulières en bioinformatique (informatique/statistiques/biologie) :
+L’étudiant a pu choisir en arrivant entre 3 sujets concernant la question biologique \textgravedbl Impact de l’acide lactique sur la polarisation et l’expression génique des macrophages \textacutedbl (actuellement dans l’unité par 3 doctorants)  avec des puces ADN. Chacun de ces sujets faisait appel à des compétences plus particulières en bioinformatique (informatique/statistiques/biologie) :
 \begin{itemize}
- \item Identification de la structure des données brutes issues des puces ADN et étapes de prétraitement des données pour l’analyse différentielle (sujet bio-informatique / informatique)
-\item Analyse différentielle des données des puces (sujet bioinformatique/biostatistiques)
-\item Comment interpréter des résultats de l’analyse différentielle d’une puce ADN (bio-informatique/ biologie)
+ \item Identification de la structure des données brutes issues des puces ADN et étapes de prétraitement des données pour l’analyse différentielle 
+\item Analyse différentielle des données des puces 
+\item Comment interpréter des résultats de l’analyse différentielle d’une puce ADN 
 \end{itemize}
-L’objectif est de permettre à l’étudiant de se familiariser avec l’une des étapes du traitement des données d’expression génique.
+L’objectif est de permettre à l’étudiant de se familiariser avec l’une des étapes du traitement des données d’expression génique,c'est-à dire de l'analyse transcriptomique.
 \subsection{Missions réellement réalisées :}
 La première partie du projet, donc le premier sujet, a été choisi et réellement réalisée par l’étudiant à partir des données brutes issues de la technologie illumina. 
 Il a identifié la structure des données contenues dans ce fichier, et toutes les étapes de contrôle et de prétraitement des données nécessaires aux analyses statistiques ultérieures.
@@ -356,7 +353,7 @@ Par approximation, on peut considérer qu’un signal émis par la puce soit :
 La puce d’Illumina introduit alors des sondes appelées sonde de contrôle pour pouvoir mesurer et quantifier la qualité des données obtenues.
 Avec ces sondes de contrôles, on peut quantifier les bruits et la qualité du signal, vérifier la qualité de la mesure d’expression de l'ensemble des sondes de la puce. 
 Une valeur anormale produit par un seul BeadArray peut compromettre le résultat d’une analyse sur l’ensemble des données. 
-On ne peut pas donc être assuré d’avoir un bon résultat en phase d’analyse si la qualité des données obtenues n’est pas acceptable (Tableau :~\ref{Control Dyrect  Hyb})
+Dans ce cas, la solution est de répéter l’expérience ou simplement retirer de l’ensemble des données les échantillons qui présentent des qualités médiocres avant la phase de prétraitement et de l’analyse. (Tableau :~\ref{Control Dyrect  Hyb})
 \footnote{\url{https://www.bioconductor.org/packages/release/data/experiment/vignettes/BeadArrayUseCases/inst/doc/BeadArrayUseCases.pdf}}
 \footnote{\url{http://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2013/11/technote\_gene\_expression\_data\_quality\_control.pdf}}.
 \begin{table}[!ht]
@@ -529,9 +526,9 @@ Parmi ces sources, on cible plus précisément :
  De la même manière, le principe d’invariance d’une très grande majorité des expressions géniques d’une puce à une autre doit se traduire par une répartition comparable des valeurs des signaux entre les différentes puces. Si des différences marquées existent, il est judicieux de ramener les signaux moyens de chaque puce à la même valeur.
 \end{itemize}
 Avant de s’approcher des hypothèses favorables pour l’analyse différentielle, la normalisation est nécessaire afin de s’assurer que les données des différentes puces sont exploitables et comparable entre elles, que les différences d’intensité sont en effet dues à l’expression différentielle et non aux artefacts et les biais techniques expérimentaux.
-Il y a plusieurs méthodes de normalisation souvent classé en deux catégories :
+Il y a plusieurs méthodes de normalisation\cite{bolstad2003comparison} souvent classé en deux catégories :
 \begin{itemize}
- \item \emph{méthodes qui utilisent des données de référence (baseline array)}: scaling methods and non-linear methods
+ \item \emph{méthodes qui utilisent des données de référence (baseline array)}: méthode de mise à l'echelle (Scaling methods) et les méthodes non-linéaire (Non-linear methods)
  \item \emph{méthodes qui combinent l’information de toutes les sections de la puce dans un ensemble de données donné (méthode complet)}: Lowess,normalisation par quantile,RMA(Robust Multi-Array Analysis)
 \end{itemize}
 
@@ -539,7 +536,7 @@ Il y a plusieurs méthodes de normalisation souvent classé en deux catégories�
 \subsection{La fonction neqc() du package Limma :}
 Le package Limma (écrit par Gordon Smyth,Matthew Ritchie et autres) contient pas mal de fonction de normalisation de puce à ADN que ce soit à une ou double couleur. Mais la fonction qui nous intéresse est la fonction neqc() spécialement personnalisée pour les puces Illumina BeadChips.
 Cette fonction R effectue avant la transformation logarithmique des données une correction de bruit de fond utilisant des sondes de contrôle négatif suivie après par la normalisation par quantile utilisant à la fois les sondes de contrôle positif et négatif.
-\\L’algorithme utilise le modèle « normexp »\cite{silver2009microarray} pour la correction de bruit de fond qui consiste à modéliser les intensités de pixels observées en tant que somme de deux variables aléatoires, une normalement distribuée et l’autre répartie exponentiellement, représentant respectivement le bruit et le signal de fond. 
+\\L’algorithme utilise le modèle \textgravedbl normexp \textacutedbl\cite{silver2009microarray} pour la correction de bruit de fond qui consiste à modéliser les intensités de pixels observées en tant que somme de deux variables aléatoires, une normalement distribuée et l’autre répartie exponentiellement, représentant respectivement le bruit et le signal de fond. 
 La moyenne (\emph{mu}) et l’écart-type (\emph{sigma}) du bruit de fond normalement distribuée du modèle normexp sont estimés avec les valeurs des sondes de contrôle négatif et  la moyenne (\emph{alpha}) du signal répartie exponentiellement est estimée comme la différence entre la moyenne du signal et la moyenne des sondes de contrôle négatif.
 \begin{scriptsize}
  \\$mu \leftarrow colMeans(xn, na.rm = TRUE)$
@@ -577,13 +574,14 @@ Le but de la normalisation par quantile est de mettre la distribution, médiane 
  \captionof{figure}{ Densité de la population 1 après la normalisation}
 \end{center}
 
-\section{ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}
+%\section{ANALYSE DES DONN\'{E}ES DE TRANSCRIPTOME :}
 % \subsection{Gènes différentiellement exprimés :}
 % \subsection{Gènes co-exprimés :}
-=> En cours
-\section{INTERP\'{E}TATION :}
-=> Pas de temps
+%=> En cours
+%\section{INTERP\'{E}TATION :}
+%=> Pas de temps
 % (Caractérisation d’un ensemble de gènes)
+\section{CONCLUSION :}
 \section{ANNEXE: Scripts R développés et quelques fonctions de Limma}
 \subsection{Lecture des fichiers IDAT :}
 \begin{Schunk}
@@ -643,7 +641,7 @@ Finished reading data.
 \end{Sinput}
 \end{Schunk}
 \subsection{Contrôle des données :}
-Utilisation du fichier Metrics.txt :
+\subsubsection{ Utilisation du fichier Metrics.txt :}
 \begin{Schunk}
 \begin{Sinput}
  par(mfcol=c(2,1))
@@ -673,7 +671,7 @@ Utilisation du fichier Metrics.txt :
  #########################################
 \end{Sinput}
 \end{Schunk}
-Utilisation des données pour le contrôle:
+\subsubsection{Utilisation des données pour le contrôle:}
 \begin{Schunk}
 \begin{Sinput}
  ###############################################################################
@@ -895,7 +893,7 @@ Utilisation des données pour le contrôle:
  abline(h=c(1.8,2.2), col="blue")
  abline(v=12.5, col="red")
 \end{Sinput}
-La fonction propexpr() de limma :
+\subsubsection{La fonction propexpr() de limma :}
 \begin{Sinput}
  propexpr()
 \end{Sinput}
@@ -948,53 +946,7 @@ function (x, neg.x = NULL, status = x$genes$Status, labels = c("negative",
 \begin{Sinput}
  dCorect <- neqc(obj)
 \end{Sinput}
-La fonction neqc() de limma :
-\begin{Sinput}
- neqc
-\end{Sinput}
-\begin{Soutput}
-function (x, neg.x = NULL, status = x$genes$Status, labels = c("negative", 
-    "regular")) 
-{
-    if (is.null(neg.x)) {
-        ineg <- grep(tolower(labels[1]), tolower(status))
-        if (length(labels) > 1) {
-            ireg <- grep(tolower(labels[2]), tolower(status))
-        }
-        else {
-            ireg <- -ineg
-        }
-        x <- as.matrix(x)
-        neg.x <- x[ineg, , drop = FALSE]
-        x <- x[ireg, , drop = FALSE]
-    }
-    else {
-        x <- as.matrix(x)
-        neg.x <- as.matrix(neg.x)
-    }
-    narrays <- ncol(x)
-    p <- pb <- p1 <- rep(NA, narrays)
-    for (i in 1:narrays) {
-        b <- neg.x[, i]
-        b <- b[!is.na(b)]
-        nb <- length(b)
-        r <- x[, i]
-        r <- r[!is.na(r)]
-        nr <- length(r)
-        mu <- mean(b)
-        alpha <- max(mean(r) - mu, 10)
-        b1 <- median(b)
-        p1[i] <- mean(pexp(b1 - b, rate = 1/alpha))
-        pb[i] <- (sum(b < b1) + sum(b == b1)/2)/nb
-        p[i] <- (sum(r < b1) + sum(r == b1)/2)/nr
-    }
-    pi1 <- (pb - p)/(pb - p1)
-    pi1[pi1 > 1] <- 1
-    pi1[pi1 < 0] <- 0
-    names(pi1) <- colnames(x)
-    pi1
-}
-\end{Soutput}
+\subsubsection{La fonction neqc() de limma :}
 \begin{Sinput}
  neqc
 \end{Sinput}
@@ -1024,7 +976,7 @@ function (x, status = NULL, negctrl = "negative", regular = "regular",
     y
 }
 \end{Soutput}
-La fonction nec() de limma :
+\subsubsection{La fonction nec() de limma :}
 \begin{Sinput}
  nec
 \end{Sinput}
@@ -1069,7 +1021,7 @@ function (x, status = NULL, negctrl = "negative", regular = "regular",
 }
 #$
 \end{Soutput}
-La fonction normexp.fit.control() de limma :
+\subsubsection{La fonction normexp.fit.control() de limma :}
 \begin{Sinput}
  normexp.fit.control
 \end{Sinput}
@@ -1115,7 +1067,7 @@ function (x, status = NULL, negctrl = "negative", regular = "regular",
 }
 #$
 \end{Soutput}
-La fonction normexp.signal() de limma :
+\subsubsection{La fonction normexp.signal() de limma :}
 \begin{Sinput}
  normexp.signal
 \end{Sinput}
@@ -1145,7 +1097,6 @@ function (par, x)
 \end{Soutput}
 \end{Schunk}
 \subsection{Analyse des données :}
-\section{CONCLUSION :}
 \nocite{smyth2005limma}
 \nocite{druaghici2016statistics}
 \bibliographystyle{plain} 
