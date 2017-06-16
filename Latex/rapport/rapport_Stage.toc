@@ -12,10 +12,10 @@
 \contentsline {subsection}{\numberline {4.2}Les puces \IeC {\`a} ADN :}{8}
 \contentsline {subsection}{\numberline {4.3}La technologie Illumina :}{9}
 \contentsline {subsection}{\numberline {4.4}Les sources de variations et les d\IeC {\'e}fis sur l'utilisation des puces ADN :}{11}
-\contentsline {section}{\numberline {5}DESCRIPTION DES DONN\'{E}ES }{13}
-\contentsline {subsection}{\numberline {5.1} D\IeC {\'e}cryptage et lecture :}{13}
-\contentsline {subsection}{\numberline {5.2} Donn\IeC {\'e}es brutes via Bioconductor :}{13}
-\contentsline {subsection}{\numberline {5.3} Contr\IeC {\^o}le et qualit\IeC {\'e} :}{14}
+\contentsline {section}{\numberline {5}DESCRIPTION DES DONN\'{E}ES }{12}
+\contentsline {subsection}{\numberline {5.1} D\IeC {\'e}cryptage et lecture :}{12}
+\contentsline {subsection}{\numberline {5.2} Donn\IeC {\'e}es brutes via Bioconductor :}{12}
+\contentsline {subsection}{\numberline {5.3} Contr\IeC {\^o}le et qualit\IeC {\'e} :}{13}
 \contentsline {subsection}{\numberline {5.4} Commentaire des r\IeC {\'e}sultats :}{14}
 \contentsline {section}{\numberline {6}PR\'{E}TRAITEMENT DES DONN\'{E}ES }{24}
 \contentsline {subsection}{\numberline {6.1}Correction de bruit de fond :}{24}
