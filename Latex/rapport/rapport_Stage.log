@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.14)  16 JUN 2017 09:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.14)  16 JUN 2017 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -711,24 +711,24 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 (./rapport_Stage.aux)
 \openout1 = `rapport_Stage.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    ... okay on input line 28.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -792,12 +792,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \degres on input line 26.
-LaTeX Info: Redefining \dots on input line 26.
-LaTeX Info: Redefining \up on input line 26.
+LaTeX Info: Redefining \degres on input line 28.
+LaTeX Info: Redefining \dots on input line 28.
+LaTeX Info: Redefining \up on input line 28.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 28.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -805,29 +805,29 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 <./image/ualogo.png, id=1, 209.78375pt x 201.75375pt>
 File: ./image/ualogo.png Graphic file (type png)
  <use ./image/ualogo.png>
-Package pdftex.def Info: ./image/ualogo.png used on input line 34.
+Package pdftex.def Info: ./image/ualogo.png used on input line 36.
 (pdftex.def)             Requested size: 104.8916pt x 100.87662pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 38.
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 40.
 
 <./image/logo-generique-SD.png, id=3, 209.78375pt x 56.21pt>
 File: ./image/logo-generique-SD.png Graphic file (type png)
 
 <use ./image/logo-generique-SD.png>
-Package pdftex.def Info: ./image/logo-generique-SD.png used on input line 41.
+Package pdftex.def Info: ./image/logo-generique-SD.png used on input line 43.
 (pdftex.def)             Requested size: 276.00105pt x 73.95297pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./image/ualogo.png> <./ima
 ge/logo-generique-SD.png>]
-Overfull \hbox (2760.0pt too wide) in paragraph at lines 51--81
+Overfull \hbox (2760.0pt too wide) in paragraph at lines 53--83
  []$[]$ 
  []
 
 [2] (./rapport_Stage.toc
-Overfull \hbox (6.97821pt too wide) in paragraph at lines 25--25
+Overfull \hbox (6.97821pt too wide) in paragraph at lines 26--26
  [] []\T1/cmr/bx/n/10 ANNEXE : Scripts R dé-ve-lop-pés et quelques fonc-tions d
 e Limma []  
  []
@@ -845,39 +845,39 @@ e Limma []
 \openout6 = `rapport_Stage.lot'.
 
  [4]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 102.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 108.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [5]
-Overfull \hbox (14.91333pt too wide) in paragraph at lines 123--124
+Overfull \hbox (14.91333pt too wide) in paragraph at lines 129--130
 []\T1/cmr/m/n/10 Les ma-cro-phages de type M1 sont im-pli-qués dans la ré-ponse
  anti-microbienne
  []
 
-[6] <./image/plan.png, id=46, 728.4816pt x 478.9092pt>
+[6] [7] <./image/plan.png, id=49, 728.4816pt x 478.9092pt>
 File: ./image/plan.png Graphic file (type png)
- <use ./image/plan.png>
-Package pdftex.def Info: ./image/plan.png used on input line 151.
-(pdftex.def)             Requested size: 364.23991pt x 239.45401pt.
 
-[7] [8 <./image/plan.png>]
+<use ./image/plan.png>
+Package pdftex.def Info: ./image/plan.png used on input line 157.
+(pdftex.def)             Requested size: 364.23991pt x 239.45401pt.
+ [8 <./image/plan.png>]
 <./image/principe.jpg, id=63, 602.25pt x 276.03125pt>
 File: ./image/principe.jpg Graphic file (type jpg)
 
 <use ./image/principe.jpg>
-Package pdftex.def Info: ./image/principe.jpg used on input line 210.
+Package pdftex.def Info: ./image/principe.jpg used on input line 216.
 (pdftex.def)             Requested size: 301.12425pt x 138.01527pt.
 
 <./image/beadarray.png, id=64, 431.6125pt x 554.07pt>
 File: ./image/beadarray.png Graphic file (type png)
 
 <use ./image/beadarray.png>
-Package pdftex.def Info: ./image/beadarray.png used on input line 221.
+Package pdftex.def Info: ./image/beadarray.png used on input line 227.
 (pdftex.def)             Requested size: 86.32097pt x 110.81203pt.
  [9 <./image/principe.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 225--225
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
 [][][]\T1/cmr/m/n/8 .[]$\T1/cmtt/m/n/8 https : / / support . illumina . com / a
 rray / array \ _kits / humanht -[] 12 \ _v4 \ _expression \
  []
@@ -886,7 +886,7 @@ rray / array \ _kits / humanht -[] 12 \ _v4 \ _expression \
 File: ./image/Direct_Hyb.png Graphic file (type png)
 
 <use ./image/Direct_Hyb.png>
-Package pdftex.def Info: ./image/Direct_Hyb.png used on input line 229.
+Package pdftex.def Info: ./image/Direct_Hyb.png used on input line 235.
 (pdftex.def)             Requested size: 183.68579pt x 125.46843pt.
  [10 <./image/beadarray.png>]
 <./image/direct_hybridization_assay_workflow.png, id=73, 760.8425pt x 500.87125
@@ -894,136 +894,136 @@ pt>
 File: ./image/direct_hybridization_assay_workflow.png Graphic file (type png)
  <use ./image/direct_hybridization_assay_workflow.png>
 Package pdftex.def Info: ./image/direct_hybridization_assay_workflow.png used o
-n input line 234.
+n input line 240.
 (pdftex.def)             Requested size: 380.42032pt x 250.435pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--250
+Underfull \hbox (badness 10000) in paragraph at lines 247--256
 
  []
 
 [11 <./image/Direct_Hyb.png> <./image/direct_hybridization_assay_workflow.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--257
+Underfull \hbox (badness 10000) in paragraph at lines 263--263
 []\T1/cmr/m/n/10 Préparation des
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 []\T1/cmr/m/n/10 Amplification
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 265--265
+Underfull \hbox (badness 7273) in paragraph at lines 271--271
 []\T1/cmr/m/n/10 Variations géo-mé-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--273
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
 []\T1/cmr/m/n/10 Hybridation non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--277
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []\T1/cmr/m/n/10 Limitation de la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--279
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
 []\T1/cmr/m/n/10 Alignement
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--281
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
 []\T1/cmr/m/n/10 Placement de la
  []
 
 
-Overfull \hbox (20.43306pt too wide) in paragraph at lines 253--292
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 259--298
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
 []\T1/cmr/m/n/10 (Serial Num-
  []
 
 
-Overfull \hbox (20.43306pt too wide) in paragraph at lines 302--319
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 308--325
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--324
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 [][][]\T1/cmr/m/n/8 .[]$\T1/cmtt/m/n/8 https : / / support . illumina . com / c
 ontent / dam / illumina -[] support / documents /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--324
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 \T1/cmtt/m/n/8 documentation / software \ _documentation / genomestudio / genom
 estudio -[] 2011 -[] 1 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--327
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
 [][][]\T1/cmr/m/n/8 .[]$\T1/cmtt/m/n/8 https : / / bioconductor . org / package
 s / release / bioc / vignettes / limma / inst / doc /
  []
 
 
-Overfull \hbox (20.43306pt too wide) in paragraph at lines 332--344
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 338--350
 [][] 
  []
 
 [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
 [][][]\T1/cmr/m/n/8 .[]$\T1/cmtt/m/n/8 https : / / www . bioconductor . org / p
 ackages / release / data / experiment / vignettes /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
 [][][]\T1/cmr/m/n/8 .[]$\T1/cmtt/m/n/8 http : / / dnatech . genomecenter . ucda
 vis . edu / wp -[] content / uploads / 2013 / 11 /
  []
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 366--366
+Underfull \hbox (badness 3769) in paragraph at lines 372--372
 []\T1/cmr/m/n/10 Contrôle de l'éti-
  []
 
 
-Overfull \hbox (20.43306pt too wide) in paragraph at lines 362--381
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 368--387
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--391
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 []\T1/cmr/m/n/10 Hybridization
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--395
+Underfull \hbox (badness 10000) in paragraph at lines 401--401
 []\T1/cmr/m/n/10 Biotin and High
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 397--397
+Underfull \hbox (badness 7273) in paragraph at lines 403--403
 []\T1/cmr/m/n/10 Negative Controls
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--397
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \T1/cmr/m/n/10 (Back-ground and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--399
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
 []\T1/cmr/m/n/10 Gene In-ten-sity
  []
 
 
-Overfull \hbox (20.43306pt too wide) in paragraph at lines 387--404
+Overfull \hbox (20.43306pt too wide) in paragraph at lines 393--410
  [][] 
  []
 
@@ -1031,15 +1031,15 @@ Overfull \hbox (20.43306pt too wide) in paragraph at lines 387--404
 File: ../../R/output/hybControl.png Graphic file (type png)
 
 <use ../../R/output/hybControl.png>
-Package pdftex.def Info: ../../R/output/hybControl.png used on input line 410.
+Package pdftex.def Info: ../../R/output/hybControl.png used on input line 416.
 (pdftex.def)             Requested size: 285.69164pt x 301.50066pt.
 
 <../../R/output/LowStringency.png, id=88, 571.38469pt x 603.0028pt>
 File: ../../R/output/LowStringency.png Graphic file (type png)
 
 <use ../../R/output/LowStringency.png>
-Package pdftex.def Info: ../../R/output/LowStringency.png used on input line 41
-7.
+Package pdftex.def Info: ../../R/output/LowStringency.png used on input line 42
+3.
 (pdftex.def)             Requested size: 285.69164pt x 301.50066pt.
 
 <../../R/output/SummaryControl.png, id=89, 571.38469pt x 524.71031pt>
@@ -1047,7 +1047,7 @@ File: ../../R/output/SummaryControl.png Graphic file (type png)
 
 <use ../../R/output/SummaryControl.png>
 Package pdftex.def Info: ../../R/output/SummaryControl.png used on input line 4
-24.
+30.
 (pdftex.def)             Requested size: 285.69164pt x 262.3545pt.
 
 <../../R/output/signal_to_noise.png, id=90, 456.95718pt x 364.36125pt>
@@ -1055,7 +1055,7 @@ File: ../../R/output/signal_to_noise.png Graphic file (type png)
 
 <use ../../R/output/signal_to_noise.png>
 Package pdftex.def Info: ../../R/output/signal_to_noise.png used on input line 
-431.
+437.
 (pdftex.def)             Requested size: 228.47803pt x 182.18018pt.
 
 <../../R/output/Detectedgenes.png, id=91, 571.38469pt x 603.0028pt>
@@ -1063,31 +1063,31 @@ File: ../../R/output/Detectedgenes.png Graphic file (type png)
 
 <use ../../R/output/Detectedgenes.png>
 Package pdftex.def Info: ../../R/output/Detectedgenes.png used on input line 44
-1.
+7.
 (pdftex.def)             Requested size: 285.69164pt x 301.50066pt.
 
 <../../R/output/outliers.png, id=92, 571.38469pt x 603.0028pt>
 File: ../../R/output/outliers.png Graphic file (type png)
 
 <use ../../R/output/outliers.png>
-Package pdftex.def Info: ../../R/output/outliers.png used on input line 448.
+Package pdftex.def Info: ../../R/output/outliers.png used on input line 454.
 (pdftex.def)             Requested size: 285.69164pt x 301.50066pt.
 
 <../../R/output/ratiopmmm2.png, id=93, 571.38469pt x 603.0028pt>
 File: ../../R/output/ratiopmmm2.png Graphic file (type png)
 
 <use ../../R/output/ratiopmmm2.png>
-Package pdftex.def Info: ../../R/output/ratiopmmm2.png used on input line 455.
+Package pdftex.def Info: ../../R/output/ratiopmmm2.png used on input line 461.
 (pdftex.def)             Requested size: 285.69164pt x 301.50066pt.
 
 <../../R/output/propexpr.png, id=94, 456.95718pt x 364.36125pt>
 File: ../../R/output/propexpr.png Graphic file (type png)
 
 <use ../../R/output/propexpr.png>
-Package pdftex.def Info: ../../R/output/propexpr.png used on input line 463.
+Package pdftex.def Info: ../../R/output/propexpr.png used on input line 469.
 (pdftex.def)             Requested size: 228.47803pt x 182.18018pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--475
+Underfull \hbox (badness 10000) in paragraph at lines 479--481
 
  []
 
@@ -1095,14 +1095,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 473--475
 ingency.png>] [17] [18 <../../R/output/SummaryControl.png>] [19 <../../R/output
 /signal_to_noise.png (PNG copy)>] [20 <../../R/output/Detectedgenes.png (PNG co
 py)>] [21 <../../R/output/outliers.png (PNG copy)>] [22 <../../R/output/ratiopm
-mm2.png (PNG copy)>] [23 <../../R/output/propexpr.png (PNG copy)>] [24]
-Overfull \hbox (19.40688pt too wide) in paragraph at lines 533--534
+mm2.png (PNG copy)>] [23 <../../R/output/propexpr.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 527--527
+[][][]\T1/cmr/m/n/8 .[]$\T1/cmtt/m/n/8 https : / / www . illumina . com / techn
+iques / microarrays / array -[] data -[] analysis -[]
+ []
+
+[24]
+Overfull \hbox (19.40688pt too wide) in paragraph at lines 550--551
 \T1/cmr/m/it/10 dans un en-semble de don-nées donné (mé-thode com-plet) \T1/cmr
 /m/n/10 : Lo-wess,normalisation
  []
 
 
-Overfull \hbox (19.53745pt too wide) in paragraph at lines 538--551
+Overfull \hbox (19.53745pt too wide) in paragraph at lines 555--568
 \OML/cmm/m/it/7 signal \OMS/cmsy/m/n/7   \OML/cmm/m/it/7 mu:sf \OT1/cmr/m/n/7 +
  \OML/cmm/m/it/7 sigma[] \OMS/cmsy/m/n/7 ^^C \OML/cmm/m/it/7 exp\OT1/cmr/m/n/7 
 (\OML/cmm/m/it/7 dnorm\OT1/cmr/m/n/7 (0\OML/cmm/m/it/7 ; mean \OT1/cmr/m/n/7 = 
@@ -1112,81 +1118,81 @@ m/n/7 = \OML/cmm/m/it/7 TRUE\OT1/cmr/m/n/7 ) \OMS/cmsy/m/n/7 ^^@ \OML/cmm/m/it/
  []
 
 
-Overfull \hbox (52.79019pt too wide) in paragraph at lines 538--551
+Overfull \hbox (52.79019pt too wide) in paragraph at lines 555--568
 \T1/cmr/m/n/10 pres-sion dif-fé-ren-tielle et on ap-plique la nor-ma-li-sa-tion
  par quan-tile(\T1/cmr/m/it/10 normalizeBetweenArrays\T1/cmr/m/n/10 ).
  []
 
-[25] <../../R/output/boxplotbeforeNorm.png, id=138, 571.38469pt x 603.0028pt>
+[25] <../../R/output/boxplotbeforeNorm.png, id=136, 571.38469pt x 603.0028pt>
 File: ../../R/output/boxplotbeforeNorm.png Graphic file (type png)
 
 <use ../../R/output/boxplotbeforeNorm.png>
 Package pdftex.def Info: ../../R/output/boxplotbeforeNorm.png used on input lin
-e 558.
+e 575.
 (pdftex.def)             Requested size: 285.69164pt x 301.50066pt.
-
-<../../R/output/boxplotAfterNorm.png, id=139, 571.38469pt x 603.0028pt>
+ [26]
+<../../R/output/boxplotAfterNorm.png, id=142, 571.38469pt x 603.0028pt>
 File: ../../R/output/boxplotAfterNorm.png Graphic file (type png)
 
 <use ../../R/output/boxplotAfterNorm.png>
 Package pdftex.def Info: ../../R/output/boxplotAfterNorm.png used on input line
- 563.
+ 580.
 (pdftex.def)             Requested size: 285.69164pt x 301.50066pt.
- [26 <../../R/output/boxplotbeforeNorm.png>] <../../R/output/Densitypop1.png, i
-d=144, 457.71pt x 364.36125pt>
+ [27 <../../R/output/boxplotbeforeNorm.png>] <../../R/output/Densitypop1.png, i
+d=147, 457.71pt x 364.36125pt>
 File: ../../R/output/Densitypop1.png Graphic file (type png)
 
 <use ../../R/output/Densitypop1.png>
-Package pdftex.def Info: ../../R/output/Densitypop1.png used on input line 568.
+Package pdftex.def Info: ../../R/output/Densitypop1.png used on input line 585.
 
 (pdftex.def)             Requested size: 228.85445pt x 182.18018pt.
 
-<../../R/output/Densitypop1C.png, id=145, 457.71pt x 364.36125pt>
+<../../R/output/Densitypop1C.png, id=148, 457.71pt x 364.36125pt>
 File: ../../R/output/Densitypop1C.png Graphic file (type png)
 
 <use ../../R/output/Densitypop1C.png>
-Package pdftex.def Info: ../../R/output/Densitypop1C.png used on input line 573
+Package pdftex.def Info: ../../R/output/Densitypop1C.png used on input line 590
 .
 (pdftex.def)             Requested size: 228.85445pt x 182.18018pt.
- [27 <../../R/output/boxplotAfterNorm.png> <../../R/output/Densitypop1.png (PNG
- copy)>] [28 <../../R/output/Densitypop1C.png (PNG copy)>] [29] [30] [31] [32] 
-[33] [34] [35] [36] [37]
-(./rapport_Stage.bbl [38]) [39] (./rapport_Stage.aux) ) 
+ [28 <../../R/output/boxplotAfterNorm.png> <../../R/output/Densitypop1.png (PNG
+ copy)>] [29 <../../R/output/Densitypop1C.png (PNG copy)>] [30] [31] [32] [33] 
+[34] [35] [36] [37] [38] [39]
+(./rapport_Stage.bbl) [40] (./rapport_Stage.aux) ) 
 Here is how much of TeX's memory you used:
- 6573 strings out of 493013
- 94688 string characters out of 6135682
- 176117 words of memory out of 5000000
- 9960 multiletter control sequences out of 15000+600000
+ 6574 strings out of 493013
+ 94708 string characters out of 6135682
+ 176226 words of memory out of 5000000
+ 9961 multiletter control sequences out of 15000+600000
  20965 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,27n,39p,817b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/
-enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/c
-m-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfbx0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfcc1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1000.pfb></
-usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/font
-s/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-su
-per/sfsx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></u
-sr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfxc0900.pfb>
-Output written on rapport_Stage.pdf (41 pages, 1167607 bytes).
+{/usr/share/texmf/fonts/enc/d
+vips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-sup
+er-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfbx0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfcc1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1000.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+fsx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+xc0900.pfb>
+Output written on rapport_Stage.pdf (42 pages, 1185666 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
+ 275 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

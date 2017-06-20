@@ -62,4 +62,10 @@ SE~Wildsmith, GE~Archer, AJ~Winkley, PW~Lane, and PJ~Bugelski.
 \newblock Research report maximization of signal derived from cdna microarrays.
 \newblock {\em Biotechniques}, 30(1):202--208, 2001.
 
+\bibitem{xie2009statistical}
+Yang Xie, Xinlei Wang, and Michael Story.
+\newblock Statistical methods of background correction for illumina beadarray
+  data.
+\newblock {\em Bioinformatics}, 25(6):751--757, 2009.
+
 \end{thebibliography}

@@ -21,6 +21,8 @@
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{formatcom = {\color[rgb]{0, 0, 0.56}}}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{formatcom = {\color[rgb]{0.56, 0, 0}}}
 
 % Title Page
 \begin{document}
@@ -94,8 +96,12 @@
 \newpage
 \DefineVerbatimEnvironment{Sinput}{Verbatim}{formatcom = {\color[rgb]{0, 0, 0.56}}}
 \DefineVerbatimEnvironment{Soutput}{Verbatim}{formatcom = {\color[rgb]{0.56, 0, 0}}}
-%\section{INTRODUCTION }
+\section{INTRODUCTION }
+``The four qualities of a great data scientist are creativity, tenacity, curiosity, and deep technical skills. They use skills in data gathering and data munging, visualization, machine learning, and computer programming to make data driven decisions and data driven products. They prefer to let the data do the talking.'' 
+Jeremy Howard, President \& Chief Scientist, Kaggle
+\\Dans le cadre de mes études, j’ai souhaité réaliser mon stage dans le domaine de Science de donnée pour approfondir et appliquer les techniques d’apprentissage automatique et de prise de décision qu’on a eu le temps d’étudier en cours. Le stage que l’Unité INSERM\footnote{Institut National de la Santé et de la Recherche Médicale.} a proposé m’offrait l’opportunité de réaliser cette étude pratique. De plus, initier en un champ multi-disciplinaire qui est la bio-informatique était un plus pour ma curiosité.
 
+Dans un premier temps nous décrirons l’organisme d’accueil avant de présenter l’objet de mon stage. Puis nous étudierons mes missions, lors de ce stage avant de dresser un bilan de celui-ci.
 \section{PR\'{E}SENTATION DE L'ORGANISME D'ACCUEIL }
 \subsection{Organisme d’accueil : Centre de Recherche en Cancérologie et Immunologie Nantes Angers (CRCINA)}
 Le CRCINA est une structure de recherche intégrée aux universités de Nantes et d’Angers et labellisée par l’Institut National de la Santé et de la Recherche Médicale (Inserm). 
@@ -109,7 +115,7 @@ Le CRCINA développe des programmes multidisciplinaires alliant recherche fondam
 \end{itemize}
 Les équipes de recherche sont installées sur différents sites : CHU de Nantes, CHU d’Angers et Institut de Cancérologie de l’Ouest (site Gauducheau à Nantes et site Papin à Angers).
 Les activités de recherche sont adossées à des plateformes technologiques et plateaux techniques localisés dans les différents sites ; ces laboratoires sont, pour la plupart, intégrés dans les structures fédératives de recherche des sites Santé des Universités de Nantes et d’Angers (SFR Bonamy à Nantes ; SFR ICAT à Angers).
-\subsection{Service du rattaché : Équipe 7 de l’U1232 Immunité innée et immunothérapie}
+\subsection{Service du rattaché : Équipe 7 de l’U1232 Immunité innée et immunothérapie (UMR INSERM 1232)}
 Le système immunitaire est organisé autour de deux composantes, le système immunitaire inné et le système immunitaire adaptatif. Le système immunitaire inné est spécialisé dans la détection des signaux de danger, qu’ils soient d’origine endogène (le soi modifié), représenté par les cellules mortes, ou d’origine exogène (le non soi), à savoir les microbes. 
 Toute altération du système immunitaire inné peut avoir des conséquences pathologiques sévères, pouvant aller du déficit immunitaire aux maladies inflammatoires chroniques. Ainsi, les cellules myéloïdes (monocytes, macrophages…) jouent un rôle essentiel dans la réponse immunitaire. Elles sont impliquées dans l’élimination des microbes et des cellules mortes ainsi que dans l’initiation et la polarisation des réponses immunitaires adaptatives. 
 
@@ -507,9 +513,20 @@ La proportion des valeurs aberrantes sur chaque échantillon reste faible (Figur
 Par contre, la divergence de ratio trouvée(Figure \ref{fig:pmmm2ratio}) indique une différence possible de stringence d’hybridation entre les échantillons concernés.\\% (problème de spécificité dans l’expérience). \\
 Tous les échantillons préparés à partir de la même source d’échantillon devraient avoir un nombre similaire de transcrits détectés, c'est un peu le cas dans la figure \ref{fig:detectedGene}.
 L’écart type de l’estimation de la proportion des sondes exprimés sur l’ensemble des échantillons n’est pas énorme ($sd(propexpr(obj))=0.03361209$) par rapport à la moyenne($mean(propexpr(obj))=0.4087041$), la variation de la dite proportion entre les échantillons n'est pas signifiante.
-\\En somme, il n’y a pas un facteur discriminatoire sur l’ensemble des contrôles effectués (a qui peut ne pas valider les données en termes de qualité. Toutefois, la phase de prétraitement doit tenir compte de quelque spécificité liée à la qualité (Exemple : le fait qu’on a deux puces,...) pour mener à bien l'analyse.
+\\En somme, il n’y a pas un facteur discriminatoire sur l’ensemble des contrôles effectués a qui peut ne pas valider les données en termes de qualité. Toutefois, la phase de prétraitement doit tenir compte de quelque spécificité liée à la qualité (Exemple : le fait qu’on a deux puces,...) pour mener à bien l'analyse.
 \section{PR\'{E}TRAITEMENT DES DONN\'{E}ES }
 \subsection{Correction de bruit de fond :}
+La correction de bruit de fond est la première étape et cruciale dans le prétraitement des données. Il semble logique de supprimer ce bruit qui perturbe la détection des variations biologiques cherchées  mais le problème est complexe, il n’est pas possible d’éliminer tous les artefacts expérimentaux en réalité. 
+Pour soustraire ce bruit, il y a plusieurs approches possibles pour estimer sa valeur :
+\begin{itemize}
+ \item correction de bruit localement (utilisation de mesure de tendance central des sondes voisin)
+ \item correction par groupe ou sous-groupe (utilisation de mesure de tendance central des groupes ou sous-groupes de sondes)
+ \item utilisation des sondes vides
+ \item utilisation des sondes de contrôle
+\end{itemize}
+Le logiciel payant  GenomeStudio\footnote{\url{https://www.illumina.com/techniques/microarrays/array-data-analysis-experimental-design/genomestudio.html}} d’Illumina propose deux options sur ce point pour le prétraitement des données BeadArray\cite{xie2009statistical}, soit ne pas faire la correction de bruit de fond soit enlever les bruit en utilisant la moyenne des sondes de contrôle négative. 
+Le modèle Normexp (normal-exponential convolution model) et ses variantes (RMA\footnote{Robust Multi-array Analysis},MBCB\footnote{Model-based Background Correction method for Illumina BeadArrays},MLE\footnote{the Maximum Likelihood Estimation},...) sont les méthodes les plus utilisées pour la correction des bruits de fond des puces ADN.
+\\En réalité le bruit de fond affecte peu l’analyse des résultats puisque celle-ci revient à examiner la position des gènes les uns par rapport aux autres (dans le nuage). Sous l’effet du bruit de fond, les gènes bougent un peu, mais pas au point de bouleverser le nuage. L’effet n’est sensible que pour les plus bas niveaux d’expression, dans un cas où de toute façon les mesures sont très imprécises. 
 \subsection{Transformation :}
 La distribution du niveau d'expression des gènes est très asymétrique avec un petit nombre de valeurs élevées. C’est une source de problèmes, car de nombreuses méthodes statistiques supposent implicitement une distribution gaussienne. 
 Un simple calcul d’écart type ne satisfait donc pas de donner une interprétation habituelle de la distribution. La transformation logarithmique est la plus utilisée. 
@@ -583,6 +600,9 @@ Le but de la normalisation par quantile est de mettre la distribution, médiane 
 %=> Pas de temps
 % (Caractérisation d’un ensemble de gènes)
 \section{CONCLUSION :}
+Ce stage a été très enrichissant pour moi, car il m’a permis de découvrir dans le détail les grands point de l’analyse de donnée des puces ADN notamment la phase de contrôle et de prétraitement de données.
+J’aimerai par la suite, animé par une curiosité personnelle, continuer les parties restantes du sujet. 
+À savoir l’analyse différentielles en testant plusieurs méthodes comme le modèle de régression linéaire de Limma, SAM(The Significance Analysis of Microarrays)  et autres méthodes de tests statistiques ; le défi sur la représentation graphique des résultats avec les méthodes de clustering et par l’analyse en composantes principales (ACP).
 \section{ANNEXE: Scripts R développés et quelques fonctions de Limma}
 \subsection{Lecture des fichiers IDAT :}
 \begin{Schunk}
@@ -672,7 +692,7 @@ Finished reading data.
  #########################################
 \end{Sinput}
 \end{Schunk}
-\subsubsection{Utilisation des données pour le contrôle:}
+\subsubsection{Utilisation des données pour le contrôle :}
 \begin{Schunk}
 \begin{Sinput}
  ###############################################################################
@@ -1097,7 +1117,7 @@ function (par, x)
 }
 \end{Soutput}
 \end{Schunk}
-\subsection{Analyse des données :}
+%\subsection{Analyse des données :}
 \nocite{smyth2005limma}
 \nocite{druaghici2016statistics}
 \bibliographystyle{plain} 
